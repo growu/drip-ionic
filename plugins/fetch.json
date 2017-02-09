@@ -1,0 +1,192 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.synconset.imagepicker": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wymsee/cordova-imagePicker.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.qiudao.cordova.umeng-analytics": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/baomingba/cordova-plugin-umeng-analytics.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {
+            "UMENG_IOS_ID": "123456789012345678901234",
+            "UMENG_ANDROID_ID": "123456789012345678900987"
+        }
+    },
+    "cordova-plugin-crop": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-crop"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-qqsdk": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-qqsdk"
+        },
+        "is_top_level": true,
+        "variables": {
+            "QQ_APP_ID": "1104758278"
+        }
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-compat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-compat"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-file-transfer": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file-transfer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-console": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-console"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-apprate": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pushandplay/cordova-plugin-apprate.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-globalization": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-globalization"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "ionic-plugin-keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.5.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "jpush-phonegap-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "jpush-phonegap-plugin"
+        },
+        "is_top_level": true,
+        "variables": {
+            "API_KEY": "c31d2ddd5cb355159e6d4b85"
+        }
+    },
+    "cordova-plugin-weibo": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-weibo"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-wechat": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-wechat"
+        },
+        "is_top_level": true,
+        "variables": {
+            "WECHATAPPID": "wx1bdc17e4439c5ffc"
+        }
+    },
+    "cordova-plugin-x-socialsharing": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-x-socialsharing"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-app-config": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-app-config"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-xiaomi": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-xiaomi"
+        },
+        "is_top_level": true,
+        "variables": {
+            "XIAOMIAPPID": "2882303761517415143"
+        }
+    }
+}

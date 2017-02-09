@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-weibo"
+    version="1.6.0">
+    <name>Weibo</name>
+    <description>weibo plugin for cordova</description>
+    <author>BelinChung</author>
+    <license>MIT</license>
+    <keywords>cordova,weibo,sdk</keywords>
+    <repo>https://github.com/BelinChung/cordova-plugin-weibo</repo>
+    <js-module src="www/weibo.js" name="weibo">
+        <clobbers target="window.weibo" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="weibo" >
+                <param name="android-package" value="com.hiliaox.Weibo"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+                      android:configChanges="keyboardHidden|orientation"
+                      android:windowSoftInputMode="adjustResize"
+                      android:exported="false"
+                      android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            </activity>
+            <activity android:name="com.sina.weibo.sdk.register.mobile.MobileRegisterActivity"
+                      android:configChanges="keyboardHidden|orientation"
+                      android:windowSoftInputMode="adjustResize"
+                      android:exported="false"
+                      android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            </activity>
+            <activity android:name="com.sina.weibo.sdk.register.mobile.SelectCountryActivity"
+                      android:configChanges="keyboardHidden|orientation"
+                      android:windowSoftInputMode="adjustResize"
+                      android:exported="false"
+                      android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            </activity>
+            <activity
+                      android:name="com.hiliaox.WeiboShareCallback"
+                      android:configChanges="keyboardHidden|orientation"
+                      android:screenOrientation="portrait" >
+                      <intent-filter>
+                        <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                        <category android:name="android.intent.category.DEFAULT" />
+                      </intent-filter>
+            </activity>
+        </config-file>
+        <source-file src="src/android/Weibo.java" target-dir="src/com/hiliaox" />
+        <source-file src="src/android/WeiboShareCallback.java" target-dir="src/com/hiliaox" />
+        <source-file src="src/android/weiboSDKCore_3.1.4.jar" target-dir="libs" framework="true" />
+        <source-file src="src/android/libs/arm64-v8a/libweibosdkcore.so" target-dir="libs/arme64-v8a/" />
+        <source-file src="src/android/libs/armeabi/libweibosdkcore.so" target-dir="libs/armeabi/" />
+        <source-file src="src/android/libs/armeabi-v7a/libweibosdkcore.so" target-dir="libs/armeabi-v7a/" />
+        <source-file src="src/android/libs/mips/libweibosdkcore.so" target-dir="libs/mips/" />
+        <source-file src="src/android/libs/mips64/libweibosdkcore.so" target-dir="libs/mips64/" />
+        <source-file src="src/android/libs/x86/libweibosdkcore.so" target-dir="libs/x86/" />
+        <source-file src="src/android/libs/x86_64/libweibosdkcore.so" target-dir="libs/x86_64/" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="weibo">
+                <param name="ios-package" value="weibo"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/WBHttpRequest.h" />
+        <header-file src="src/ios/WBHttpRequest+WeiboUser.h" />
+        <header-file src="src/ios/WBHttpRequest+WeiboShare.h" />
+        <header-file src="src/ios/WBHttpRequest+WeiboToken.h" />
+        <header-file src="src/ios/WBHttpRequest+WeiboGame.h" />
+        <header-file src="src/ios/WeiboSDK+Statistics.h" />
+        <header-file src="src/ios/WBSDKRelationshipButton.h" />
+        <header-file src="src/ios/WBSDKCommentButton.h" />
+        <header-file src="src/ios/WBSDKBasicButton.h" />
+        <header-file src="src/ios/WeiboSDK.h" />
+        <header-file src="src/ios/WeiboUser.h" />
+        <header-file src="src/ios/weibo.h" />
+        <source-file src="src/ios/weibo.m" />
+        <source-file src="src/ios/libWeiboSDK.a" framework="true" compiler-flags="-objc"/>
+        <resource-file src="src/ios/WeiboSDK.bundle" />
+        
+        <framework src="QuartzCore.framework" weak="true"/>
+        <framework src="Security.framework" weak="true"/>
+        <framework src="ImageIO.framework" weak="true"/>
+        <framework src="SystemConfiguration.framework" weak="true" />
+        <framework src="CoreTelephony.framework" weak="true" />
+        <framework src="CoreText.framework" weak="true" />
+        <framework src="UIKit.framework" weak="true" />
+        <framework src="Foundation.framework" weak="true" />
+        <framework src="CoreGraphics.framework" weak="true" />
+        <framework src="libz.tbd" weak="true" />
+        <framework src="libsqlite3.tbd" weak="true" />
+    </platform>
+</plugin>

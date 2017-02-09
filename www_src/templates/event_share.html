@@ -1,0 +1,65 @@
+<ion-view title="分享">
+    <ion-header-bar class="bar-positive" id="header">
+		<go-back></go-back>
+        <div class="title">分享</div>
+    </ion-header-bar>
+    <ion-content>
+
+		<div style="background-color:#0c9;background: url('img/share_bg.jpg');padding:20px;" id="content">
+			<div class="card" style="background-color: rgba(255,255,255,.4);">
+
+				<h4 style="color:#fff;padding-top: 10px;" class="text-center">#{{eventshare.event.goal.goal_name}}#</h4>
+				<h1 style="color:#fff;margin-top:0px;" class="text-center">第 <span style="font-size: 60px;">{{eventshare.event.checkin.total_days}}</span> 天</h1>
+				<p ng-if="eventshare.event.checkin.items.length>0" ng-repeat="item in eventshare.event.checkin.items" style="margin:20px;color: #fff;">
+					<i class="icon ion-android-checkbox-outline"  style="font-size:16px;"></i>
+					{{item.item_name}}<span class="pull-right"> {{item.item_value}} {{item.item_unit}}</span>
+				</p>
+				<p ng-bind-html="(eventshare.event.checkin.checkin_content)" style="margin:20px;color: #fff;">
+				</p>
+				<p style="text-align: right;color: #fff;padding-right:20px;">By {{eventshare.event.user.nickname.length>0?eventshare.event.user.nickname:'keeper'+eventshare.event.user_id}}</p>
+				<p style="text-align: right;color: #fff;padding-right:20px;">{{eventshare.event.create_time*1000 | date:'yyyy-MM-dd'}}</p>
+				<p  style="margin:20px;" >
+					<img class="full-image"image-onload="eventshare.onLoad($event)" ng-src="{{eventshare.resUrl+'images/'+eventshare.event.checkin.attaches[0].attach_path+'/'+eventshare.event.checkin.attaches[0].attach_name}}" ng-if="eventshare.event.checkin.attaches.length>0">
+				</p>
+			</div>
+
+			<div class="item item-thumbnail-right" style="border: 0;background-color:transparent;margin:20px;">
+				<img src="img/code.png">
+				<h2 style="color: #fff;text-align: right;margin-top:10px;">微打卡</h2>
+				<p style="margin-top: 10px;color: #fff;text-align: right;">长按识别二维码,开始打卡</p>
+			</div>
+		</div>
+
+		<div id="result">
+
+		</div>
+
+	</ion-content>
+	<div class="bar bar-footer" style="line-height: 36px;">
+		分享到
+		<div class="buttons pull-right">
+
+			<div class="button button-clear" ng-click="eventshare.shareToQQ()">
+				<i class="icon iconfont calm">&#xe602;</i>
+			</div>
+			<div class="button button-clear" ng-click="eventshare.shareToQZone()">
+				<i class="icon iconfont energized">&#xe603;</i>
+			</div>
+			<div class="button button-clear" ng-click="eventshare.shareToWeibo()">
+				<i class="icon iconfont assertive">&#xe604;</i>
+			</div>
+			<div class="button button-clear" ng-click="eventshare.shareToWechat(0)">
+				<i class="icon iconfont balanced">&#xe608;</i>
+			</div>
+			<div class="button button-clear" ng-click="eventshare.shareToWechat(1)">
+				<i class="icon iconfont royal">&#xe609;</i>
+			</div>
+			<div class="button button-clear" ng-click="eventshare.shareToMore()">
+				<i class="icon iconfont ">&#xe60e;</i>
+			</div>
+		</div>
+	</div>
+
+
+
+</ion-view>

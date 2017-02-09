@@ -1,0 +1,37 @@
+<ion-view title="设置">
+	<ion-header-bar class="bar-positive">
+		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/app/my"></a>
+		<div class="title">设置</div>
+	</ion-header-bar>
+	<ion-content class="">
+		<div class="list">
+			<div class="item item-divider"><center>微打卡 v{{setting.localVersionNo}}</center></div>
+
+			<a class="item item-icon-right" href="#/feedback">
+				意见反馈
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+	  		<a class="item item-icon-right" href="#/about">
+				关于我们
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right" href="#/donate">
+				捐赠我们
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<a class="item item-icon-right" href="javascript:void(0);" ng-click="setting.doRate()">
+				五星好评
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+	  		<a class="item" href="javascript:void(0);" ng-if="setting.isOpenCheck&&!setting.isNeedUpdate">
+				检查更新
+				<span class="item-note">当前已是最新版本</span>
+	  		</a>
+
+			<a class="item" href="javascript:void(0);" ng-if="setting.isOpenCheck&&setting.isNeedUpdate" ng-click="setting.doUpdate()">
+				检查更新
+				<span class="item-note positive">发现新版本 v{{setting.latestVersion.no}}(点击更新)</span>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>

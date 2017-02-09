@@ -1,0 +1,50 @@
+<ion-view title="统计">
+	 <ion-header-bar class="bar-positive">
+ 		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/goal/{{goalId}}"></a>
+		<div class="title">统计</div>
+	</ion-header-bar>
+	<ion-content class="">
+		<div class="padding-top">
+			<ti-segmented-control on-select="goaldata.showChart($index)" style="width: 200px;margin:0 auto;">
+			    <ti-segmented-control-button class="button-positive" title="'周'" selected></ti-segmented-control-button>
+			    <ti-segmented-control-button class="button-positive" title="'月'"></ti-segmented-control-button>
+			    <ti-segmented-control-button class="button-positive" title="'年'"></ti-segmented-control-button>
+			</ti-segmented-control>
+		</div>
+		<div id="c3chart" ng-init="goaldata.showChart(0)"></div>
+		<!-- <c3chart bindto-id="chart1">
+		<chart-column column-id="x"
+          column-values="{{count.x}}"/>
+    	<chart-column column-id="data1"
+    				column-name="打卡次数"
+    			  column-color="#0c9" 
+                  column-values="count.y"
+                  column-type="bar"/>  
+        <chart-axes values-x="x" y="data1"/>
+    	<chart-axis>
+		    <chart-axis-x axis-position="outer-center"
+		                  axis-type="category">
+		      </chart-axis-x>
+		</chart-axis>
+		</c3chart> -->
+		<div class="list">
+			<div class="item item-divider">
+				数据汇总
+			</div>
+			<div class="item ">
+				打卡天数: <span class="item-note"><strong class="positive num">{{goaldata.summary.count}}</strong> 天</span>
+			</div>
+			<div class="item" ng-repeat="item in goaldata.summary.items" ng-if="goaldata.summary.items.length>0">
+				{{item.item_name}}:
+				<span class="item-note"><strong class="positive num"> {{item.sum}}</strong> {{item.item_unit}}
+</span>
+			</div>
+
+		</div>
+    </ion-content>
+</ion-view>
+
+
+
+
+

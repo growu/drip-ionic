@@ -1,0 +1,22 @@
+<ion-view title="粉丝" hide-nav-bar="true">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/message"></a>
+        <div class="title">粉丝</div>
+    </ion-header-bar>
+    <ion-content>
+
+        <div class="list" ng-if="messagefan.messages.length>0">
+            <a class="item item-avatar" href="#/event/{{message.event_id}}" ng-repeat="message in messagefan.messages">
+                <img ng-src="{{message.user_avatar}}" fallback-src="img/default.jpg">
+                <h2>{{message.nickname}}  关注了你</h2>
+                <p><span am-time-ago="{{message.create_time*1000}}" am-preprocess="unix"></span></p>
+            </a>
+        </div>
+        <div class="list" ng-if="messagefan.messages.length == 0">
+            <a class="item item-title">
+                <h2>先关注别人可能会赢得更多关注</h2>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

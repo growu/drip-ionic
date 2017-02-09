@@ -1,0 +1,68 @@
+<ion-view title="登陆" id="test">
+    <ion-content>
+        <div id="logo">
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="profilepicture"></div>
+        </div>
+        <form name="loginForm">
+            <div class="list list-inset login">
+                <label class="item item-input">
+                    <i class="icon ion-ios-email-outline placeholder-icon"></i>
+                    <input type="email" name="email" ng-model="login.user.email" placeholder="邮箱" required>
+                    <div class="error"
+                         ng-if="loginForm.email.$touched && loginForm.email.$dirty && loginForm.email.$invalid">
+                        <small class="error" ng-if="loginForm.email.$error.required">
+                            邮箱不能为空
+                        </small>
+                        <small class="error" ng-if="loginForm.email.$error.email">
+                            邮箱格式不正确
+                        </small>
+                    </div>
+                </label>
+
+                <label class="item item-input">
+                    <i class="icon ion-ios-locked-outline placeholder-icon"></i>
+
+                    <input type="password" name="password" ng-model="login.user.password" placeholder="密码" required
+                           ng-minlength="6" ng-maxlength="20">
+                    <div class="error"
+                         ng-if="loginForm.password.$touched && loginForm.password.$dirty && loginForm.password.$invalid">
+                        <small class="error" ng-if="loginForm.password.$error.required">
+                            密码不能为空
+                        </small>
+                        <small class="error"
+                               ng-if="loginForm.password.$error.minlength || regForm.password.$error.maxlength">
+                            请输入6-20位密码
+                        </small>
+                    </div>
+                </label>
+
+            </div>
+            <div class="padding">
+                <button ng-click="login.doLogin()"
+                        ng-disabled="(loginForm.email.$touched||loginForm.password.$touched)&&loginForm.$invalid"
+                        type="submit"
+                        class="button button-block button-light">登陆
+                </button>
+            </div>
+            <div class="padding">
+                <div class="row">
+                    <div class="col text-left"><a href="#/find" style="color:#fff;">忘记密码?</a></div>
+                    <div class="col text-right"><a href="#/register" style="color:#fff;">立即注册</a></div>
+                </div>
+            </div>
+            <div class="padding login-more" ng-if="login.isQQInstalled||login.isWeiboInstalled||login.isXiaomiChannel">
+            <p class="title">第三方帐号登录</p>
+        </div>
+            <div class="padding login-toolbar text-center" ng-if-end>
+                <i class="iconfont light" ng-if="login.isQQInstalled" ng-click="login.doQQLogin()">&#xe602;</i>
+                <!--<i class="iconfont balanced" ng-click="doWechatLogin()">&#xe611;</i>-->
+                <i class="iconfont light" ng-if="login.isWeiboInstalled" ng-click="login.doWeiboLogin()">
+                    &#xe607;</i>
+                <i class="iconfont light" ng-if="login.isXiaomiChannel" ng-click="login.doXiaomiLogin()">
+                    &#xe64f;</i>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

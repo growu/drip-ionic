@@ -1,0 +1,64 @@
+<ion-view title="打卡">
+	<ion-header-bar class="bar-positive">
+      <a class="button button-icon button-clear ion-ios-arrow-back" href="#/goal/{{checkinadd.checkin.goal_id}}"></a>
+      <div class="title">打卡</div>
+  	</ion-header-bar>
+	<ion-content class="">
+		<ion-list>
+		    <ion-item ng-repeat="item in checkinadd.goal.items" ng-if="checkinadd.goal.items.length" class="compact-item">
+		    	<label class="item-input">
+					<span class="input-label">{{item.item_name}}:</span>
+					<input type="text" ng-model="item.item_expect">
+					<span class="input-label">{{item.item_unit}}</span>
+					</label>
+				<ion-option-button class="button-assertive" ng-click="checkinadd.delItem(item)">删除</ion-option-button>
+			</ion-item>
+			<div class="item item-divider"></div>
+ 			<label class="item-input">
+		        <textarea rows="5" cols="50" ng-model="checkinadd.checkin.content" placeholder="请写下今天行动或感想..."></textarea>
+		    </label>
+		   <label class="item item-input">
+		        <button id="upload-image-btn" class="button button-icon icon ion-image" ng-click="checkinadd.doUpload()"></button>
+			</label>
+		   <div class="item" ng-if="checkinadd.checkin.attaches.length>0"  ng-repeat="attach in checkinadd.checkin.attaches">
+		    	<img ng-src="{{attach.url}}" class="full-image" src="{{attach.url}}" id="upload-image"/>
+				<a href="javascript:void(0);" ng-click="checkinadd.removeAttach()"><p>删除</p></a>
+		   </div>
+		    <a class="item item-divider"></a>
+
+			<li class="item item-toggle">
+				是否公开
+				<label class="toggle toggle-positive">
+					<input type="checkbox" ng-model="checkinadd.checkin.is_public" ng-checked="checkinadd.goal.pivot.is_public==1?true:false">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+			</li>
+
+		     <li class="item item-toggle">
+			     补打卡
+			     <label class="toggle toggle-positive">
+			       <input type="checkbox" ng-model="checkinadd.checkin.type">
+			       <div class="track">
+			         <div class="handle"></div>
+			       </div>
+			     </label>
+			 </li>
+			 <label class="item item-input item-select" ng-show="checkinadd.checkin.type">
+			    <div class="input-label">
+			      日期
+			    </div>
+			    <select ng-model="checkinadd.checkin.day">
+			      <option ng-selected="true" value="{{checkinadd.day1}}">{{checkinadd.day1}}</option>
+			      <option value="{{checkinadd.day2}}">{{checkinadd.day2}}</option>
+			      <option value="{{checkinadd.day3}}">{{checkinadd.day3}}</option>
+			    </select>
+			  </label>
+		</ion-list>
+
+		<div class="padding">
+			<button class="button button-block button-positive" ng-click="checkinadd.doCheckin()">打卡</button>
+		</div>
+	</ion-content>
+</ion-view>

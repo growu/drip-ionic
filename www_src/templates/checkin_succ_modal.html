@@ -1,0 +1,46 @@
+<ion-view title="打卡成功">
+<ion-content class="" style="padding-top:100px;">
+	<center>
+		<h3>
+			打卡成功，正能量 ＋<span class="num">{{response.energy}}</span>
+		</h3>
+	</center>
+	<center class="padding">截至今日，你已经在<span class="positive">#{{response.goal.goal_name}}#</span>项目</center>
+	<div class="row padding center">
+	  	<div class="col">
+	  		<strong class="num">{{response.goal.series_days}}</strong>
+	  		<br>连续天数
+	  	</div>
+	  	<div class="col">
+	  		<strong class="num">{{response.goal.total_days}}</strong>
+	  		<br>总天数
+	  	</div>
+	  	<div class="col">
+	  		<strong class="num">{{response.goal.energy}}</strong>
+	  		<br>正能量
+	  	</div>
+	</div>
+	<div class="padding">
+		<center>
+		<div class="button button-assertive" ng-click="doShare()">
+			分享好友
+		</div>
+		<div class="button" ng-click="cancelShare()">
+			低调路过
+		</div>
+		</center>
+	</div>
+	<div class="footer" style="margin-top:50px;" ng-if="response.users.length">
+		<div class="list">
+			<div class="item-divider center">这些小伙伴们也刚刚完成了该项目：</div>
+			<a class="item item-icon-right avatar" href="#/goal
+			/events/{{response.goal.goal_id}}">
+				<img ng-src="{{user.user_avatar}}" fallback-src="img/default.jpg" ng-repeat="user in response.users">
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+			<ion-checkbox ng-model="filter.blue" checkbox-positive>一键点赞</ion-checkbox>
+		</div>
+	</div>
+</ion-content>
+	
+</ion-view>

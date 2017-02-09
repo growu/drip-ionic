@@ -1,0 +1,26 @@
+<ion-view title="个人资料">
+ 	<ion-header-bar class="bar-positive">
+ 		<a class="button button-icon icon ion-ios-arrow-left button-clear" href="#/app/my"></a>
+		<div class="title">个人资料</div>
+	</ion-header-bar>
+	<ion-content class="has-header">
+		<div class="list">
+			<a class="item item-avatar item-icon-right" ng-click="profile.avatarPick()" id="profile-avatar">
+		  		<img ng-src="{{profile.profile.user_avatar}}" src="{{profile.profile.user_avatar}}" fallback-src="img/default.jpg" id="avatar">
+		  		<span class="input-label">头像</span>
+		  		<i class="icon ion-ios-arrow-right"></i>
+		  	</a>	
+		  	<label class="item item-input">
+		    	<span class="input-label">昵称</span>
+		    	<input type="text" placeholder="昵称" ng-model="profile.profile.nickname">
+		 	 </label>
+		  	<label class="item item-input">
+		    	<span class="input-label">签名</span>
+		    	<textarea placeholder="签名" ng-model="profile.profile.signature"></textarea>
+		  	</label>
+		</div>
+		<div class="padding">
+            <button ng-click="profile.saveProfile()" type="submit" class="button button-block button-positive">保存</button>
+        </div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,57 @@
+<ion-refresher
+        pulling-text="下拉刷新..."
+        on-refresh="eventlist.onRefresh()">
+</ion-refresher>
+
+<div class="list event-list" ng-repeat="event in eventlist.events" ng-if="eventlist.events.length>0">
+    <div class="item item-avatar">
+        <img ng-src="{{event.user.user_avatar}}" fallback-src="img/default.jpg" go-state="{state:'userhome',params:{userId:event.user_id}}">
+        <h2 go-state="{state:'userhome',params:{userId:event.user_id}}">{{event.user.nickname.length>0?event.user.nickname:'keeper'+event.user_id}}</h2>
+        <p go-state="{state:'goalhome',params:{goalId:event.goal.goal_id}}"><span class="">#{{event.goal.goal_name}}#</span><span class="positive" style="font-size:2em;">{{event.checkin.total_days}}</span>天
+        </p>
+        <span am-time-ago="{{event.create_time*1000}}" am-preprocess="unix" class="time"></span>
+        <i class="icon ion-bookmark positive" style="position:absolute;top:-5px;right:10px;font-size: 20px;" ng-if="event.is_hot==1"></i>
+    </div>
+
+    <div class="item item-body" ng-if="event.checkin.checkin_content||event.checkin.attaches.length>0">
+        <a href="#/event/{{event.event_id}}">
+            <event-content content="{{event.checkin.checkin_content}}"></event-content>
+            <p></p>
+            <img class="full-image"
+                 ng-src="{{eventlist.resUrl+'images/'+event.checkin.attaches[0].attach_path+'/'+event.checkin.attaches[0].attach_name}}"
+                 ng-if="event.checkin.attaches.length>0">
+        </a>
+    </div>
+    <a class="item item-icon-left checkin-item" href="#/event/{{event.event_id}}" ng-if="event.checkin.items.length>0"
+       ng-repeat="item in event.checkin.items" style="font-size:14px;background-color: #f8f8f8;">
+        <i class="icon ion-android-checkbox-outline" style="font-size:16px;"></i>
+        {{item.item_name}}<span class="pull-right"> {{item.item_value}} {{item.item_unit}}</span>
+    </a>
+
+    <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="javascript:void(0);" ng-click="eventlist.doLike(event)">
+            <i class="icon"
+               ng-class="{'assertive':event.is_like,'ion-ios-heart-outline':!event.is_like,'ion-ios-heart':event.is_like}"></i>
+            {{event.like_count}}
+        </a>
+        <a class="tab-item" href="#/event/{{event.event_id}}">
+            <i class="icon ion-ios-chatbubble-outline"></i>
+            {{event.comment_count}}
+        </a>
+        <a class="tab-item" ng-click="eventlist.showMore(event.event_id)">
+            <i class="icon ion-ios-more-outline"></i>
+        </a>
+    </div>
+</div>
+
+<div class="list" ng-if="eventlist.events.length==0">
+    <div class="item text-center">
+            暂时还没有动态
+        </div>
+</div>
+
+<ion-infinite-scroll
+        on-infinite="eventlist.onInfinite()"
+        distance="1%">
+    显示更多
+</ion-infinite-scroll>

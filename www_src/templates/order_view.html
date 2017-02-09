@@ -1,0 +1,78 @@
+<ion-view>
+	<ion-content>
+		<div class="state" ng-class="{state_1:order.order_status==1,state_2:order.order_status==6,state_3:order.order_status==10}">
+			<div class="state_step">
+	            <ul>
+	                <li class="state_step_1"></li>
+	                <li class="state_step_2"></li>
+	                <li class="state_step_3"></li>
+	            </ul>
+	            <span class="state_arrow">
+	            	<i class="state_arrow_i"></i>
+	            	<i class="state_arrow_o"></i>
+	            </span>
+	        </div>
+        </div>
+		<div class="list">
+			<div class="item order_info_item">
+				<p><strong>订单状态：</strong>
+					<span class="assertive">{{order.order_status | status}}</span>
+				</p>
+				<p><strong>总额：</strong><span class="assertive" style="font-size:14px;">{{order.order_fee}}</span>（微信支付）</p>
+				<p><strong>送至：</strong>{{order.address_province+order.address_city+order.address_area+order.address_detail}}</p>
+				<p><strong>收货人：</strong>{{order.address_recipient}}({{order.address_phone}})</p>
+				<p><strong>订单编号：</strong>{{order.order_no}}</p>
+				<p><strong>下单时间：</strong>{{order.create_time*1000 | date:"yyyy-MM-dd HH:mm:ss"}}</p>
+
+				<p ng-if="order.order-status==6"><strong>物流公司：</strong>{{order.compnay_name}}</p>
+				<p ng-if="order.order-status==6"><strong>物流单号：</strong>{{order.logistics_no}}</p>
+
+				<p ng-if="order.refund_status == 1">					
+					<span class="assertive">退货申请中</span>
+				</p>
+
+				<p ng-if="order.refund_status == 2">					
+					<span class="assertive">同意退货</span>
+				</p>
+
+				<p ng-if="order.refund_status == 3">					
+					<span class="assertive">拒绝退货</span>
+				</p>
+
+				<p ng-if="order.refund_status == 4">					
+					<span class="assertive">退货完成</span>
+				</p>
+
+
+				<p ng-if="order.exchange_status == 1"><					
+					<span class="assertive">换货申请中</span>
+				</p>
+
+				<p ng-if="order.exchange_status == 2"><					
+					<span class="assertive">同意换货</span>
+				</p>
+
+				<p ng-if="order.exchange_status == 3"><					
+					<span class="assertive">拒绝换货</span>
+				</p>
+
+				<p ng-if="order.exchange_status == 4"><					
+					<span class="assertive">换货成功</span>
+				</p>
+
+			</div>
+			<div class="item item-divider">商品信息</div>
+			<a class="item item-thumbnail-left" href="#/good?goodId={{order.good_id}}">
+				<img ng-src="{{order.good_image}}">
+			    <h2>{{order.good_title}}</h2>
+			    <p>数量：{{order.order_num}}</p>
+			    <p>库存：{{order.stock_num}}</p>
+			    <span class="assertive right" ng-if="type == 'tuan'">{{order.tuan_price}}/件</span>
+			    <span class="assertive right" ng-if="type == 'single'">{{order.single_price}}/件</span>
+			</a>
+			<div class="item" ng-if="order.tuan_status!=0">
+				<a class="button button-default button-small" style="float:right;" href="#/tuan?tuanId={{order.tuan_id}}">查看团详情</a>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

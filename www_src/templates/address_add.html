@@ -1,0 +1,70 @@
+<ion-view title="新增地址">
+	<ion-content>
+		<form name="addressForm">
+		<div class="list">
+		  	<label class="item item-input">
+		    	<span class="input-label">收货人</span>
+		    	<input type="text" name="recipient" ng-model="address.recipient" required ng-maxlength="20">
+		    	<div class="error" ng-if="addressForm.recipient.$touched && addressForm.recipient.$invalid">
+                    <small class="error" ng-if="addressForm.recipient.$error.required">
+                        收货人不能为空
+                    </small>
+                    <small class="error" ng-if="addressForm.recipient.$error.maxlength">
+                        输入字符长度过长
+                    </small>
+                </div>
+		  	</label>
+		  	<label class="item item-input">
+		    	<span class="input-label">手机/电话</span>
+		    	<input type="text" name="phone" ng-model="address.phone" required>
+		    	<div class="error" ng-if="addressForm.phone.$touched && addressForm.phone.$invalid">
+                    <small class="error" ng-if="addressForm.phone.$error.required">
+                        号码不能为空
+                    </small>
+                    <small class="error" ng-if="addressForm.phone.$error.maxlength">
+                        
+                    </small>
+                </div>
+		  	</label>
+			<label class="item item-input item-select">
+		    	<div class="input-label">
+		      		省份
+		    	</div>
+	    		<select id="province" required="" ng-model="address.province" ng-options="key as key for (key,value) in division"  
+                            ng-change="address.city='';address.district='';">
+<!-- 					<option value="">请选择</option>
+ -->				</select>
+		  	</label>
+		  	<label class="item item-input item-select">
+		    	<div class="input-label" >
+		      		城市
+		    	</div>
+	    		<select ng-model="address.city" ng-options="key as key for (key,value) in division[address.province]"  
+                            ng-change="address.district='';"></select>
+		  	</label>
+		  	<label class="item item-input item-select">
+		    	<div class="input-label">
+		      		区/县
+		    	</div>
+	    		<select ng-model="address.area" ng-options="value as value for value in division[address.province][address.city]"></select>
+		  	</label>
+		  	<label class="item item-input item-select">
+		    	<div class="input-label">
+		      		住址类型
+		    	</div>
+	    		<select ng-model="address.type">
+	      			<option value="0">家</option>
+	      			<option  value="1">办公</option>
+	    		</select>
+		  	</label>
+		  	<label class="item item-input">
+		    	<span class="input-label">详细地址</span>
+		    	<input type="text" ng-model="address.detail">
+		  	</label>
+		</div>
+		<div class="padding">
+			<button class="button button-positive button-block" ng-click="saveAddress()">保存</button>
+		</div>
+		</form>
+	</ion-content>
+</ion-view>

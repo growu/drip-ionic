@@ -1,0 +1,31 @@
+<ion-view title="全部目标">
+	<ion-header-bar class="bar-positive">
+		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/app/home"></a>
+		<div class="title">全部目标</div>
+		<a class="button button-clear icon ion-android-add" href="#/goal/add"></a>
+	</ion-header-bar>
+	<ion-content>
+		<div class="bar bar-header item-input-inset">
+			  <div class="item-input-wrapper">
+			    <i class="icon ion-search placeholder-icon"></i>
+			    <input type="search" placeholder="搜索目标" ng-model="goalsearch.search.text" ng-change="goalsearch.doSearch()">
+			    <i ng-if="goalsearch.search.text.length > 0" ng-click="goalsearch.clearSearch()" class="icon ion-close"></i>
+			  </div>
+	  	</div>
+		<div class="list">
+		    <a class="item item-icon-right" href="#/goal/{{goal.goal_id}}/home" ng-repeat="goal in goalsearch.goals" ng-if="goalsearch.goals.length>0">
+			      	<h2>{{goal.goal_name}}</h2>
+			     	<p>{{goal.follow_nums}} 人参与</p>
+				<i class="icon ion-ios-arrow-right"></i>
+				<!--<button class="button button-positive button-outline button-small" ng-click="doJoin($event,{{group.group_id}})">-->
+      				<!--加入-->
+    			<!--</button>-->
+		    </a>
+
+		</div>
+		<div class="padding text-center" ng-if="goalsearch.goals.length==0">
+				还没有人创建目标 <span style="color:#0c9;font-size: 24px;">{{goalsearch.search.text}}</span>
+				<br><a href="#/goal/add" class="button button-positive">立即创建</a>
+		</div>
+	</ion-content>
+</ion-view>

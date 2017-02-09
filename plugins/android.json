@@ -1,0 +1,336 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"JPushPlugin\"><param name=\"android-package\" value=\"cn.jpush.phonegap.JPushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.synconset.ImagePicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Wechat\"><param name=\"android-package\" value=\"xu.li.cordova.wechat.Wechat\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"YCQQ\"><param name=\"android-package\" value=\"org.zy.yuancheng.qq.YCQQ\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://openmobile.qq.com/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://qzs.qq.com/open/mobile/login/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://qzonestyle.gtimg.cn/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://pub.idqqimg.com/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://appsupport.qq.com/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://support.qq.com/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://qzs.qq.com/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"http://m.qzone.com/*\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"QQ_APP_ID\" value=\"1104758278\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UmengAnalytics\"><param name=\"android-package\" value=\"com.qiudao.cordova.umeng.UmengAnalytics\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CropPlugin\"><param name=\"android-package\" value=\"com.jeduan.crop.CropPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"weibo\"><param name=\"android-package\" value=\"com.hiliaox.Weibo\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"com.keepdays.weidaka.permission.JPUSH_MESSAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission android:name=\"com.keepdays.weidaka.permission.JPUSH_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"cn.jpush.android.ui.PushActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"><intent-filter><action android:name=\"cn.jpush.android.ui.PushActivity\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"cn.jpush.android.service.DownloadService\"></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"cn.jpush.android.service.PushService\"><intent-filter><action android:name=\"cn.jpush.android.intent.REGISTER\" /><action android:name=\"cn.jpush.android.intent.REPORT\" /><action android:name=\"cn.jpush.android.intent.PushService\" /><action android:name=\"cn.jpush.android.intent.PUSH_TIME\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.android.service.PushReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.USER_PRESENT\" /><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.PACKAGE_ADDED\" /><action android:name=\"android.intent.action.PACKAGE_REMOVED\" /><data android:scheme=\"package\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.phonegap.MyReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter><intent-filter><action android:name=\"cn.jpush.android.intent.REGISTRATION\" /><action android:name=\"cn.jpush.android.intent.UNREGISTRATION\" /><action android:name=\"cn.jpush.android.intent.MESSAGE_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_OPENED\" /><action android:name=\"cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"cn.jpush.android.service.AlarmReceiver\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"JPUSH_CHANNEL\" android:value=\"developer-default\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"JPUSH_APPKEY\" android:value=\"c31d2ddd5cb355159e6d4b85\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@android:style/Theme.Holo.Light\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:exported=\"true\" android:label=\"@string/launcher_name\" android:name=\".wxapi.WXEntryActivity\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><data android:scheme=\"Anything\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:launchMode=\"singleTask\" android:name=\"com.tencent.tauth.AuthActivity\" android:noHistory=\"true\"><intent-filter><action android:name=\"android.intent.action.VIEW\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"android.intent.category.BROWSABLE\" /><data android:scheme=\"tencent1104758278\" /></intent-filter></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"com.tencent.connect.common.AssistActivity\" android:screenOrientation=\"portrait\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"UMENG_APPKEY\" android:value=\"@string/umeng_android_id\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"UMENG_CHANNEL\" android:value=\"{UMENG_CHANNEL_VALUE}\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:name=\"com.soundcloud.android.crop.CropImageActivity\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboardHidden|orientation\" android:exported=\"false\" android:name=\"com.sina.weibo.sdk.component.WeiboSdkBrowser\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"adjustResize\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboardHidden|orientation\" android:exported=\"false\" android:name=\"com.sina.weibo.sdk.register.mobile.MobileRegisterActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"adjustResize\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboardHidden|orientation\" android:exported=\"false\" android:name=\"com.sina.weibo.sdk.register.mobile.SelectCountryActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"adjustResize\"></activity>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboardHidden|orientation\" android:name=\"com.hiliaox.WeiboShareCallback\" android:screenOrientation=\"portrait\"><intent-filter><action android:name=\"com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 2
+                        }
+                    ]
+                }
+            },
+            "res/values/umeng.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"umeng_android_id\">55a1019467e58eaf8f00b413</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "com.qiudao.cordova.umeng-analytics": {
+            "UMENG_IOS_ID": "55a0938067e58e0cb0002c3e",
+            "UMENG_ANDROID_ID": "55a1019467e58eaf8f00b413",
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-crop": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "1104758278",
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-apprate": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "jpush-phonegap-plugin": {
+            "API_KEY": "c31d2ddd5cb355159e6d4b85",
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-weibo": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wx1bdc17e4439c5ffc",
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-app-config": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-xiaomi": {
+            "XIAOMIAPPID": "2882303761517415143",
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.keepdays.weidaka"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<ion-view title="评论">
+	<ion-header-bar class="bar-positive">
+		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/checkin/detail/{{checkinId}}"></a>
+		<div class="title">评论</div>
+	</ion-header-bar>
+	<ion-content class="has-header">
+		<div class="list">
+		    <label class="item-input">
+		        <textarea rows="10" cols="50" placeholder="写下你的评论..." ng-model="comment.content"></textarea>
+		    </label>
+		</div>
+		<div class="padding">
+        	<button class="button button-block button-positive" ng-click="doComment()" ng-disabled="!comment.content.length">提交</button>
+      	</div>
+	</ion-content>
+</ion-view>

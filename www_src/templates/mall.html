@@ -1,0 +1,16 @@
+<ion-view title="能量商城">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <go-back></go-back>
+        <div class="title">能量商城</div>
+    </ion-header-bar>
+    <ion-content>
+        <a class="item item-divider">热门兑换</a>
+        <div class="list card" collection-repeat="good in mall.goods" item-width="50%" item-height="300px">
+            <a class="item item-body" href="#/good/{{good.id}}">
+                <img ng-src="{{good.main_image}}" class="full-image" style="height:auto;">
+                <h2>{{good.title}}</h2>
+                <p><strong>￥{{good.sell_price}}&nbsp;</strong> +<span class="positive">{{good.energy_price}}</span> </p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

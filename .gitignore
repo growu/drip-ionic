@@ -1,0 +1,6 @@
+bower_components/
+node_modules/
+dist/
+doc/
+www_src_bak/
+*.sh

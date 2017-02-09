@@ -1,0 +1,16 @@
+<ion-view title="鼓励">
+	<ion-header-bar class="bar-positive">
+		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/event/{{eventlike.eventId}}"></a>
+		<div class="title">鼓励</div>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list" >
+			<a class="item item-avatar item-icon-right" href="#/user/{{user.user_id}}" ng-repeat="user in eventlike.users">
+	    		<img ng-src="{{user.user.user_avatar}}" fallback-src="img/default.jpg">
+		      	<h2>{{user.user.nickname.length>0?user.user.nickname:'keeper'+user.user.user_id}}</h2>
+				<i class="icon ion-ios-arrow-right"></i>
+			</a>
+		</div>	
+	</ion-content>
+	
+</ion-view>

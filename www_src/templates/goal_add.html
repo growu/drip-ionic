@@ -1,0 +1,70 @@
+<ion-view title="新增目标">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-clear icon ion-ios-arrow-left" href="#/app/home"></a>
+        <div class="title">新增目标</div>
+    </ion-header-bar>
+    <ion-content class="">
+        <form name="goalForm">
+            <div class="list">
+                <div class="item item-divider"></div>
+
+                <label class="item item-input">
+                    <span class="input-label">目标名称</span>
+                    <input type="text" name="name" placeholder="例如：跑步" ng-model="goaladd.goal.name" ng-maxlength="100"
+                           required>
+                    <div class="error"
+                         ng-if="goalForm.name.$touched && goalForm.name.$dirty && goalForm.name.$invalid">
+                        <small class="error" ng-if="goalForm.name.$error.required">
+                            目标名称不能为空
+                        </small>
+                        <small class="error"
+                               ng-if="goalForm.name.$error.maxlength">
+                            目标名称长度过长
+                        </small>
+                    </div>
+                </label>
+                <div class="item item-divider"></div>
+                <label class="item item-input">
+                    <span class="input-label">目标天数</span>
+                    <input type="number" name="days" placeholder="请输入数字，0代表每天" ng-model="goaladd.goal.days"
+                           max="999" ng-pattern="/^[0-9]{1,4}$/" required>
+                    <div class="error"
+                         ng-if="goalForm.days.$touched && goalForm.days.$dirty && goalForm.days.$invalid">
+                        <small class="error" ng-if="goalForm.days.$error.required">
+                            天数不得为空
+                        </small>
+                        <small class="error"
+                               ng-if="goalForm.days.$error.pattern">
+                            天数必须在0-999范围内
+                        </small>
+                    </div>
+                </label>
+                <label class="item" ng-if="goaladd.goal.days>0">
+                    起止日期
+                    <span class="item-note">
+					{{goaladd.getRange()}}
+    			    </span>
+                </label>
+                <label class="item" ng-if="goaladd.goal.days>=0">
+                    消耗能量
+                    <span class="item-note assertive">
+					-{{goaladd.goal.days==0?1000:goaladd.goal.days}}
+    			    </span>
+                </label>
+                <div class="item item-divider"></div>
+
+                <label class="item item-input">
+                    <span class="input-label">目标介绍</span>
+                    <textarea placeholder="用简短的话语描述你的目标(可不填写)" rows="3" ng-model="goaladd.goal.desc"></textarea>
+                </label>
+                <div class="item item-divider"></div>
+
+            </div>
+            <div class="padding">
+                <button class="button button-block button-positive" ng-click="goaladd.doSaveGoal()"
+                        ng-disabled="goalForm.$invalid">保存
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

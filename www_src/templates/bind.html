@@ -1,0 +1,45 @@
+<ion-view title="绑定账户">
+    <ion-header-bar class="bar-positive">
+        <div class="title">绑定账户</div>
+    </ion-header-bar>
+    <ion-content>
+        <form name="bindForm">
+            <div class="list list-inset">
+                <div class="item item-toggle">
+                     是否注册过账户
+                     <label class="toggle toggle-positive">
+                       <input type="checkbox" ng-model="bind.user.is_register">
+                       <div class="track">
+                         <div class="handle"></div>
+                       </div>
+                     </label>
+                </div>
+
+                <label class="item item-input">
+                    <input type="email" name="email" ng-model="bind.user.email" placeholder="邮箱" required>
+                    <div class="error" ng-if="bindForm.email.$touched && bindForm.email.$dirty && bindForm.email.$invalid">
+                        <small class="error" ng-if="bindForm.email.$error.required">
+                            邮箱不能为空
+                        </small>
+                        <small class="error" ng-if="bindForm.email.$error.email">
+                            邮箱格式不正确
+                        </small>
+                    </div>
+                </label>
+               
+                <label class="item item-input">
+                    <input type="password" name="password" ng-model="bind.user.password" placeholder="密码" required>
+                     <div class="error" ng-if="bindForm.password.$touched && bindForm.password.$dirty && bindForm.password.$invalid">
+                        <small class="error" ng-if="bindForm.password.$error.required">
+                            密码不能为空
+                        </small>
+                    </div>
+                </label>               
+            </div>
+            <div class="padding">
+                <button ng-click="bind.doBind()" ng-disabled="bindForm.$invalid" type="submit" class="button button-block button-positive">立即绑定</button>
+                <!--<a href="#/app/home" class="button button-block button-default">跳过该步骤</a>-->
+            </div>   
+        </form>
+    </ion-content>
+</ion-view>

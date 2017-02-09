@@ -1,0 +1,21 @@
+<ion-view>
+    <ion-header-bar class="bar-positive">
+        <go-back></go-back>
+        <div class="title">xx的目标</div>
+    </ion-header-bar>
+    <ion-content>
+        <ti-segmented-control on-select="usergoals.getEvents($index)" style="width: 200px;margin:0 auto;">
+            <ti-segmented-control-button class="button-positive" title="'进行中'"
+                                         selected></ti-segmented-control-button>
+            <ti-segmented-control-button class="button-positive" title="'已过期'"></ti-segmented-control-button>
+        </ti-segmented-control>
+
+        <div class="list">
+            <div class="item item-icon-right" ng-repeat="goal in usergoals.goals">
+                <h2>{{goal.goal_name}}</h2>
+                <p>当前进度:10/20</p>
+                <i class="icon ion-ios-arrow-right"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

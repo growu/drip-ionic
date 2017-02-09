@@ -1,0 +1,31 @@
+<ion-view title="排行榜">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div class="title">
+			{{top.month}} 月打卡排行
+		</div>
+		<!-- <div class="title padding-top">
+			<ti-segmented-control on-select="getTop($index)" style="width: 200px;margin:0 auto;">
+			    <ti-segmented-control-button class="button-positive" title="'目标'"></ti-segmented-control-button>
+			    <ti-segmented-control-button class="button-positive" title="'个人'" selected></ti-segmented-control-button>
+			</ti-segmented-control>
+		</div> -->
+	</ion-header-bar>
+	<ion-content class="has-header">
+
+		<div class="list">
+				 <div class="item item-divider">本月打卡 {{top.count}} 次<span class="pull-right">排名 {{top.rank}}</span></div>
+
+ 			    <a class="item item-avatar item-icon-right" ng-repeat="user in top.users" href="#/user/{{user.user_id}}">
+		        	<img ng-src="{{user.user_avatar}}" fallback-src="img/default.jpg">
+		        	<h2>{{user.nickname.length > 0?user.nickname:'keeper'+user.user_id}}</h2>
+		        	<p>次数：{{user.count}}</p>
+					<i class="icon iconfont energized" style="right:42px;" ng-if="$index==0">&#xe611</i>
+					<i class="icon iconfont balanced" style="right:42px;" ng-if="$index==1">&#xe612</i>
+					<i class="icon iconfont royal" style="right:42px;" ng-if="$index==2">&#xe613</i>
+
+					<span class="badge" ng-class="getClass($index + 1)" ng-if="$index>2">NO.{{$index + 1}}</span>
+		      	</a>
+
+		 </div>
+    </ion-content>
+</ion-view>
