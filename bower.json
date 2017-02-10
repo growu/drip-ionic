@@ -21,6 +21,9 @@
     "ionic": "1.3.2",
     "ionic-timepicker": "~0.4.0",
     "moment": "~2.10.6",
-    "ngstorage": "~0.3.10"
+    "ngstorage": "~0.3.10",
+    "ngCordova": "~0.1.27-alpha",
+    "ti-segmented-control": "~0.0.2",
+    "ionic-date-slider": "*"
   }
 }
