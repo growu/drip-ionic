@@ -1,0 +1,86 @@
+<ion-view>
+    <ion-header-bar ng-class="{'bar-hidden':userhome.position<80}" class="bar-positive">
+        <go-back></go-back>
+        <div class="title">{{userhome.user.nickname}}</div>
+        <a class="button button-icon button-clear ion-ios-more" ng-click="userhome.showMenu($event)"
+           ng-if="!userhome.isSelf"></a>
+    </ion-header-bar>
+    <div ng-hide="userhome.position>80" class="bar bar-subheader bar-positive text-center"
+         style="height:280px;border-top:0;border-bottom:0;padding:0;">
+        <div class="padding-bottom text-center" style="background-color: #00cc99;color:#fff;width:100%;">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <img class="profilepicture2" ng-src="{{userhome.user.user_avatar}}"
+                         fallback-src="img/default.jpg" width="96" height="96">
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col"><a href="#/user/{{userhome.user.user_id}}/follow"><span class="num"
+                                                                                                 style="color:#fff;">{{userhome.user.follow_count}}</span></a><br>关注
+                        </div>
+                        <div class="col"><a href="#/user/{{userhome.user.user_id}}/fans"><span class="num"
+                                                                                               style="color:#fff;">{{userhome.user.fans_count}}</span></a><br>粉丝
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <button class="button button-small button-outline button-light"
+                                    ng-if="!userhome.isSelf&&!userhome.isFollow"
+                                    style="width:96px;" ng-click="userhome.doFollow(userhome.user.user_id)">
+                                <i class="icon ion-person-add"></i> 关注Ta
+                            </button>
+                            <button class="button button-small button-outline button-light"
+                                    ng-if="!userhome.isSelf&&userhome.isFollow"
+                                    style="width:96px;" ng-click="userhome.unFollow(userhome.user.user_id)">
+                                <i class="icon ion-ios-checkmark-empty"></i> 已关注
+                            </button>
+                            <a class="button button-small button-outline button-light" ng-if="userhome.isSelf"
+                               style="width:96px;" href="#/profile">
+                                <i class="icon ion-compose"></i> 编辑资料
+                            </a>
+                        </div>
+                        <!--<div class="col">-->
+                        <!--<button class="button button-small button-outline button-dark"-->
+                        <!--style="">-->
+                        <!--<i class="icon ion-email"></i> 私信-->
+                        <!--</button>-->
+                        <!--</button>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <h3 style="color:#fff;font-size:18px;margin-top:0px;">
+                {{userhome.user.nickname.length>0?userhome.user.nickname:'keeper'+userhome.user.user_id}}
+                <span class="level" ng-if="userhome.user.level>0"><a href="#/user/{{userhome.user.user_id}}/level">{{userhome.level}}</a></span>
+            </h3>
+            <p style="margin-left: 8px; margin-right: 8px;">{{userhome.user.signature}}</p>
+
+        </div>
+
+        <div class="row center" style="background-color:#fff;color:#aaa;position:absolute;bottom:0;left: 0;right: 0;">
+            <div class="col" style="border-right: 1px solid #ccc;"><span
+                    class="num">{{userhome.user.goal_count}}</span><br>目标
+            </div>
+            <div class="col" style="border-right: 1px solid #ccc;"><span
+                    class="num">{{userhome.user.checkin_count}}</span><br>打卡
+            </div>
+            <div class="col"><a href="#/user/{{userhome.user.user_id}}/energy"><span class="num">{{userhome.user.energy_count}}</span></a><br>能量
+            </div>
+        </div>
+
+
+    </div>
+    <ion-content style="background-color:#e5e5e5;padding-top:20px;" on-scroll="userhome.getScrollPosition()"
+                 ng-style="{'top':(userhome.position>80)?'0px':'300px'}">
+        <div class="" style="margin-top:20px;">
+            <div class="item item-divider">动态</div>
+        </div>
+        <event-list events="userhome.events" on-refresh="userhome.doRefresh()"
+                    on-infinite="userhome.loadMore()"></event-list>
+
+    </ion-content>
+</ion-view>
+
+

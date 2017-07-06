@@ -1,0 +1,84 @@
+<ion-view title="编辑目标">
+  	<ion-header-bar class="bar-positive">
+		<a class="button button-clear icon ion-ios-arrow-left" href="#/app/home"></a>
+		<div class="title">编辑目标</div>
+	</ion-header-bar>
+	<ion-content class="">
+	<div class="list">
+		<div class="item item-divider"></div>
+
+		<label class="item item-input">
+			<span class="input-label">目标名称</span>
+			<input type="text" name="name" placeholder="例如：跑步" ng-model="goaledit.goal.goal_name"  ng-maxlength="100" required disabled>
+			<div class="error"
+				 ng-if="goalForm.name.$touched && goalForm.name.$dirty && goalForm.name.$invalid">
+				<small class="error" ng-if="goalForm.name.$error.required">
+					目标名称不能为空
+				</small>
+				<small class="error"
+					   ng-if="goalForm.name.$error.maxlength">
+					目标名称长度过长
+				</small>
+			</div>
+		</label>
+		<div class="item item-divider"></div>
+		<label class="item item-input">
+			<span class="input-label">目标天数</span>
+			<input type="number" name="days" placeholder="请输入数字，0代表每天" ng-model="goaledit.goal.pivot.expect_days"
+				   max="9999" ng-pattern="/^[0-9]{1,4}$/" required>
+			<div class="error"
+				 ng-if="goalForm.days.$touched && goalForm.days.$dirty && goalForm.days.$invalid">
+				<small class="error" ng-if="goalForm.days.$error.required">
+					天数不得为空
+				</small>
+				<small class="error"
+					   ng-if="goalForm.days.$error.pattern">
+					天数必须在0-9999范围内
+				</small>
+			</div>
+		</label>
+		<label class="item" ng-if="goaledit.goal.days>0">
+			起止日期
+			<span class="item-note">
+					{{goaledit.getRange()}}
+    			</span>
+		</label>
+		<div class="item item-divider"></div>
+
+		<label class="item item-input">
+			<span class="input-label">目标介绍</span>
+			<textarea placeholder="用简短的话语描述你的目标(可不填写)" rows="3" ng-model="goaledit.goal.pivot.	goal_desc"></textarea>
+		</label>
+		<div class="item item-divider"></div>
+
+		<!--   <label class="item item-input item-select">
+		    <div class="input-label">
+		      频率
+		    </div>
+		    <select>
+		      <option>每天</option>
+		      <option selected>每周</option>
+		      <option>每月</option>
+		    </select>
+		  </label> -->
+		<!--<div class="item item-divider" style="line-height:30px;">-->
+		  		<!--统计项目(非必需)-->
+		  		<!--<i class="right icon ion-ios-plus" style="font-size:28px;" ng-click="goaledit.itemAdd()"></i>-->
+		<!--</div>-->
+		  <!--<div class="item item-button-right" ng-repeat="item in goaledit.goal.items">-->
+		  		<!--{{item.item_name}}: <strong class="positive num">{{item.item_expect}}</strong> {{item.item_unit}}-->
+		  		<!--<div class="buttons">-->
+                    <!--<button class="button button-clear" ng-click="goaledit.doEditItem(item)">-->
+                        <!--<i class="icon ion-edit" ></i>-->
+                    <!--</button>-->
+                    <!--<button class="button button-clear" ng-click="goaledit.doDelItem(item)">-->
+                        <!--<i class="icon ion-trash-a"></i>-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+		<!--</div>-->
+	<div class="padding">
+		<button class="button button-block button-positive" ng-click="goaledit.doSaveGoal()">保存</button>
+	</div>
+</ion-content>
+</ion-view>

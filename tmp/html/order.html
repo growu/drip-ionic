@@ -1,0 +1,53 @@
+<ion-view title="订单" hide-nav-bar="true">
+	<div class="tabs-top tabs-striped tabs-color-assertive" id="order-tab">
+		    <div class="tabs">
+		      	<a class="tab-item" ng-click="getOrders('all')" ng-class="{'active':currentIndex=='all'}">
+		        全部订单
+		      </a>
+		      <a class="tab-item" ng-click="getOrders(1)" ng-class="{'active':currentIndex==1}">
+		        已支付
+		      </a>
+		      <a class="tab-item" ng-click="getOrders(0)" ng-class="{'active':currentIndex==0}">
+		        未付款
+		      </a>
+		    </div>
+		</div>
+	<ion-content>
+  		<div class="list padding-top has-header">
+  			<div class="item item-divider"
+		        ng-repeat-start="order in orders">
+		        {{order.create_time*1000 | date:"yyyy-MM-dd HH:mm:ss"}}
+		    </div>
+		   	<a class="item item-thumbnail-left" href="#/app/order?orderId={{order.order_id}}">
+  				<img ng-src="{{order.good_image}}">
+			    <h2>{{order.good_title}}</h2>
+			    <p>数量：{{order.order_num}}</p>
+			    <span class="right"><span class="assertive">￥ {{order.tuan_price}}</span>/件</span>
+  			</a>
+  			<div class="item">
+  				<p>共 {{order.order_num}} 件商品，免运费<span class="right">实付：<span class="assertive">￥{{order.order_fee}}</span></span></p>
+  			</div>
+  			<div class="item">
+  				<span class="assertive">
+  					{{order.order_status | status}}
+  					<em ng-if="order.refund_status == 1">(退货申请中)</em>
+  					<em ng-if="order.refund_status == 2">(同意退货)</em>
+  					<em ng-if="order.refund_status == 3">(拒绝退货)</em>
+  					<em ng-if="order.refund_status == 4">(退货成功)</em>
+  					<em ng-if="order.exchange_status == 1">(换货申请中)</em>
+  					<em ng-if="order.exchange_status == 2">(同意换货)</em>
+  					<em ng-if="order.exchange_status == 3">(拒绝换货)</em>
+  					<em ng-if="order.exchange_status == 4">(换货成功)</em>
+  				</span>
+  				<button class="button button-small button-dark right" style="margin-left:10px;" ng-if="order.order_status == 0" ng-click="cancleOrder(order)">取消订单</button>
+		    	<button class="button button-small button-dark right" ng-if="order.order_status == 0" ng-click="payOrder(order.good_id,order.order_type,order.tuan_id)">去支付</button>
+		    	<button class="button button-small button-dark right" style="margin-left:10px;" ng-if="order.order_status == 6 && order.refund_status==0 && order.exchange_status==0" ng-click="openRequestModal(order)">退换货申请</button>
+		    	<button class="button button-small button-dark right" style="margin-left:10px;" ng-if="order.refund_logistics_no == null && (order.refund_status == 2 || order.exchange_status == 2)" ng-click="openLogisticsModal(order)">填写单号</button>
+		    	<button class="button button-small button-dark right" ng-if="order.order_status == 6 || order.order_status == 8" ng-click="finishOrder(order)">确认收货</button>
+  			</div>
+
+		    <div ng-repeat-end></div>
+  			
+  		</div>
+	</ion-content>
+</ion-view>

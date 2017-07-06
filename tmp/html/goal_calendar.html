@@ -1,0 +1,44 @@
+<ion-view title="日历">
+    <ion-header-bar class="bar-dark">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/goal/{{goalcalendar.goalId}}"></a>
+        <div class="title">日历</div>
+        <a class="button button-icon button-clear ion-ios-pulse" href="#/goal/{{goalcalendar.goalId}}/data"></a>
+    </ion-header-bar>
+    <ion-content class="">
+        <!--<div class="padding-top">-->
+            <!--<ti-segmented-control on-select="showChart($index)" style="width: 200px;margin:0 auto;">-->
+                <!--<ti-segmented-control-button class="button-positive" title="'周'" selected></ti-segmented-control-button>-->
+                <!--<ti-segmented-control-button class="button-positive" title="'月'"></ti-segmented-control-button>-->
+                <!--<ti-segmented-control-button class="button-positive" title="'年'"></ti-segmented-control-button>-->
+            <!--</ti-segmented-control>-->
+        <!--</div>-->
+
+        <flex-calendar options="goalcalendar.options" events="goalcalendar.events"></flex-calendar>
+        <div class="list" ng-if="!(goalcalendar.checkin | isEmpty)">
+            <div class="item item-divider">
+                {{goalcalendar.selectedDay}} <span class="right">完成第 <em class="num">{{goalcalendar.checkin.total_days}}</em> 天</span>
+            </div>
+
+            <div class="item item-body">
+                <event-content content="{{goalcalendar.checkin.checkin_content}}"></event-content>
+                <p></p>
+                <img class="full-image" ng-src="{{goalcalendar.resUrl+'images/'+goalcalendar.checkin.attaches[0].attach_path+'/'+goalcalendar.checkin.attaches[0].attach_name}}" ng-if="goalcalendar.checkin.attaches.length>0">
+            </div>
+
+            <div class="item item-icon-left checkin-item" ng-if="goalcalendar.checkin.items.length>0" ng-repeat="item in goalcalendar.checkin.items" style="font-size:14px;background-color: #f8f8f8;">
+                <i class="icon ion-android-checkbox-outline"  style="font-size:16px;"></i>
+                {{item.item_name}}<span class="pull-right"> {{item.item_value}} {{item.item_unit}}</span>
+            </div>
+        </div>
+        <div class="list" ng-if="goalcalendar.checkin | isEmpty">
+            <a class="item">
+                <p>无打卡记录</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
+
+
+
+
+

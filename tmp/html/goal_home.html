@@ -1,0 +1,39 @@
+<ion-view title="{{goalhome.goal.goal_name}}">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-icon button-clear ion-ios-arrow-back" href="#/app/home"></a>
+        <div class="title">{{goalhome.goal.goal_name}}</div>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div class="card text-center padding" style="margin-top: 10px;">
+            <p>创建者:<a href="#/user/{{goalhome.goal.create_user.user_id}}">{{goalhome.goal.create_user.nickname?goalhome.goal.create_user.nickname:'keeper'+goalhome.goal.create_user.user_id}}</a></p>
+            <p><span class="num">{{goalhome.goal.follow_nums}}</span>人参加</p>
+            <p><button class="button button-positive button-block" ng-if="!goalhome.goal.is_follow" ng-click="goalhome.followGoal()">制定目标</button></p>
+            <p><button class="button button-stable button-block" ng-if="goalhome.goal.is_follow">已制定</button></p>
+        </div>
+
+        <ti-segmented-control on-select="goalhome.changeIndex($index)" style="width: 200px;margin:0 auto;">
+			    <ti-segmented-control-button class="button-positive" title="'动态'" selected></ti-segmented-control-button>
+			    <ti-segmented-control-button class="button-positive" title="'排行'"></ti-segmented-control-button>
+        </ti-segmented-control>
+
+        <div class="padding-top">
+            <event-list events="goalhome.events" ng-if="goalhome.index==0"></event-list>
+
+            <div class="list" ng-if="goalhome.index==1">
+                <a class="item item-avatar item-icon-right" ng-repeat="user in goalhome.users" href="#/user/{{user.user_id}}">
+                    <img ng-src="{{user.user_avatar}}" fallback-src="img/default.jpg">
+                    <h2>{{user.nickname.length > 0?user.nickname:'keeper'+user.user_id}}</h2>
+                    <p>天数：{{user.total_days}}</p>
+                    <span class="badge" ng-class="getClass($index + 1)">NO.{{$index + 1}}</span>
+                </a>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>
+
+

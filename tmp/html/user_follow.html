@@ -1,0 +1,33 @@
+<ion-view title="{{userfollow.user.nickname}} 的关注">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/user/{{userfollow.user.user_id}}"></a>
+        <div class="title">{{userfollow.user.nickname}} 的关注</div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="userfollow.doRefresh()">
+        </ion-refresher>
+        <div class="list" >
+            <a class="item item-avatar item-icon-right" href="#/user/{{user.user_id}}" ng-repeat="user in userfollow.users" ng-if="userfollow.users.length>0">
+                <img ng-src="{{user.user_avatar}}" fallback-src="img/default.jpg">
+                <h2>{{user.nickname.length>0?user.nickname:'keeper'+user.user_id}}</h2>
+                <!--<button class="button button-positive button-outline button-small">-->
+                <!--关注-->
+                <!--</button>-->
+                <i class="icon ion-ios-arrow-right"></i>
+
+            </a>
+            <a class="item text-center" ng-if="userfollow.users.length == 0">
+                暂时还没有Ta关注的人
+            </a>
+        </div>
+
+        <ion-infinite-scroll
+                on-infinite="userfollow.loadMore()"
+                distance="1%">
+            显示更多
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view title="通知" hide-nav-bar="true">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/message"></a>
+        <div class="title">通知</div>
+    </ion-header-bar>
+    <ion-content>
+
+        <div class="list" ng-if="messagenotice.messages.length>0">
+
+            <div class="card" ng-repeat="message in messagenotice.messages">
+                <div class="item">
+                    {{message.title}}
+                    <span am-time-ago="{{message.create_time*1000}}" am-preprocess="unix" class="item-note"></span>
+                </div>
+
+                <div class="item item-body">
+                    <p ng-bind-html="message.content">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="list" ng-if="messagenotice.messages.length == 0">
+            <a class="item item-title">
+                <h2>暂时还未收到</h2>
+            </a>
+        </div>
+
+    </ion-content>
+</ion-view>

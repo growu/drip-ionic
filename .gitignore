@@ -4,3 +4,4 @@ dist/
 doc/
 www_src_bak/
 *.sh
+.idea/*

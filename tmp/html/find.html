@@ -1,0 +1,65 @@
+<ion-view title="找回密码">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/login"></a>
+        <div class="title">找回密码</div>
+    </ion-header-bar>
+    <ion-content>
+        <form name="sendForm"  ng-if="!find.isSend">
+            <div class="list list-inset">
+
+                <label class="item item-input">
+                    <input type="email" name="email" ng-model="find.email" placeholder="请输入你的注册邮箱" required>
+                    <div class="error" ng-if="sendForm.email.$touched && sendForm.email.$dirty && sendForm.email.$invalid">
+                        <small class="error" ng-if="sendForm.email.$error.required">
+                            邮箱不能为空
+                        </small>
+                        <small class="error" ng-if="sendForm.email.$error.email">
+                            邮箱格式不正确
+                        </small>
+                    </div>
+                </label>
+            </div>
+
+            <div class="padding">
+                <button ng-click="find.doSend()" ng-disabled="bindForm.$invalid" type="submit" class="button button-block button-positive">获取验证码</button>
+            </div>
+        </form>
+
+        <form name="findForm" ng-if="find.isSend">
+            <div class="padding">
+                验证码已发送至你的邮箱:{{find.email}},十分钟内有效.
+            </div>
+            <div class="list list-inset">
+
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input type="text" name="code" placeholder="请输入验证码" ng-model="find.find.code" required>
+                    </label>
+                    <button class="button button-small" ng-disabled="find.time>0" ng-click="find.doSend()">
+                        {{find.codetime}}
+                    </button>
+                    <div class="error" ng-if="findForm.code.$touched && findForm.code.$dirty ">
+                        <small class="error" ng-if="findForm.code.$error.required">
+                            验证码不能为空
+                        </small>
+                    </div>
+                </div>
+
+                <label class="item item-input">
+                    <input type="password" name="password" ng-model="find.find.password" placeholder="请输入新的密码" required>
+                    <div class="error" ng-if="findForm.password.$touched && findForm.password.$dirty && findForm.password.$invalid">
+                        <small class="error" ng-if="findForm.password.$error.required">
+                            密码不能为空
+                        </small>
+                    </div>
+                </label>
+
+            </div>
+
+            <div class="padding">
+                <button ng-click="find.doFind()" ng-disabled="findForm.$invalid" type="submit" class="button button-block button-positive">重置密码</button>
+            </div>
+        </form>
+
+    </ion-content>
+</ion-view>

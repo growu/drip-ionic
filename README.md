@@ -1,7 +1,7 @@
 
 # 项目说明
 
-微打卡Android,IOS的客户端ionic源码
+本项目是「水滴打卡」App 基于Ionic编写的Android和Ios客户端代码
 
 # 功能说明
 
@@ -45,6 +45,7 @@
 
 ## step3:编译工程
 
+`ionic serve`
 `ionic build android`
 `ionic build ios --device`
 
@@ -54,27 +55,24 @@
 
 
 
-# About
+# 关于项目
 
-微打卡是一款基于目标管理和习惯养成的打卡工具，并充分融入了社交元素。
-
-现已对用户开放使用：
+「水滴打卡」是一款基于目标管理和习惯养成的打卡工具，并充分融入了社交元素。现已上线
 
 **IOS**：[https://itunes.apple.com/us/app/wei-da-ka-zhuan-zhu-yu-mu/id1017364870?l=zh&ls=1&mt=8](https://itunes.apple.com/us/app/wei-da-ka-zhuan-zhu-yu-mu/id1017364870?l=zh&ls=1&mt=8)
 
-**Android**: 在应用宝，360，豌豆荚，小米商店搜索**微打卡**即可。
+**Android**: 在应用宝，360，豌豆荚，小米商店搜索**水滴打卡**即可。
+
+
+> 代码和设计方面也存在很多的不足之处，我们也希望借助社区的力量，来不断地完善此款app。如果你对我们的项目感兴趣，也可以联系格吾君的微信号（growu001）,加入我们的线上开发团队中。
 
 
 
-> 代码和设计方面也存在很多的不足之处，我们也希望借助社区的力量，来不断地完善此款app。如果你对我们的项目感兴趣，也可以联系刚哥的微信号（foxmee）,来加入我们的线上开发团队中。
+# 关注我们：
 
+微信公众号:格吾社区
 
-
-如果想了解更多方面，可以通过以下方式关注我们：
-
-微信公众号:keepdays
-
-新浪微博：[http://weibo.com/keepdays/](http://weibo.com/keepdays/)
+新浪微博：[http://weibo.com/growu/](http://weibo.com/growu)
 
 
 

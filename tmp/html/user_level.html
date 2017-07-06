@@ -1,0 +1,198 @@
+<ion-view title="等级">
+    <div class="bar bar-header bar-positive">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/app/my"></a>
+        <div class="title">等级</div>
+    </div>
+    <div class="bar bar-positive bar-subheader" style="height:124px;">
+        <div class="padding text-center" style="width:100%;">
+            <h2 class="light">{{userlevel.level}}</h2>
+
+            <div class="row center" style="color:#ddd;">
+                <div class="col"><span
+                        class="num" style="color:#fff;">{{userlevel.count}}</span><br>打卡次数</div>
+                <div class="col"><span class="num" style="color:#fff;">{{userlevel.rank}}</span><br>排名</div>
+            </div>
+        </div>
+    </div>
+    <ion-content class="has-header has-subheader" style="top:188px;">
+
+        <div class="list">
+            <div class="item item-button-right">
+                <h2>卡渣</h2>
+                <p>{{userlevel.levels[1]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 5</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡弱</h2>
+                <p>{{userlevel.levels[2]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 10</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡民</h2>
+                <p>{{userlevel.levels[3]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 20</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡霸</h2>
+                <p>{{userlevel.levels[4]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 50</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡尊</h2>
+                <p>{{userlevel.levels[5]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 100</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡圣</h2>
+                <p>{{userlevel.levels[6]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 200</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡神</h2>
+                <p>{{userlevel.levels[7]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 500</button>
+            </div>
+
+            <div class="item item-button-right">
+                <h2>卡帝</h2>
+                <p>{{userlevel.levels[8]}} 人在此等级</p>
+                <button class="button button-clear button-large button-positive">≥ 1000</button>
+            </div>
+        </div>
+        <!--<ul class="timeline">-->
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡渣</h4>-->
+                    <!--<p>初来咋到,毫无表现。</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数>=10-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡弱</h4>-->
+                    <!--<p>暂露头角,但还是比较弱</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 100+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡民</h4>-->
+                    <!--<p>普普通通的打卡群众。。</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 200+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡霸</h4>-->
+                    <!--<p>初具实力,称霸一方。。。</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 500+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡尊</h4>-->
+                    <!--<p>万人仰慕,九五至尊</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 2000+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡圣</h4>-->
+                    <!--<p>圣光</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 5000+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡仙</h4>-->
+                    <!--<p>超凡脱俗,得道成仙</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 5,000+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡神</h4>-->
+                    <!--<p>神一样的存在</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 10,000+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+            <!--<li>-->
+                <!--<div class="timeline-thumb timeline-icon bg-color-gray">-->
+                    <!--<i class="ion-flash"></i>-->
+                <!--</div>-->
+                <!--<div class="timeline-item">-->
+                    <!--<h4>卡帝</h4>-->
+                    <!--<p>至高境界</p>-->
+                    <!--<div class="timeline-stats">-->
+                        <!--完成条件:打卡次数 100,000+-->
+                        <!--<span class="pos-absolute-right"><i class="ion-ios-clock"></i> 20123 人在此等级</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+
+        <!--</ul>-->
+
+    </ion-content>
+</ion-view>

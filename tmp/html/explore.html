@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-header-bar align-title="center" class="bar-positive">
+        <!--<div class="title padding-top">-->
+            <!--<ti-segmented-control on-select="explore.getEvents($index)" style="width: 200px;margin:0 auto;">-->
+                <!--<ti-segmented-control-button class="button-positive" title="'最新'"-->
+                                             <!--selected></ti-segmented-control-button>-->
+                <!--<ti-segmented-control-button class="button-positive" title="'精选'"></ti-segmented-control-button>-->
+                <!--<ti-segmented-control-button class="button-positive" title="'关注'"></ti-segmented-control-button>-->
+            <!--</ti-segmented-control>-->
+        <!--</div>-->
+        <div class="title">
+            <ion-tabs class="tabs-top tabs-positive tabs-striped tabs-color-light tabs-header" style="top:0px!important;">
+
+                <ion-tab title="精选"  on-select="explore.onTabSelected('hot')">
+                    <!--<event-list events="explore.events" on-refresh="explore.doRefresh()"-->
+                                <!--on-infinite="explore.loadMore()"></event-list>-->
+                </ion-tab>
+
+                <ion-tab title="全部"  on-select="explore.onTabSelected('new')">
+                    <!--<event-list events="explore.events" on-refresh="explore.doRefresh()"-->
+                                <!--on-infinite="explore.loadMore()"></event-list>-->
+                </ion-tab>
+
+                <ion-tab title="关注"  on-select="explore.onTabSelected('follow')">
+                    <!--<event-list events="explore.events" on-refresh="explore.doRefresh()"-->
+                                <!--on-infinite="explore.loadMore()"></event-list>-->
+                </ion-tab>
+            </ion-tabs>
+        </div>
+        <!--<a class="button button-icon button-clear ion-ios-camera-outline" href="#/event/create"></a>-->
+    </ion-header-bar>
+
+    <ion-content class="" style="background-color:#e5e5e5;padding-top: 20px;">
+        <event-list events="explore.events" on-refresh="explore.doRefresh()"
+                    on-infinite="explore.loadMore()"></event-list>
+    </ion-content>
+</ion-view>

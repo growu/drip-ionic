@@ -1,0 +1,23 @@
+<ion-view title="地址">
+	<ion-content>
+		<ion-list>
+			<ion-item class="item" ng-repeat="address in addresses" ng-click="setDefaultAddress(address.address_id,$index)">
+				<div class="item-checkbox">
+				    <label class="checkbox">
+				       <input type="checkbox" ng-checked="address.is_default == 1">
+				     </label>
+			     	<span class="input-label">{{address.address_province}}{{address.address_city}}{{address.address_area}}{{address.address_detail}}<br>{{address.address_recipient}}({{address.address_phone}})</span>
+			     </div>
+			     <ion-option-button class="button-positive" ng-click="editAddress(address.address_id)">编辑</ion-option-button>
+			     <ion-option-button class="button-assertive" ng-click="deleteAddress(address.address_id,$index)">删除</ion-option-button>
+			</ion-item>
+		</ion-list>
+		<div class="list">
+			<a class="item item-divider"></a>
+			<a class="item item-icon-right" ng-click="goAddressAdd()">
+				<i class="icon ion-ios-plus-outline"></i>
+				新增地址
+			</a>
+		</div>
+	</ion-content>
+</ion-view>

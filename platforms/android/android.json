@@ -159,7 +159,7 @@
                             "count": 2
                         },
                         {
-                            "xml": "<uses-permission android:name=\"com.keepdays.weidaka.permission.JPUSH_MESSAGE\" />",
+                            "xml": "<uses-permission android:name=\"me.growu.drip.permission.JPUSH_MESSAGE\" />",
                             "count": 1
                         },
                         {
@@ -191,7 +191,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<permission android:name=\"com.keepdays.weidaka.permission.JPUSH_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "xml": "<permission android:name=\"me.growu.drip.permission.JPUSH_MESSAGE\" android:protectionLevel=\"signature\" />",
                             "count": 1
                         }
                     ],
@@ -221,7 +221,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"cn.jpush.android.ui.PushActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"><intent-filter><action android:name=\"cn.jpush.android.ui.PushActivity\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter></activity>",
+                            "xml": "<activity android:configChanges=\"orientation|keyboardHidden\" android:name=\"cn.jpush.android.ui.PushActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\"><intent-filter><action android:name=\"cn.jpush.android.ui.PushActivity\" /><category android:name=\"android.intent.category.DEFAULT\" /><category android:name=\"me.growu.drip\" /></intent-filter></activity>",
                             "count": 1
                         },
                         {
@@ -237,15 +237,15 @@
                             "count": 1
                         },
                         {
-                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.android.service.PushReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.USER_PRESENT\" /><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.PACKAGE_ADDED\" /><action android:name=\"android.intent.action.PACKAGE_REMOVED\" /></intent-filter></receiver>",
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.android.service.PushReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"me.growu.drip\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.USER_PRESENT\" /><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter><intent-filter><action android:name=\"android.intent.action.PACKAGE_ADDED\" /><action android:name=\"android.intent.action.PACKAGE_REMOVED\" /></intent-filter></receiver>",
                             "count": 1
                         },
                         {
-                            "xml": "<service android:enabled=\"true\" android:exported=\"true\" android:name=\"cn.jpush.android.service.DaemonService\"><intent-filter><action android:name=\"cn.jpush.android.intent.DaemonService\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter></service>",
+                            "xml": "<service android:enabled=\"true\" android:exported=\"true\" android:name=\"cn.jpush.android.service.DaemonService\"><intent-filter><action android:name=\"cn.jpush.android.intent.DaemonService\" /><category android:name=\"me.growu.drip\" /></intent-filter></service>",
                             "count": 1
                         },
                         {
-                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.phonegap.MyReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter><intent-filter><action android:name=\"cn.jpush.android.intent.REGISTRATION\" /><action android:name=\"cn.jpush.android.intent.UNREGISTRATION\" /><action android:name=\"cn.jpush.android.intent.MESSAGE_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_OPENED\" /><action android:name=\"cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK\" /><category android:name=\"com.keepdays.weidaka\" /></intent-filter></receiver>",
+                            "xml": "<receiver android:enabled=\"true\" android:name=\"cn.jpush.phonegap.MyReceiver\"><intent-filter android:priority=\"1000\"><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY\" /><category android:name=\"me.growu.drip\" /></intent-filter><intent-filter><action android:name=\"cn.jpush.android.intent.REGISTRATION\" /><action android:name=\"cn.jpush.android.intent.UNREGISTRATION\" /><action android:name=\"cn.jpush.android.intent.MESSAGE_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_RECEIVED\" /><action android:name=\"cn.jpush.android.intent.NOTIFICATION_OPENED\" /><action android:name=\"cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK\" /><category android:name=\"me.growu.drip\" /></intent-filter></receiver>",
                             "count": 1
                         },
                         {
@@ -335,76 +335,76 @@
     },
     "installed_plugins": {
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "com.synconset.imagepicker": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "com.qiudao.cordova.umeng-analytics": {
             "UMENG_IOS_ID": "55a0938067e58e0cb0002c3e",
             "UMENG_ANDROID_ID": "55a1019467e58eaf8f00b413",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-crop": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-qqsdk": {
             "QQ_APP_ID": "1104758278",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-apprate": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "jpush-phonegap-plugin": {
             "API_KEY": "c31d2ddd5cb355159e6d4b85",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-weibo": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-wechat": {
             "WECHATAPPID": "wx1bdc17e4439c5ffc",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-app-config": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-xiaomi": {
             "XIAOMIAPPID": "2882303761517415143",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         }
     },
     "dependent_plugins": {},

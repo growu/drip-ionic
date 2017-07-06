@@ -1,0 +1,25 @@
+<ion-modal-view title="新增项目">
+	<ion-header-bar class="bar-positive">
+		<a class="button button-clear icon ion-android-close" ng-click="itemadd.closeModal()"></a>
+		<div class="title">新增项目</div>
+	</ion-header-bar>
+<ion-content class="">
+	<div class="list">
+		<label class="item item-input">
+		    <span class="input-label">名称</span>
+		    <input type="text" placeholder="例如：时间" ng-model="itemadd.item.item_name">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">单位</span>
+		    <input type="text" placeholder="例如：分钟" ng-model="itemadd.item.item_unit">
+		  </label>
+		   <label class="item item-input">
+		    <span class="input-label">预期</span>
+		    <input type="text" placeholder="初始设定" ng-model="itemadd.item.item_expect">
+		  </label>
+	</div>
+	<div class="padding">
+		<button class="button button-block button-positive" ng-click="itemadd.doSaveItem()">添加</button>
+	</div>
+</ion-content>
+</ion-modal-view>

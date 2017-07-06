@@ -1,0 +1,40 @@
+<ion-view title="日志">
+ 	<ion-header-bar class="bar-positive">
+ 		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/app/home"></a>
+		<div class="title">日志</div>
+	</ion-header-bar>
+	<ion-content class="padding">
+		<div class="responsive-calendar">
+	        <div class="controls">
+	            <a class="pull-left" data-go="prev"><div class="btn btn-icon"><i class="ion-ios-arrow-back positive"></i></div></a>
+	            <h4><span data-head-year></span> <span data-head-month></span></h4>
+	            <a class="pull-right" data-go="next"><div class="btn btn-icon"><i class="ion-ios-arrow-forward positive"></i></div></a>
+	        </div><hr/>
+	        <div class="day-headers">
+	          <div class="day header">一</div>
+	          <div class="day header">二</div>
+	          <div class="day header">三</div>
+	          <div class="day header">四</div>
+	          <div class="day header">五</div>
+	          <div class="day header">六</div>
+	          <div class="day header">日</div>
+	        </div>
+	        <div class="days" data-group="days">
+	          
+	        </div>
+	  </div>
+
+		<!-- <div class="timeline">
+
+	    	<h2 ng-repeat-start="event in events">Day {{event.checkin.total_days}}</h2>
+	    	<ul ng-repeat-end>
+		      <li>
+		        <p>{{event.checkin.checkin_content}}</p>
+		        <time>{{event.checkin.checkin_day}}</time>
+		        <a class="right" style="float:right;" href="#/checkin/detail/{{event.checkin.checkin_id}}">详情>></a>
+		      </li>
+		    </ul>
+	    
+	    </div> -->
+	</ion-content>
+</ion-view>

@@ -1,0 +1,88 @@
+<ion-view title="动态详情">
+	<ion-header-bar class="bar-positive">
+		<go-back></go-back>
+		<div class="title">动态详情</div>
+	</ion-header-bar>
+	<ion-content style="background-color:#e5e5e5;">
+		<div class="list">
+		  <div class="item item-avatar item-button-right">
+		    <img ng-src="{{eventinfo.event.user.user_avatar}}" fallback-src="img/default.jpg" go-state="{state:'userhome',params:{userId:eventinfo.event.user_id}}">
+			  <h2 go-state="{state:'userhome',params:{userId:eventinfo.event.user_id}}">{{eventinfo.event.user.nickname.length>0?eventinfo.event.user.nickname:'keeper'+eventinfo.event.user_id}}</h2>
+		    <p ng-if="eventinfo.event.type == 'USER_CHECKIN'"><span class="">#{{eventinfo.event.goal.goal_name}}#</span><span class="positive" style="font-size:2em;">{{eventinfo.event.checkin.total_days}}</span>天</p>
+		    <button class="button button-small button-clear" ng-if="eventinfo.event.type == 'USER_CHECKIN'" style="font-size: 14px;">
+	      		<span am-time-ago="{{eventinfo.event.create_time*1000}}" am-preprocess="unix"></span>
+	    	</button>
+		  </div>
+
+		  <div class="item item-body" ng-if="eventinfo.event.checkin.items.length>0||eventinfo.event.checkin.checkin_content">
+				<event-content content="{{eventinfo.event.checkin.checkin_content}}"></event-content>
+				<p></p>
+			  	<img class="full-image" ng-src="{{eventinfo.resUrl+'images/'+eventinfo.event.checkin.attaches[0].attach_path+'/'+eventinfo.event.checkin.attaches[0].attach_name}}" ng-if="eventinfo.event.checkin.attaches.length>0">
+		  </div>
+
+			<div class="item item-icon-left checkin-item" ng-if="eventinfo.event.checkin.items.length>0" ng-repeat="item in eventinfo.event.checkin.items" style="font-size:14px;background-color: #f8f8f8;">
+				<i class="icon ion-android-checkbox-outline"  style="font-size:16px;"></i>
+				{{item.item_name}}<span class="pull-right"> {{item.item_value}} {{item.item_unit}}</span>
+			</div>
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item" href="javascript:void(0);" ng-click="eventinfo.doLike(eventinfo.event)">
+					<i class="icon"
+					   ng-class="{'assertive':eventinfo.event.is_like,'ion-ios-heart-outline':!eventinfo.event.is_like,'ion-ios-heart':eventinfo.event.is_like}"></i>
+					{{eventinfo.event.like_count}}
+				</a>
+				<a class="tab-item">
+					<i class="icon ion-ios-chatbubble-outline"></i>
+					{{eventinfo.event.comment_count}}
+				</a>
+				<a class="tab-item" ng-click="eventinfo.showMore(event.event_id)">
+					<i class="icon ion-ios-more-outline"></i>
+				</a>
+			</div>
+		 </div>
+
+		 <div class="list">
+			<a class="item item-icon-right like-item" href="#/event
+			/{{eventinfo.event.event_id}}/like">
+				<label>
+				{{eventinfo.event.like_count}} 人鼓励
+				</label>
+				<!--<div class="avatars">-->
+				<img ng-src="{{like.user.user_avatar}}" fallback-src="img/default.jpg" ng-repeat="like in eventinfo.event.likes">
+				<i class="icon iconfont" ng-if="eventinfo.event.likes.length>=6">&#xe60e;</i>
+
+				<!--</div>-->
+			</a>
+		</div>
+
+		 <div class="list">
+		 	 <div class="item item-divider">
+			    全部评论 {{eventinfo.event.comment_count}}
+			  </div>
+		    <div class="item item-avatar comment-item" ng-repeat="comment in eventinfo.event.comments" ng-click="eventinfo.showCommentMenu(comment,$event)">
+				<img ng-src="{{comment.user.user_avatar}}" fallback-src="img/default.jpg" go-state="{state:'userhome',params:{userId:comment.user_id}}">
+				<span class="item-note">
+					<i class="icon ion-ios-undo-outline" ng-click="eventinfo.doReply(comment,$event)"></i>
+					<i class="icon ion-thumbsup" ng-click="eventinfo.doLike(comment,$event)"></i>
+					<em ng-if="comment.like_count>0">{{comment.like_count}}</em>
+				</span>
+				<h2 go-state="{state:'userhome',params:{userId:comment.user_id}}">{{comment.user.nickname.length>0?comment.user.nickname:'keeper'+comment.user_id}}</h2>
+				<p am-time-ago="{{comment.create_time*1000}}" am-preprocess="unix" style="font-size:12px;color:#b2b2b2;"></p>
+				<p ng-if="comment.parent_id>0" class="comment-quota"><span class="positive">{{comment.parent.user.nickname}}</span>: {{comment.parent.content}}</p>
+				<p>{{comment.content}}</p>
+		    </div>
+		    <div class="item" ng-if="eventinfo.event.comments.length == 0">
+		    	暂无评论
+		    </div>
+		</div>
+		
+	</ion-content>
+
+	<ion-footer-bar keyboard-attach class="bar-light item-input-inset footer-item-input-insert">
+         <label class="item-input-wrapper">
+            <input type="search" placeholder="说点什么吧"  maxlength="500" ng-model="eventinfo.comment.content" id="reply-input" ng-blur="eventinfo.clearReply()">
+        </label>
+        <button class="button button-clear" ng-click="eventinfo.doComment()">
+            发布
+        </button>
+    </ion-footer-bar>
+</ion-view>

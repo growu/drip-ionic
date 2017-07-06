@@ -1,0 +1,69 @@
+<ion-view title="主页">
+ 	<ion-header-bar class="bar-positive">
+ 		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/goal/{{goalId}}"></a>
+		<div class="title">动态</div>
+	</ion-header-bar>
+<ion-content>
+	<ion-refresher
+	    pulling-text="下拉刷新..."
+	    on-refresh="doRefresh()">
+	</ion-refresher>
+
+	<div class="list card" ng-if="!events.length">
+      <div class="row">
+        <div class="col"><center>暂时还没有动态</center></div>
+      </div>
+    </div>
+
+	<div class="list card" ng-repeat="event in events" ng-if="events.length>0">
+	  <a class="item item-avatar item-button-right" href="#/user/{{event.user_id}}">
+	    <img ng-src="{{event.user_avatar}}" fallback-src="img/default.jpg">
+	    <h2>{{event.nickname.length > 0?event.nickname:'keeper'+event.user_id}}</h2>
+	    <p><span am-time-ago="{{event.create_time*1000}}" am-preprocess="unix"></span></p>
+	    <button class="button button-positive button-outline" ng-if="event.event_type=='USER_CHECKIN'">
+      		第{{event.checkin.total_days}}天
+    	</button>
+	  </a>
+
+	  <div class="item item-body" ng-if="event.event_type=='USER_CHECKIN'">
+	  	<a href="#/checkin/detail/{{event.checkin.checkin_id}}">
+	     	<p>
+	     	{{event.checkin.checkin_content}}
+	     	</p>
+	     	<blockquote ng-if="event.checkin.checkin_remark" ng-bind-html="event.checkin.checkin_remark | parseUrl">		
+     		</blockquote>
+	   	</a>
+
+	   	 <p ng-if="event.checkin.tags.length>0" class="padding-top">
+      		<a href="#/tag/{{tag.tag_id}}" class="positive tag" ng-repeat="tag in event.checkin.tags">#{{tag.tag_name}}#</a>
+    	</p>
+	  </div>
+
+	  <div class="item item-body" ng-if="event.event_type !='USER_CHECKIN'">
+	    <p>
+	     	{{event.event_content}}
+	    </p>
+	  </div>
+
+	  <div class="item tabs tabs-secondary tabs-icon-left" ng-if="event.event_type=='USER_CHECKIN'">
+	    <a class="tab-item"  href="javascript:void(0);" ng-click="doLike(event)">
+	      <i class="icon" ng-class="{'assertive':event.is_like,'ion-ios-heart-outline':!event.is_like,'ion-ios-heart':event.is_like}"></i>
+	      {{event.checkin.like_num}}
+	    </a>
+	    <a class="tab-item" href="#/checkin/detail/{{event.checkin.checkin_id}}">
+	      <i class="icon ion-ios-chatbubble-outline"></i>
+	      {{event.checkin.comment_num}}
+	    </a>
+	    <a class="tab-item" ng-click="checkinMore(event.checkin.checkin_id)">
+	      <i class="icon ion-ios-more-outline"></i>
+	    </a>
+	  </div>
+	</div>
+
+	 <ion-infinite-scroll
+		    on-infinite="loadMore()"
+		    distance="1%">
+		    显示更多
+	</ion-infinite-scroll>
+</ion-content>
+</ion-view>

@@ -1,0 +1,67 @@
+<ion-view title="商品详情">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <go-back></go-back>
+        <div class="title">商品详情</div>
+    </ion-header-bar>
+    <ion-content>
+        <!--<ion-slide-box does-continue="true" auto-play="true" slide-interval="4000">-->
+            <!--<ion-slide >-->
+                <!--<div class="box">-->
+                    <!--<img class="full-image" ng-src="{{goodview.good.main_image}}" style="height:auto;min-height:200px;">-->
+                <!--</div>-->
+            <!--</ion-slide>-->
+        <!--</ion-slide-box>-->
+        <div class="row">
+            <img class="full-image" ng-src="{{goodview.good.main_image}}" style="height:auto;min-height:200px;">
+        </div>
+
+        <div class="list">
+            <div class="item">
+                原价
+                <span class="item-note">
+                    <del>{{goodview.good.original_price}}</del>
+                </span>
+            </div>
+            <div class="item">
+                现价
+                <span class="item-note">
+                    {{goodview.good.sell_price}}
+                </span>
+            </div>
+            <div class="item">
+                消耗能量币
+                <span class="item-note">
+                    {{goodview.good.energy_price}}
+                </span>
+            </div>
+            <div class="item">
+                邮费
+                <span class="item-note">
+                    {{goodview.good.postage}}
+                </span>
+            </div>
+            <div class="item">
+                库存数量
+                <span class="item-note">
+                    {{goodview.good.stock_count}}
+                </span>
+            </div>
+            <div class="item">
+                兑换人数
+                <span class="item-note">
+                    {{goodview.good.sell_count}}
+                </span>
+            </div>
+        </div>
+
+        <div class="item item-divider"></div>
+
+        <div class="row" ng-bind-html="goodview.good.content">
+
+        </div>
+
+    </ion-content>
+    <div class="bar bar-footer bar-stable" style="height:64px;">
+        <button class="button button-block button-positive">立即兑换</button>
+    </div>
+</ion-view>

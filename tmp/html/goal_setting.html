@@ -1,0 +1,67 @@
+<ion-view title="设置">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-clear icon ion-ios-arrow-left" href="#/goal/{{goalsetting.goalId}}"></a>
+        <div class="title">设置</div>
+    </ion-header-bar>
+    <ion-content class="">
+        <ul class="list">
+
+            <div class="item item-divider" style="line-height:30px;">
+                统计项目
+                <i class="right icon ion-ios-plus" style="font-size:28px;" ng-click="goalsetting.itemAdd()"></i>
+            </div>
+
+            <div class="item item-button-right" ng-repeat="item in goalsetting.setting.items">
+                {{item.item_name}}: <strong class="positive num">{{item.item_expect}}</strong> {{item.item_unit}}
+                <div class="buttons">
+                    <button class="button button-clear" ng-click="goalsetting.doEditItem(item)">
+                        <i class="icon ion-edit"></i>
+                    </button>
+                    <button class="button button-clear" ng-click="goalsetting.doDelItem(item)">
+                        <i class="icon ion-trash-a"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="item item-divider"></div>
+            <li class="item item-toggle">
+                是否公开
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-checked="goalsetting.setting.is_public==1"
+                           ng-model="goalsetting.setting.is_public">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+
+            <div class="item item-divider"></div>
+            <li class="item item-toggle">
+                开启提醒
+                <label class="toggle toggle-positive">
+                    <input type="checkbox" ng-model="goalsetting.setting.is_push">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </li>
+            <ionic-timepicker input-obj="goalsetting.timePickerObject" ng-if="goalsetting.setting.is_push==1">
+
+                <li class="item item-icon-right">
+                    提醒时间
+                    <span class="pull-right">{{goalsetting.setting.remind_time?goalsetting.setting.remind_time:'无'}}</span>
+                    <i class="icon ion-ios-arrow-right"></i>
+                </li>
+            </ionic-timepicker>
+
+            <div class="item item-divider"></div>
+
+        </ul>
+        <div class="padding">
+            <button class="button button-block button-positive" ng-click="goalsetting.doSaveSetting()">保存设置</button>
+
+            <button class="button button-block button-outline button-assertive" ng-click="goalsetting.delGoal()">删除项目
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

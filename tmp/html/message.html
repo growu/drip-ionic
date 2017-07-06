@@ -1,0 +1,45 @@
+<ion-view title="消息">
+		<ion-header-bar class="bar-positive">
+			<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/app/home"></a>
+			<div class="title">消息</div>
+		</ion-header-bar>
+	<ion-content>
+		<div class="list" id="message-group">
+		  <a class="item item-icon-left item-icon-right" href="#/message/comment">
+		    <i class="icon ion-chatbox-working"></i>
+		    评论
+		    <span class="badge badge-assertive" ng-if="message.count.comment_count>0">{{message.count.comment_count}}</span>
+		    <i class="icon ion-ios-arrow-right"></i>
+		  </a>
+
+		  <a class="item item-icon-left item-icon-right" href="#/message/at">
+		    <i class="icon ion-at"></i>
+		    @
+		   <span class="badge badge-assertive" ng-if="message.count.at_count>0">{{message.count.at_count}}</span>
+		    <i class="icon ion-ios-arrow-right"></i>
+		  </a>
+
+		  <a class="item item-icon-left item-icon-right" href="#/message/like">
+		    <i class="icon ion-ios-heart"></i>
+		    鼓励和赞
+		    <span class="badge badge-assertive" ng-if="message.count.like_count>0">{{message.count.like_count}}</span>
+		    <i class="icon ion-ios-arrow-right"></i>
+		  </a>
+
+		  <a class="item item-icon-left item-icon-right" href="#/message/fan">
+		    <i class="icon ion-ios-person"></i>
+		    粉丝
+		    <span class="badge badge-assertive" ng-if="message.count.fan_count>0">{{message.count.fan_count}}</span>
+		    <i class="icon ion-ios-arrow-right"></i>
+		  </a>
+
+		   <a class="item item-icon-left item-icon-right" href="#/message/notice	">
+		    <i class="icon ion-ios-bell"></i>
+		    通知
+		    <span class="badge badge-assertive" ng-if="message.count.notice_count>0">{{message.count.notice_count}}</span>
+		    <i class="icon ion-ios-arrow-right"></i>
+		  </a>
+
+		</div>
+	</ion-content>
+</ion-view>

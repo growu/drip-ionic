@@ -1,0 +1,43 @@
+<ion-view title="能量明细">
+    <div class="bar bar-header bar-positive">
+        <a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#app/my"></a>
+        <div class="title">能量明细</div>
+    </div>
+    <div class="bar bar-positive bar-subheader" style="height:104px;">
+        <div class="padding text-center" style="width:100%;">
+            <h2 class="light">{{userenergy.user.energy_count}}</h2>
+
+            <div class="row">
+                <div class="col">
+                    <a href="#/mall" class="light">
+                        <i class="icon ion-ios-briefcase-outline"></i>
+                        能量商城
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#/energy/help" class="light">
+                        <i class="icon ion-ios-paper-outline"></i>
+                        规则说明
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ion-content class="hasheader has-subheader" style="top:148px;">
+
+        <div class="list">
+            <li class="item" ng-repeat="log in userenergy.logs">
+                <h3>{{log.name2}}</h3>
+                <p>{{log.create_time*1000 |date:"yyyy-MM-dd" }}</p>
+                <span class="badge" ng-class="{ 'positive':log.change>0,'assertive':log.change<0}">{{log.change>0?'+'+log.change:log.change}}</span>
+            </li>
+
+        </div>
+        <!--<ion-infinite-scroll-->
+                <!--ng-if="canScroll"-->
+                <!--on-infinite="loadMore()"-->
+                <!--distance="1%">-->
+            <!--显示更多-->
+        <!--</ion-infinite-scroll>-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view title="我">
+	 <ion-header-bar class="bar-positive" align-title="center">
+        <div class="title">我</div>
+    </ion-header-bar>
+<ion-content>
+	<div class="list">
+      	<a class="item item-thumbnail-left item-icon-right" href="#/user/{{my.user.user_id}}">
+        	<img ng-src="{{my.user.user_avatar}}" class="avatar">
+        	<h2>{{my.user.nickname.length>0?my.user.nickname:'keeper'+my.user.user_id}}</h2>
+        	<button class="button button-clear button-small icon-left ion-compose" ui-sref="profile">编辑资料</button>
+        	<i class="icon ion-ios-arrow-right"></i>
+       	</a>
+	  	
+	 	<!--<a class="item item-divider"></a>-->
+		<!--<a class="item item-icon-left" href="#/user/{{my.user.user_id}}/level">-->
+		 	<!--<i class="icon ion-arrow-graph-up-right"></i>-->
+	    	<!--打卡等级-->
+	  	<!--</a>-->
+
+	 	<a class="item item-divider"></a>
+	  	<a class="item item-icon-left" href="#/message">
+		  	<i class="icon ion-ios-email"></i>
+		    消息
+		    <span class="badge badge-assertive" ng-if="my.new_messages_count > 0">{{my.new_messages_count}}</span>
+	  	</a>
+		<a class="item item-divider"></a>
+	  	<a class="item item-icon-left" href="#/setting">
+	  	  	<i class="icon ion-gear-b"></i>
+	    	设置
+	  	</a>
+	</div>
+	<div class="padding" >
+	  	  <button class="button button-outline button-block button-assertive" ng-click="my.doLogout()">退出登录</button>
+	</div>
+</ion-content>
+</ion-view>

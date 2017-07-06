@@ -1,0 +1,23 @@
+<ion-view title="意见反馈">
+	<ion-header-bar class="bar-positive">
+		<a class="button button-icon icon ion-ios-arrow-left butoon-clear" href="#/setting"></a>
+		<div class="title">反馈</div>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list">
+		    <label class="item-input">
+		        <textarea rows="10" cols="50" placeholder="你的想法或者建议对我们很有帮助，欢迎随时提交..." ng-model="feedback.feedback.content"></textarea>
+		    </label>
+			<label class="item item-input">
+				<button id="upload-image-btn" class="button button-icon icon ion-image" ng-click="feedback.doUpload()"></button>
+			</label>
+			<div class="item" ng-if="feedback.feedback.attaches.length>0"  ng-repeat="attach in feedback.feedback.attaches">
+				<img ng-src="{{attach.url}}" class="full-image" src="{{attach.url}}" id="upload-image"/>
+				<a href="javascript:void(0);" ng-click="feedback.removeAttach()"><p>删除</p></a>
+			</div>
+		</div>
+		<div class="padding">
+        	<button class="button button-block button-positive" ng-click="feedback.doFeedback()" ng-disabled="!feedback.feedback.content.length" >提交</button>
+      	</div>
+	</ion-content>
+</ion-view>

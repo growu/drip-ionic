@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.keepdays.weidaka" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="me.growu.drip" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
@@ -94,12 +94,12 @@
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-    <name>微打卡</name>
+    <name>水滴打卡</name>
     <description>
-        微打卡 － 一个专注于目标管理和习惯养成的打卡工具
+    水滴打卡 － 一个帮助你进行目标管理和习惯养成的工具
     </description>
-    <author email="admin@keepdays.com" href="http://www.keepdays.com/">
-      Keepdays Team
+    <author email="admin@growu.me" href="http://www.growu.me/">
+      格吾社区
     </author>
     <content src="index.html" />
     <access origin="*" />

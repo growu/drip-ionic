@@ -1,0 +1,66 @@
+<ion-view title="目标">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <div class="buttons" side="right">
+            <button class="button button-icon button-clear ion-navicon" ng-click="home.showReorder()">
+            </button>
+        </div>
+        <div class="title">目标</div>
+        <div class="buttons" side="right">
+            <a class="button button-icon button-clear ion-ios-search-strong" href="#/goal/search"></a>
+        </div>
+    </ion-header-bar>
+    <ion-content class="" ng-init="home.getGoals()">
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="home.doRefresh()">
+        </ion-refresher>
+
+        <div ng-if="home.processed_goals.length == 0" class="padding">
+            <center>你还没有设定目标，<br>点击右侧"+"号给自己制定一个目标吧。</center>
+        </div>
+        <ion-list ng-if="home.processed_goals.length > 0" show-reorder="home.isReorder"
+                  class="left-recorder-button">
+            <div class="item item-divider" style="letter-space:0.2em;">进行中({{home.processed_goals.length}})</div>
+            <ion-item class="item home-item" ng-repeat="goal in home.processed_goals">
+                <div class="item-checkbox" go-state="{state:'goalview',params:{goalId:goal.goal_id}}">
+                    <label class="checkbox checkbox-positive" ng-if="goal.pivot.is_today_checkin">
+                        <input type="checkbox" checked="checked">
+                    </label>
+                    <label class="checkbox" ng-if="!goal.pivot.is_today_checkin">
+                        <input type="checkbox">
+                    </label>
+                    <h2 class="input-label">
+                        {{goal.goal_name}}
+                    </h2>
+                    <span class="badge" ng-class="home.checkStatus(goal.pivot.last_checkin_time)">{{goal.pivot.total_days}}/{{goal.pivot.expect_days>0?goal.pivot.expect_days:999}}</span>
+                </div>
+                <ion-option-button class="button-positive button-clear ion-checkmark"
+                                   ng-click="home.checkinGoal(goal)">
+                </ion-option-button>
+                <ion-option-button class="button-assertive button-clear ion-trash-a"
+                                   ng-click="home.delGoal(goal,$index)">
+                </ion-option-button>
+                <ion-reorder-button class="ion-navicon" on-reorder="home.reOrderGoal(goal, $fromIndex, $toIndex)">
+                </ion-reorder-button>
+            </ion-item>
+            </ion-list>
+            <ion-list ng-if="home.finished_goals.length > 0" >
+                <div class="item item-divider" style="letter-space:0.2em;" ng-click="home.isFinishGroupShow = !home.isFinishGroupShow"
+                >已过期({{home.finished_goals.length}})<i class="icon right" ng-class="home.isFinishGroupShow? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i></div>
+                <ion-item href="#/goal/{{goal.goal_id}}" ng-repeat="goal in home.finished_goals" ng-if="home.isFinishGroupShow">
+                    <div class="item-checkbox">
+                        <label class="checkbox checkbox-light">
+                            <input type="checkbox" checked>
+                        </label>
+                        <h2 class="input-label">
+                            {{goal.goal_name}}
+                        </h2>
+                        <span class="badge badge-stable">{{goal.pivot.total_days}}/{{goal.pivot.expect_days>0?goal.pivot.expect_days:999}}</span>
+                    </div>
+                    <ion-option-button class="button-assertive button-clear ion-trash-a"
+                                       ng-click="home.delGoal(goal,$index)">
+                    </ion-option-button>
+                </ion-item>
+            </ion-list>
+    </ion-content>
+</ion-view>
