@@ -9,79 +9,27 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ImagePicker\"><param name=\"ios-package\" value=\"SOSPicker\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"UmengAnalytics\"><param name=\"ios-package\" value=\"UmengAnalytics\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<preference name=\"UmengIOSAppId\" value=\"55a0938067e58e0cb0002c3e\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"CropPlugin\"><param name=\"ios-package\" value=\"CTCrop\" /></feature>",
+                            "xml": "<feature name=\"AppConfig\"><param name=\"ios-package\" value=\"AppConfig\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"YCQQ\"><param name=\"ios-package\" value=\"YCQQ\" /></feature>",
+                            "xml": "<feature name=\"Analytics\"><param name=\"ios-package\" value=\"CDVAnalytics\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<access origin=\"https://openmobile.qq.com/*\" />",
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<access origin=\"http://qzonestyle.gtimg.cn/*\" />",
+                            "xml": "<feature name=\"Wechat\"><param name=\"ios-package\" value=\"CDVWechat\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<access origin=\"http://pub.idqqimg.com/*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"http://qzs.qq.com/*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"http://m.qzone.com/*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"http://*.ptlogin2.qq.com/*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"http://*.qq.com/*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"http://q2.qlogo.cn/*\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"QQ_APP_ID\" value=\"1104758278\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "xml": "<preference name=\"WECHATAPPID\" value=\"wxac31b5ac3e65915a\" />",
                             "count": 1
                         },
                         {
@@ -97,7 +45,23 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CropPlugin\"><param name=\"ios-package\" value=\"CTCrop\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         },
                         {
@@ -105,7 +69,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"JPushPlugin\"><param name=\"ios-package\" value=\"JPushPlugin\" /></feature>",
+                            "xml": "<feature name=\"QQSDK\"><param name=\"ios-package\" value=\"CDVQQSDK\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"QQ_APP_ID\" value=\"1106192747\" />",
                             "count": 1
                         },
                         {
@@ -113,27 +81,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Wechat\"><param name=\"ios-package\" value=\"CDVWechat\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"ios-package\" value=\"SOSPicker\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"WECHATAPPID\" value=\"wx1bdc17e4439c5ffc\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"AppConfig\"><param name=\"ios-package\" value=\"AppConfig\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Xiaomi\"><param name=\"ios-package\" value=\"CDVWechat\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"XIAOMIAPPID\" value=\"2882303761517415143\" />",
+                            "xml": "<feature name=\"JPushPlugin\"><param name=\"ios-package\" value=\"JPushPlugin\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -144,10 +96,6 @@
                     "APP_KEY": [
                         {
                             "xml": "<string>$API_KEY</string>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<string>c31d2ddd5cb355159e6d4b85</string>",
                             "count": 1
                         }
                     ]
@@ -161,25 +109,21 @@
                             "count": 1
                         },
                         {
-                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>tencentopenapi</string><key>CFBundleURLSchemes</key><array><string>tencent1104758278</string></array></dict></array>",
+                            "xml": "<array><dict><key>CFBundleURLName</key><string>weixin</string><key>CFBundleURLSchemes</key><array><string>wxac31b5ac3e65915a</string></array></dict></array>",
                             "count": 1
                         },
                         {
-                            "xml": "<array><dict><key>CFBundleURLName</key><string>weixin</string><key>CFBundleURLSchemes</key><array><string>wx1bdc17e4439c5ffc</string></array></dict></array>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<array><dict><key>CFBundleURLName</key><string>xiaomi_appid</string><key>CFBundleURLSchemes</key><array><string>2882303761517415143</string></array></dict></array>",
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>tencentopenapi</string><key>CFBundleURLSchemes</key><array><string>tencent1106248902</string></array></dict></array>",
                             "count": 1
                         }
                     ],
                     "LSApplicationQueriesSchemes": [
                         {
-                            "xml": "<array><string>mqqapi</string><string>mqq</string><string>mqqOpensdkSSoLogin</string><string>mqqconnect</string><string>mqqopensdkdataline</string><string>mqqopensdkgrouptribeshare</string><string>mqqopensdkfriend</string><string>mqqopensdkapi</string><string>mqqopensdkapiV2</string><string>mqqopensdkapiV3</string><string>mqzoneopensdk</string><string>wtloginmqq</string><string>wtloginmqq2</string><string>mqqwpa</string><string>mqzone</string><string>mqzonev2</string><string>mqzoneshare</string><string>wtloginqzone</string><string>mqzonewx</string><string>mqzoneopensdkapiV2</string><string>mqzoneopensdkapi19</string><string>mqzoneopensdkapi</string><string>mqzoneopensdk</string></array>",
+                            "xml": "<array><string>weixin</string><string>wechat</string></array>",
                             "count": 1
                         },
                         {
-                            "xml": "<array><string>weixin</string><string>wechat</string></array>",
+                            "xml": "<array><string>mqqapi</string><string>mqq</string><string>mqqOpensdkSSoLogin</string><string>mqqconnect</string><string>mqqopensdkdataline</string><string>mqqopensdkgrouptribeshare</string><string>mqqopensdkfriend</string><string>mqqopensdkapi</string><string>mqqopensdkapiV2</string><string>mqqopensdkapiV3</string><string>mqqopensdkapiV4</string><string>mqzoneopensdk</string><string>wtloginmqq</string><string>wtloginmqq2</string><string>mqqwpa</string><string>mqzone</string><string>mqzonev2</string><string>mqzoneshare</string><string>wtloginqzone</string><string>mqzonewx</string><string>mqzoneopensdkapiV2</string><string>mqzoneopensdkapi19</string><string>mqzoneopensdkapi</string><string>mqzoneopensdk</string><string>mqqgamebindinggroup</string><string>tencentapi.qq.reqContent</string><string>tencentapi.qzone.reqContent</string><string>tim</string><string>timapi</string><string>timopensdkfriend</string><string>timwpa</string><string>timgamebindinggroup</string><string>timapiwallet</string><string>timOpensdkSSoLogin</string><string>wtlogintim</string><string>timopensdkgrouptribeshare</string><string>timopensdkapiV4</string><string>timgamebindinggroup</string><string>timopensdkdataline</string><string>wtlogintimV1</string><string>timapiV1</string></array>",
                             "count": 1
                         }
                     ],
@@ -188,420 +132,95 @@
                             "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
                             "count": 1
                         }
+                    ],
+                    "NSPhotoLibraryUsageDescription": [
+                        {
+                            "xml": "<string> </string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*JPushConfig.plist": {
+                "parents": {
+                    "Appkey": [
+                        {
+                            "xml": "<string>46becc0d96be0a46d601867f</string>",
+                            "count": 1
+                        }
                     ]
                 }
             }
         }
     },
     "installed_plugins": {
+        "cordova-plugin-app-config": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-umeng-analytics": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "com.synconset.imagepicker": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "com.qiudao.cordova.umeng-analytics": {
-            "UMENG_IOS_ID": "123456789012345678901234",
-            "UMENG_ANDROID_ID": "123456789012345678900987",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-crop": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-qqsdk": {
-            "QQ_APP_ID": "1104758278",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-apprate": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "jpush-phonegap-plugin": {
-            "API_KEY": "c31d2ddd5cb355159e6d4b85",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-weibo": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-wechat": {
-            "WECHATAPPID": "wx1bdc17e4439c5ffc",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "WECHATAPPID": "wxac31b5ac3e65915a",
+            "PACKAGE_NAME": "me.growu.drip"
         },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "me.growu.drip"
         },
-        "cordova-plugin-app-config": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "me.growu.drip"
         },
-        "cordova-plugin-xiaomi": {
-            "XIAOMIAPPID": "2882303761517415143",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+        "cordova-plugin-apprate": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-crop": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "1106192747",
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-weibo": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-image-picker": {
+            "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "jpush-phonegap-plugin": {
+            "APP_KEY": "46becc0d96be0a46d601867f",
+            "PACKAGE_NAME": "me.growu.drip"
         }
     },
     "dependent_plugins": {},
     "modules": [
-        {
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "pluginId": "cordova-plugin-splashscreen",
-            "clobbers": [
-                "navigator.splashscreen"
-            ]
-        },
-        {
-            "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
-            "id": "com.synconset.imagepicker.ImagePicker",
-            "pluginId": "com.synconset.imagepicker",
-            "clobbers": [
-                "plugins.imagePicker"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-crop/www/crop.js",
-            "id": "cordova-plugin-crop.CropPlugin",
-            "pluginId": "cordova-plugin-crop",
-            "clobbers": [
-                "plugins.crop"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-qqsdk/www/ycqq.js",
-            "id": "cordova-plugin-qqsdk.ycqq",
-            "pluginId": "cordova-plugin-qqsdk",
-            "clobbers": [
-                "YCQQ"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
-            "id": "cordova-plugin-file.DirectoryEntry",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.DirectoryEntry"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/DirectoryReader.js",
-            "id": "cordova-plugin-file.DirectoryReader",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.DirectoryReader"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/Entry.js",
-            "id": "cordova-plugin-file.Entry",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.Entry"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/File.js",
-            "id": "cordova-plugin-file.File",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.File"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileEntry.js",
-            "id": "cordova-plugin-file.FileEntry",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileEntry"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileError.js",
-            "id": "cordova-plugin-file.FileError",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileError"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileReader.js",
-            "id": "cordova-plugin-file.FileReader",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileReader"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileSystem.js",
-            "id": "cordova-plugin-file.FileSystem",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileSystem"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileUploadOptions.js",
-            "id": "cordova-plugin-file.FileUploadOptions",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileUploadOptions"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileUploadResult.js",
-            "id": "cordova-plugin-file.FileUploadResult",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileUploadResult"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/FileWriter.js",
-            "id": "cordova-plugin-file.FileWriter",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.FileWriter"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/Flags.js",
-            "id": "cordova-plugin-file.Flags",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.Flags"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/LocalFileSystem.js",
-            "id": "cordova-plugin-file.LocalFileSystem",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.LocalFileSystem"
-            ],
-            "merges": [
-                "window"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/Metadata.js",
-            "id": "cordova-plugin-file.Metadata",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.Metadata"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/ProgressEvent.js",
-            "id": "cordova-plugin-file.ProgressEvent",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.ProgressEvent"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/fileSystems.js",
-            "id": "cordova-plugin-file.fileSystems",
-            "pluginId": "cordova-plugin-file"
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/requestFileSystem.js",
-            "id": "cordova-plugin-file.requestFileSystem",
-            "pluginId": "cordova-plugin-file",
-            "clobbers": [
-                "window.requestFileSystem"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js",
-            "id": "cordova-plugin-file.resolveLocalFileSystemURI",
-            "pluginId": "cordova-plugin-file",
-            "merges": [
-                "window"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
-            "id": "cordova-plugin-file.isChrome",
-            "pluginId": "cordova-plugin-file",
-            "runs": true
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/ios/FileSystem.js",
-            "id": "cordova-plugin-file.iosFileSystem",
-            "pluginId": "cordova-plugin-file",
-            "merges": [
-                "FileSystem"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/fileSystems-roots.js",
-            "id": "cordova-plugin-file.fileSystems-roots",
-            "pluginId": "cordova-plugin-file",
-            "runs": true
-        },
-        {
-            "file": "plugins/cordova-plugin-file/www/fileSystemPaths.js",
-            "id": "cordova-plugin-file.fileSystemPaths",
-            "pluginId": "cordova-plugin-file",
-            "merges": [
-                "cordova"
-            ],
-            "runs": true
-        },
-        {
-            "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
-            "id": "cordova-plugin-file-transfer.FileTransferError",
-            "pluginId": "cordova-plugin-file-transfer",
-            "clobbers": [
-                "window.FileTransferError"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
-            "id": "cordova-plugin-file-transfer.FileTransfer",
-            "pluginId": "cordova-plugin-file-transfer",
-            "clobbers": [
-                "window.FileTransfer"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "id": "cordova-plugin-device.device",
-            "pluginId": "cordova-plugin-device",
-            "clobbers": [
-                "device"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
-            "id": "cordova-plugin-console.console",
-            "pluginId": "cordova-plugin-console",
-            "clobbers": [
-                "console"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-console/www/logger.js",
-            "id": "cordova-plugin-console.logger",
-            "pluginId": "cordova-plugin-console",
-            "clobbers": [
-                "cordova.logger"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-            "id": "cordova-plugin-dialogs.notification",
-            "pluginId": "cordova-plugin-dialogs",
-            "merges": [
-                "navigator.notification"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
-            "id": "cordova-plugin-globalization.GlobalizationError",
-            "pluginId": "cordova-plugin-globalization",
-            "clobbers": [
-                "window.GlobalizationError"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-globalization/www/globalization.js",
-            "id": "cordova-plugin-globalization.globalization",
-            "pluginId": "cordova-plugin-globalization",
-            "clobbers": [
-                "navigator.globalization"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-apprate/www/AppRate.js",
-            "id": "cordova-plugin-apprate.AppRate",
-            "pluginId": "cordova-plugin-apprate",
-            "clobbers": [
-                "AppRate"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-apprate/www/locales.js",
-            "id": "cordova-plugin-apprate.locales",
-            "pluginId": "cordova-plugin-apprate",
-            "runs": true
-        },
-        {
-            "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
-            "id": "ionic-plugin-keyboard.keyboard",
-            "pluginId": "ionic-plugin-keyboard",
-            "clobbers": [
-                "cordova.plugins.Keyboard"
-            ],
-            "runs": true
-        },
-        {
-            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-            "id": "cordova-plugin-inappbrowser.inappbrowser",
-            "pluginId": "cordova-plugin-inappbrowser",
-            "clobbers": [
-                "cordova.InAppBrowser.open",
-                "window.open"
-            ]
-        },
-        {
-            "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
-            "id": "jpush-phonegap-plugin.JPushPlugin",
-            "pluginId": "jpush-phonegap-plugin",
-            "clobbers": [
-                "JPush"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-weibo/www/weibo.js",
-            "id": "cordova-plugin-weibo.weibo",
-            "pluginId": "cordova-plugin-weibo",
-            "clobbers": [
-                "window.weibo"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-wechat/www/wechat.js",
-            "id": "cordova-plugin-wechat.Wechat",
-            "pluginId": "cordova-plugin-wechat",
-            "clobbers": [
-                "Wechat"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-            "id": "cordova-plugin-x-socialsharing.SocialSharing",
-            "pluginId": "cordova-plugin-x-socialsharing",
-            "clobbers": [
-                "window.plugins.socialsharing"
-            ]
-        },
         {
             "file": "plugins/cordova-plugin-app-config/www/AppConfig.js",
             "id": "cordova-plugin-app-config.AppConfig",
@@ -611,36 +230,350 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-xiaomi/www/xiaomi.js",
-            "id": "cordova-plugin-xiaomi.Xiaomi",
-            "pluginId": "cordova-plugin-xiaomi",
+            "id": "cordova-umeng-analytics.Analytics",
+            "file": "plugins/cordova-umeng-analytics/www/umeng.analytics.js",
+            "pluginId": "cordova-umeng-analytics",
+            "merges": [
+                "Umeng"
+            ]
+        },
+        {
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
             "clobbers": [
-                "Xiaomi"
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "id": "cordova-plugin-wechat.Wechat",
+            "file": "plugins/cordova-plugin-wechat/www/wechat.js",
+            "pluginId": "cordova-plugin-wechat",
+            "clobbers": [
+                "Wechat"
+            ]
+        },
+        {
+            "id": "cordova-plugin-dialogs.notification",
+            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+            "pluginId": "cordova-plugin-dialogs",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "id": "cordova-plugin-globalization.GlobalizationError",
+            "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+            "pluginId": "cordova-plugin-globalization",
+            "clobbers": [
+                "window.GlobalizationError"
+            ]
+        },
+        {
+            "id": "cordova-plugin-globalization.globalization",
+            "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+            "pluginId": "cordova-plugin-globalization",
+            "clobbers": [
+                "navigator.globalization"
+            ]
+        },
+        {
+            "id": "cordova-plugin-apprate.AppRate",
+            "file": "plugins/cordova-plugin-apprate/www/AppRate.js",
+            "pluginId": "cordova-plugin-apprate",
+            "clobbers": [
+                "AppRate"
+            ]
+        },
+        {
+            "id": "cordova-plugin-apprate.locales",
+            "file": "plugins/cordova-plugin-apprate/www/locales.js",
+            "pluginId": "cordova-plugin-apprate",
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-file.DirectoryEntry",
+            "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.DirectoryEntry"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.DirectoryReader",
+            "file": "plugins/cordova-plugin-file/www/DirectoryReader.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.DirectoryReader"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.Entry",
+            "file": "plugins/cordova-plugin-file/www/Entry.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.Entry"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.File",
+            "file": "plugins/cordova-plugin-file/www/File.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.File"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileEntry",
+            "file": "plugins/cordova-plugin-file/www/FileEntry.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileEntry"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileError",
+            "file": "plugins/cordova-plugin-file/www/FileError.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileError"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileReader",
+            "file": "plugins/cordova-plugin-file/www/FileReader.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileReader"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileSystem",
+            "file": "plugins/cordova-plugin-file/www/FileSystem.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileSystem"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileUploadOptions",
+            "file": "plugins/cordova-plugin-file/www/FileUploadOptions.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileUploadOptions"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileUploadResult",
+            "file": "plugins/cordova-plugin-file/www/FileUploadResult.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileUploadResult"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.FileWriter",
+            "file": "plugins/cordova-plugin-file/www/FileWriter.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.FileWriter"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.Flags",
+            "file": "plugins/cordova-plugin-file/www/Flags.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.Flags"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.LocalFileSystem",
+            "file": "plugins/cordova-plugin-file/www/LocalFileSystem.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.LocalFileSystem"
+            ],
+            "merges": [
+                "window"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.Metadata",
+            "file": "plugins/cordova-plugin-file/www/Metadata.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.Metadata"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.ProgressEvent",
+            "file": "plugins/cordova-plugin-file/www/ProgressEvent.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.ProgressEvent"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.fileSystems",
+            "file": "plugins/cordova-plugin-file/www/fileSystems.js",
+            "pluginId": "cordova-plugin-file"
+        },
+        {
+            "id": "cordova-plugin-file.requestFileSystem",
+            "file": "plugins/cordova-plugin-file/www/requestFileSystem.js",
+            "pluginId": "cordova-plugin-file",
+            "clobbers": [
+                "window.requestFileSystem"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.resolveLocalFileSystemURI",
+            "file": "plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js",
+            "pluginId": "cordova-plugin-file",
+            "merges": [
+                "window"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.isChrome",
+            "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
+            "pluginId": "cordova-plugin-file",
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-file.iosFileSystem",
+            "file": "plugins/cordova-plugin-file/www/ios/FileSystem.js",
+            "pluginId": "cordova-plugin-file",
+            "merges": [
+                "FileSystem"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file.fileSystems-roots",
+            "file": "plugins/cordova-plugin-file/www/fileSystems-roots.js",
+            "pluginId": "cordova-plugin-file",
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-file.fileSystemPaths",
+            "file": "plugins/cordova-plugin-file/www/fileSystemPaths.js",
+            "pluginId": "cordova-plugin-file",
+            "merges": [
+                "cordova"
+            ],
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-file-transfer.FileTransferError",
+            "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+            "pluginId": "cordova-plugin-file-transfer",
+            "clobbers": [
+                "window.FileTransferError"
+            ]
+        },
+        {
+            "id": "cordova-plugin-file-transfer.FileTransfer",
+            "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+            "pluginId": "cordova-plugin-file-transfer",
+            "clobbers": [
+                "window.FileTransfer"
+            ]
+        },
+        {
+            "id": "cordova-plugin-console.console",
+            "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
+            "pluginId": "cordova-plugin-console",
+            "clobbers": [
+                "console"
+            ]
+        },
+        {
+            "id": "cordova-plugin-console.logger",
+            "file": "plugins/cordova-plugin-console/www/logger.js",
+            "pluginId": "cordova-plugin-console",
+            "clobbers": [
+                "cordova.logger"
+            ]
+        },
+        {
+            "id": "cordova-plugin-crop.CropPlugin",
+            "file": "plugins/cordova-plugin-crop/www/crop.js",
+            "pluginId": "cordova-plugin-crop",
+            "clobbers": [
+                "plugins.crop"
+            ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "pluginId": "cordova-plugin-inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
+        },
+        {
+            "id": "cordova-plugin-qqsdk.QQSDK",
+            "file": "plugins/cordova-plugin-qqsdk/www/qq.js",
+            "pluginId": "cordova-plugin-qqsdk",
+            "clobbers": [
+                "QQSDK"
+            ]
+        },
+        {
+            "id": "cordova-plugin-weibo.weibo",
+            "file": "plugins/cordova-plugin-weibo/www/weibo.js",
+            "pluginId": "cordova-plugin-weibo",
+            "clobbers": [
+                "window.weibo"
+            ]
+        },
+        {
+            "id": "cordova-plugin-image-picker.ImagePicker",
+            "file": "plugins/cordova-plugin-image-picker/www/imagepicker.js",
+            "pluginId": "cordova-plugin-image-picker",
+            "clobbers": [
+                "plugins.imagePicker"
+            ]
+        },
+        {
+            "id": "jpush-phonegap-plugin.JPushPlugin",
+            "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+            "pluginId": "jpush-phonegap-plugin",
+            "clobbers": [
+                "JPush"
             ]
         }
     ],
     "plugin_metadata": {
-        "cordova-plugin-splashscreen": "2.1.0",
-        "cordova-plugin-whitelist": "1.0.0",
-        "com.synconset.imagepicker": "1.0.6",
-        "com.qiudao.cordova.umeng-analytics": "0.1.0",
-        "cordova-plugin-crop": "0.1.0",
-        "cordova-plugin-qqsdk": "0.4.0",
-        "cordova-plugin-compat": "1.0.0",
-        "cordova-plugin-file": "4.2.0",
-        "cordova-plugin-file-transfer": "1.5.1",
-        "cordova-plugin-device": "1.1.2",
-        "cordova-plugin-console": "1.0.3",
-        "cordova-plugin-dialogs": "1.3.0",
-        "cordova-plugin-globalization": "1.0.4",
-        "cordova-plugin-apprate": "1.3.0",
-        "ionic-plugin-keyboard": "2.2.1",
-        "cordova-plugin-inappbrowser": "1.5.0",
-        "jpush-phonegap-plugin": "2.2.5",
-        "cordova-plugin-weibo": "1.6.0",
-        "cordova-plugin-wechat": "1.3.0",
-        "cordova-plugin-x-socialsharing": "5.1.3",
         "cordova-plugin-app-config": "0.0.3",
-        "cordova-plugin-xiaomi": "1.3.0"
+        "cordova-umeng-analytics": "0.0.6",
+        "cordova-plugin-splashscreen": "4.0.3",
+        "cordova-plugin-wechat": "2.0.0",
+        "cordova-plugin-dialogs": "1.3.3",
+        "cordova-plugin-globalization": "1.0.7",
+        "cordova-plugin-apprate": "1.3.0",
+        "cordova-plugin-compat": "1.1.0",
+        "cordova-plugin-file": "4.3.3",
+        "cordova-plugin-file-transfer": "1.6.3",
+        "cordova-plugin-console": "1.0.7",
+        "cordova-plugin-crop": "0.3.1",
+        "cordova-plugin-device": "1.1.6",
+        "cordova-plugin-inappbrowser": "1.7.1",
+        "cordova-plugin-qqsdk": "0.9.6",
+        "cordova-plugin-weibo": "1.6.0",
+        "cordova-plugin-whitelist": "1.3.2",
+        "cordova-plugin-image-picker": "1.1.1",
+        "cordova-plugin-jcore": "1.1.5",
+        "jpush-phonegap-plugin": "3.1.8"
     }
 }

@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.event', [
+        .module('drip.event', [
             'angularMoment'
         ]);
 })();

@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalViewController', GoalViewController);
 
     function GoalViewController($scope, $rootScope, $state, $http, $stateParams, $ionicLoading, $ionicPopover, $filter, $log, ENV, Goal,User,goal) {

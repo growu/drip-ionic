@@ -255,7 +255,11 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
                         }
                     }
                 } else {
-                    WriteDataToStream(fileData, writeStream);
+                    if (totalPayloadLength > 0) {
+                        WriteDataToStream(fileData, writeStream);
+                    } else {
+                        NSLog(@"Uploading of an empty file is not supported for chunkedMode=true and multipart=false");
+                    }
                 }
             } else {
                 NSLog(@"FileTransfer: Failed to open writeStream");
@@ -281,6 +285,7 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
     NSString* server = [command argumentAtIndex:1];
     BOOL trustAllHosts = [[command argumentAtIndex:6 withDefault:[NSNumber numberWithBool:NO]] boolValue]; // allow self-signed certs
     NSString* objectId = [command argumentAtIndex:9];
+    BOOL chunkedMode = [[command argumentAtIndex:7 withDefault:[NSNumber numberWithBool:YES]] boolValue];
 
     CDVFileTransferDelegate* delegate = [[CDVFileTransferDelegate alloc] init];
 
@@ -292,6 +297,7 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
     delegate.target = server;
     delegate.trustAllHosts = trustAllHosts;
     delegate.filePlugin = [self.commandDelegate getCommandInstance:@"File"];
+    delegate.chunkedMode = chunkedMode;
 
     return delegate;
 }
@@ -434,6 +440,13 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
         targetURL = [[self.commandDelegate getCommandInstance:@"File"] fileSystemURLforLocalPath:target].url;
     } else {
         targetURL = [NSURL URLWithString:target];
+
+        if (targetURL == nil) {
+            NSString* targetUrlTextEscaped = [target stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+            if (targetUrlTextEscaped) {
+                targetURL = [NSURL URLWithString:targetUrlTextEscaped];
+            }
+        }
     }
 
     NSURL* sourceURL = [NSURL URLWithString:source];
@@ -441,6 +454,9 @@ static CFIndex WriteDataToStream(NSData* data, CFWriteStreamRef stream)
     if (!sourceURL) {
         errorCode = INVALID_URL_ERR;
         NSLog(@"File Transfer Error: Invalid server URL %@", source);
+    } else if (!targetURL) {
+        errorCode = INVALID_URL_ERR;
+        NSLog(@"File Tranfer Error: Invalid target URL %@", target);
     } else if (![targetURL isFileURL]) {
         CDVFilesystemURL *fsURL = [CDVFilesystemURL fileSystemURLWithString:target];
         if (!fsURL) {

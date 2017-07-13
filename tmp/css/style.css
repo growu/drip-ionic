@@ -406,10 +406,14 @@ h1,h2{
 }
 
 #test {
-    background: -webkit-linear-gradient(CadetBlue, DarkSeaGreen)!important;
-    background: -o-linear-gradient(CadetBlue, DarkSeaGreen)!important;
-    background: -moz-linear-gradient(CadetBlue, DarkSeaGreen)!important;
-    background: linear-gradient(CadetBlue, DarkSeaGreen)!important;
+    /*background: -webkit-linear-gradient(CadetBlue, DarkSeaGreen)!important;*/
+    /*background: -o-linear-gradient(CadetBlue, DarkSeaGreen)!important;*/
+    /*background: -moz-linear-gradient(CadetBlue, DarkSeaGreen)!important;*/
+    /*background: linear-gradient(CadetBlue, DarkSeaGreen)!important;*/
+    background: -webkit-linear-gradient(#48c6ef, #6f86d6)!important;
+    background: -o-linear-gradient(#48c6ef, #6f86d6)!important;
+    background: -moz-linear-gradient(#48c6ef, #6f86d6)!important;
+    background: linear-gradient(#48c6ef, #6f86d6)!important;
     min-height: 100%;
 }
 

@@ -1,7 +1,59 @@
 {
-  "name": "cordova-plugin-splashscreen",
-  "version": "2.1.0",
-  "description": "Cordova Splashscreen Plugin",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-splashscreen@4.0.3",
+        "scope": null,
+        "escapedName": "cordova-plugin-splashscreen",
+        "name": "cordova-plugin-splashscreen",
+        "rawSpec": "4.0.3",
+        "spec": "4.0.3",
+        "type": "version"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1493685655978,
+  "_from": "cordova-plugin-splashscreen@4.0.3",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-splashscreen@4.0.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-splashscreen",
+  "_nodeVersion": "6.10.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-splashscreen-4.0.3.tgz_1493685654007_0.6477097773458809"
+  },
+  "_npmUser": {
+    "name": "filmaj",
+    "email": "maj.fil@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-splashscreen@4.0.3",
+    "scope": null,
+    "escapedName": "cordova-plugin-splashscreen",
+    "name": "cordova-plugin-splashscreen",
+    "rawSpec": "4.0.3",
+    "spec": "4.0.3",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-splashscreen/download/cordova-plugin-splashscreen-4.0.3.tgz",
+  "_shasum": "773cd1363c1f3bacb9901663e9e3793dd3e0a19d",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-splashscreen@4.0.3",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-splashscreen/issues"
+  },
   "cordova": {
     "id": "cordova-plugin-splashscreen",
     "platforms": [
@@ -16,10 +68,33 @@
       "tizen"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/apache/cordova-plugin-splashscreen"
+  "dependencies": {},
+  "description": "Cordova Splashscreen Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "773cd1363c1f3bacb9901663e9e3793dd3e0a19d",
+    "size": 59065,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-splashscreen/download/cordova-plugin-splashscreen-4.0.3.tgz"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova-android": ">=3.6.0"
+      },
+      "4.0.0": {
+        "cordova-android": ">=3.6.0",
+        "cordova-windows": ">=4.4.0"
+      },
+      "5.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-splashscreen#readme",
   "keywords": [
     "cordova",
     "splashscreen",
@@ -34,12 +109,49 @@
     "cordova-windows",
     "cordova-tizen"
   ],
-  "engines": [
+  "license": "Apache-2.0",
+  "maintainers": [
     {
-      "name": "cordova-android",
-      "version": ">=3.6.0"
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "kotikov.vladimir",
+      "email": "kotikov.vladimir@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
     }
   ],
-  "author": "Apache Software Foundation",
-  "license": "Apache 2.0"
+  "name": "cordova-plugin-splashscreen",
+  "optionalDependencies": {},
+  "publish_time": 1493685655978,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-splashscreen.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "4.0.3"
 }

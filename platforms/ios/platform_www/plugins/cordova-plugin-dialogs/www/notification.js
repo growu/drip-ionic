@@ -1,4 +1,5 @@
-cordova.define("cordova-plugin-dialogs.notification", function(require, exports, module) { /*
+cordova.define("cordova-plugin-dialogs.notification", function(require, exports, module) {
+/*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -39,7 +40,7 @@ module.exports = {
     alert: function(message, completeCallback, title, buttonLabel) {
         var _message = (typeof message === "string" ? message : JSON.stringify(message));
         var _title = (typeof title === "string" ? title : "Alert");
-        var _buttonLabel = (buttonLabel || "OK");
+        var _buttonLabel = (buttonLabel && typeof buttonLabel === "string" ? buttonLabel : "OK");
         exec(completeCallback, null, "Notification", "alert", [_message, _title, _buttonLabel]);
     },
 

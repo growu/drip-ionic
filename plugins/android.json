@@ -258,79 +258,70 @@
         }
     },
     "installed_plugins": {
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "com.synconset.imagepicker": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "com.qiudao.cordova.umeng-analytics": {
-            "UMENG_IOS_ID": "55a0938067e58e0cb0002c3e",
-            "UMENG_ANDROID_ID": "55a1019467e58eaf8f00b413",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-crop": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-qqsdk": {
-            "QQ_APP_ID": "1104758278",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-apprate": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "jpush-phonegap-plugin": {
-            "API_KEY": "c31d2ddd5cb355159e6d4b85",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-weibo": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-wechat": {
-            "WECHATAPPID": "wx1bdc17e4439c5ffc",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
         "cordova-plugin-app-config": {
             "PACKAGE_NAME": "com.keepdays.weidaka"
         },
-        "cordova-plugin-xiaomi": {
-            "XIAOMIAPPID": "2882303761517415143",
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+        "cordova-umeng-analytics": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wxac31b5ac3e65915a",
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-apprate": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-crop": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-qqsdk": {
+            "QQ_APP_ID": "1106248902",
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-weibo": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-image-picker": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "jpush-phonegap-plugin": {
+            "APP_KEY": "46becc0d96be0a46d601867f",
+            "PACKAGE_NAME": "me.growu.drip"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
-        },
         "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
         },
         "cordova-plugin-globalization": {
-            "PACKAGE_NAME": "com.keepdays.weidaka"
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "me.growu.drip"
+        },
+        "cordova-plugin-jcore": {
+            "PACKAGE_NAME": "me.growu.drip"
         }
     }
 }

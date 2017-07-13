@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .directive('goBack', goBack);
 
     function goBack () {

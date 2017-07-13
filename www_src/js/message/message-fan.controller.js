@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.message')
+        .module('drip.message')
         .controller('MessageFanController', MessageFanController);
 
     function MessageFanController($http, ENV) {

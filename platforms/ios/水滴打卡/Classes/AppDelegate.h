@@ -19,7 +19,7 @@
 
 //
 //  AppDelegate.h
-//  微打卡
+//  水滴打卡
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
@@ -28,6 +28,15 @@
 #import <Cordova/CDVViewController.h>
 #import <Cordova/CDVAppDelegate.h>
 
-@interface AppDelegate : CDVAppDelegate {}
+// 引入JPush功能所需头文件
+#import "JPUSHService.h"
+// iOS10注册APNs所需头文件
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
+// 如果需要使用idfa功能所需要引入的头文件（可选）
+#import <AdSupport/AdSupport.h>
+
+@interface AppDelegate : CDVAppDelegate <JPUSHRegisterDelegate>{}
 
 @end

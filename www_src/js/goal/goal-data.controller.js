@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalDataController', GoalDataController);
 
     function GoalDataController($http,$scope,$stateParams,ENV) {

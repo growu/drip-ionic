@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.app')
+        .module('drip.app')
         .controller('InitController', InitController);  
 
         function InitController($state,$log,$localStorage,Auth) {

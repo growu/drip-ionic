@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.top', [
+        .module('drip.top', [
 
         ]);
 })();

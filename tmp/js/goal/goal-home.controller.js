@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalHomeController', GoalHomeController);
 
     function GoalHomeController($http,$scope,$stateParams,$ionicPopup,Loading,$state,$log,ENV) {

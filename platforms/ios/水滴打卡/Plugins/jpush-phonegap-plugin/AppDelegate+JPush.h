@@ -11,5 +11,6 @@
 #import "JPUSHService.h"
 
 @interface AppDelegate (JPush) <JPUSHRegisterDelegate>
--(void)registerForIos10RemoteNotification;
+-(void)registerForRemoteNotification;
+-(void)startJPushSDK;
 @end

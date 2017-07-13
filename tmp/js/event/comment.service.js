@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .factory('Comment', Comment);
 
     function Comment($http, $q, $localStorage,$ionicLoading,$ionicActionSheet,$ionicHistory, $state,ENV,Auth,User,Loading) {

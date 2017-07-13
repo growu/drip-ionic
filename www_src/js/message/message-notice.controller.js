@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.message')
+        .module('drip.message')
         .controller('MessageNoticeController', MessageNoticeController);
 
     function MessageNoticeController($http,ENV) {

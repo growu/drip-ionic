@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.explore')
+        .module('drip.explore')
         .controller('ExploreController', ExploreController);  
 
     function ExploreController($scope,Event,ENV) {

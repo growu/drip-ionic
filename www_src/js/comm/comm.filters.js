@@ -1,4 +1,4 @@
-angular.module('kd.comm', [])
+angular.module('drip.comm', [])
 
     .filter('parseUrl', function () {
 

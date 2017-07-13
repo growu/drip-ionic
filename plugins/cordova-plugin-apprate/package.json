@@ -1,15 +1,91 @@
 {
-  "name": "cordova-plugin-apprate",
-  "version": "1.3.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pushandplay/cordova-plugin-apprate"
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-apprate",
+        "scope": null,
+        "escapedName": "cordova-plugin-apprate",
+        "name": "cordova-plugin-apprate",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1494344744060,
+  "_from": "cordova-plugin-apprate@latest",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-apprate@1.3.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-apprate",
+  "_nodeVersion": "7.9.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-apprate-1.3.0.tgz_1494344743839_0.7016909853555262"
+  },
+  "_npmUser": {
+    "name": "westonganger",
+    "email": "westonganger@gmail.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-apprate",
+    "scope": null,
+    "escapedName": "cordova-plugin-apprate",
+    "name": "cordova-plugin-apprate",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-apprate/download/cordova-plugin-apprate-1.3.0.tgz",
+  "_shasum": "0f2bbcf680738e972045e9787771048f620abbc5",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-apprate",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "bugs": {
+    "url": "https://github.com/pushandplay/cordova-plugin-apprate/issues"
   },
   "dependencies": {
     "cordova": "*"
   },
+  "description": "A plugin to provide rate this app functionality into your Cordova / Phonegap application<br>",
   "devDependencies": {
     "grunt": "*",
     "grunt-cordovacli": "*"
-  }
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0f2bbcf680738e972045e9787771048f620abbc5",
+    "size": 18034,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-apprate/download/cordova-plugin-apprate-1.3.0.tgz"
+  },
+  "gitHead": "c0ed9c0ca037f8990186e1eed682abe44a4b0b73",
+  "homepage": "https://github.com/pushandplay/cordova-plugin-apprate#readme",
+  "maintainers": [
+    {
+      "name": "speige",
+      "email": "devingarner@gmail.com"
+    },
+    {
+      "name": "westonganger",
+      "email": "westonganger@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-apprate",
+  "optionalDependencies": {},
+  "publish_time": 1494344744060,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushandplay/cordova-plugin-apprate.git"
+  },
+  "scripts": {},
+  "version": "1.3.0"
 }

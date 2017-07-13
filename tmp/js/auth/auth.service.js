@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('kd.auth')
+        .module('drip.auth')
         .factory('Auth', Auth);
 
     function Auth($http, $q, $localStorage,ENV) {

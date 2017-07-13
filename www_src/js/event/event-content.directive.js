@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .directive('eventContent', eventContent);
 
     function eventContent () {
@@ -23,7 +23,7 @@
     }
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .controller('EventContentController', EventContentController);
     function EventContentController($scope,$compile,$element) {
         var vm = this;

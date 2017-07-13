@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalAddController', GoalAddController);  
 
     function GoalAddController($rootScope,$state,Goal) {

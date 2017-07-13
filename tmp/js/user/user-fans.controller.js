@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('UserFansController', UserFansController);
 
     function UserFansController($scope,$stateParams,User) {

@@ -6,12 +6,12 @@
     'use strict';
 
     angular
-        .module('kd.core')
+        .module('drip.core')
         .config(coreConfig);
 
     function coreConfig( $controllerProvider, $compileProvider, $filterProvider, $provide, $animateProvider, $logProvider, $localStorageProvider, $translateProvider) {
 
-        var core = angular.module('kd.core');
+        var core = angular.module('drip.core');
         // registering components after bootstrap
         core.controller = $controllerProvider.register;
         core.directive = $compileProvider.directive;

@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.home', [
-            'kd.core'
+        .module('drip.home', [
+            'drip.core'
         ]);
 })();

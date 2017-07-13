@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.0.0 - 2017-07-01
+### Changed
+- Use android sdk from JCenter
+- Upgrade cordova versions
+- More improvements to android version of the plugin
+
+## 1.4.0 - 2017-01-10
+### Added
+- iOS OpenSDK1.7.5
+- Android libammsdk 3.1.1
+
 ## 1.3.0 - 2016-09-13
 ### Added
 - iOS openSDK1.7.3

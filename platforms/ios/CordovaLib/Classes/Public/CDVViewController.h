@@ -64,6 +64,12 @@
 @property (nonatomic, readwrite, copy) NSString* baseUserAgent;
 
 /**
+	Takes/Gives an array of UIInterfaceOrientation (int) objects
+	ex. UIInterfaceOrientationPortrait
+*/
+@property (nonatomic, readwrite, strong) NSArray* supportedOrientations;
+
+/**
  The address of the lock token used for controlling access to setting the user-agent
  */
 @property (nonatomic, readonly) NSInteger* userAgentLockToken;
@@ -73,6 +79,7 @@
 - (NSString*)appURLScheme;
 - (NSURL*)errorURL;
 
+- (UIColor*)colorFromColorString:(NSString*)colorString;
 - (NSArray*)parseInterfaceOrientations:(NSArray*)orientations;
 - (BOOL)supportsOrientation:(UIInterfaceOrientation)orientation;
 

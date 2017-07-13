@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.mall')
+        .module('drip.mall')
         .controller('GoodViewController', GoodViewController);
 
     function GoodViewController($http,$sce,$stateParams,ENV) {

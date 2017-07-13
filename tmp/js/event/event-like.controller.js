@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .controller('EventLikeController', EventLikeController);  
 
     function EventLikeController($ionicHistory,$stateParams,Event) {

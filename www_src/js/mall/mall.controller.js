@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.mall')
+        .module('drip.mall')
             .controller('MallController', MallController);
 
     function MallController($http,ENV) {

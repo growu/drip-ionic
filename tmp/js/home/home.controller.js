@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.home')
+        .module('drip.home')
         .controller('HomeController', HomeController);
 
     function HomeController($scope, $state, $rootScope,Goal,goals,User, Update) {

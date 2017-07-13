@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('UserLogoutController', UserLogoutController);  
 
     function UserLogoutController($http,$stateParams,$localStorage,ENV) {

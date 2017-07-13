@@ -1,7 +1,56 @@
 {
-  "name": "cordova-plugin-crop",
-  "version": "0.2.0",
-  "description": "Crop an image in a Cordova app",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-crop",
+        "scope": null,
+        "escapedName": "cordova-plugin-crop",
+        "name": "cordova-plugin-crop",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1485281773744,
+  "_from": "cordova-plugin-crop@latest",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-crop@0.4.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-crop",
+  "_nodeVersion": "7.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-crop-0.4.0.tgz_1485281773164_0.04032899648882449"
+  },
+  "_npmUser": {
+    "name": "jeduan",
+    "email": "jeduan@gmail.com"
+  },
+  "_npmVersion": "4.1.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-crop",
+    "scope": null,
+    "escapedName": "cordova-plugin-crop",
+    "name": "cordova-plugin-crop",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-crop/download/cordova-plugin-crop-0.4.0.tgz",
+  "_shasum": "4d9e8982ccfb38e04fa909c87b4bec06e2d1d92b",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-crop",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "bugs": {
+    "url": "https://github.com/jeduan/cordova-plugin-crop/issues"
+  },
   "cordova": {
     "id": "cordova-plugin-crop",
     "platforms": [
@@ -9,10 +58,18 @@
       "ios"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jeduan/cordova-plugin-crop"
+  "dependencies": {},
+  "description": "Crop an image in a Cordova app",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "4d9e8982ccfb38e04fa909c87b4bec06e2d1d92b",
+    "size": 673758,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-crop/download/cordova-plugin-crop-0.4.0.tgz"
   },
+  "gitHead": "d7c3fc6813df5c72ca6359b84114c25f0f31a01b",
+  "homepage": "https://github.com/jeduan/cordova-plugin-crop#readme",
   "keywords": [
     "cordova",
     "ecosystem:cordova",
@@ -22,5 +79,21 @@
     "image manipulation",
     "crop"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "jeduan",
+      "email": "jeduan@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-crop",
+  "optionalDependencies": {},
+  "publish_time": 1485281773744,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeduan/cordova-plugin-crop.git"
+  },
+  "scripts": {},
+  "version": "0.4.0"
 }

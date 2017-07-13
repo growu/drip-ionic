@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('UserEnergyController', UserEnergyController);
 
     function UserEnergyController($scope,$http,$stateParams,User,ENV) {

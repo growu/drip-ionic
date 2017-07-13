@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/pipitang/cordova-umeng-analytics",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/pipitang/cordova-umeng-analytics",
+        "spec": "git+https://github.com/pipitang/cordova-umeng-analytics.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:pipitang/cordova-umeng-analytics.git",
+          "sshUrl": "git+ssh://git@github.com/pipitang/cordova-umeng-analytics.git",
+          "httpsUrl": "git+https://github.com/pipitang/cordova-umeng-analytics.git",
+          "gitUrl": "git://github.com/pipitang/cordova-umeng-analytics.git",
+          "shortcut": "github:pipitang/cordova-umeng-analytics",
+          "directUrl": "https://raw.githubusercontent.com/pipitang/cordova-umeng-analytics/master/package.json"
+        }
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/pipitang/cordova-umeng-analytics.git",
+  "_id": "cordova-umeng-analytics@0.0.6",
+  "_inCache": true,
+  "_location": "/cordova-umeng-analytics",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/pipitang/cordova-umeng-analytics",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/pipitang/cordova-umeng-analytics",
+    "spec": "git+https://github.com/pipitang/cordova-umeng-analytics.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:pipitang/cordova-umeng-analytics.git",
+      "sshUrl": "git+ssh://git@github.com/pipitang/cordova-umeng-analytics.git",
+      "httpsUrl": "git+https://github.com/pipitang/cordova-umeng-analytics.git",
+      "gitUrl": "git://github.com/pipitang/cordova-umeng-analytics.git",
+      "shortcut": "github:pipitang/cordova-umeng-analytics",
+      "directUrl": "https://raw.githubusercontent.com/pipitang/cordova-umeng-analytics/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/pipitang/cordova-umeng-analytics.git#002e38ddfec8832865b852bb7c847b4325114272",
+  "_shasum": "945f8f4f0e9d9c06746c0b7c11b219aa7ae850a0",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/pipitang/cordova-umeng-analytics",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "pipitang"
+  },
+  "bugs": {
+    "url": "https://github.com/pipitang/cordova-umeng-analytics/issues"
+  },
+  "cordova": {
+    "id": "org.apache.cordova.umeng.Analytics",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "cordova_name": "Umeng Analytics Plugin",
+  "dependencies": {},
+  "description": "A cordova plugin, a JS version for Umeng Analytics SDK",
+  "devDependencies": {},
+  "engines": [],
+  "gitHead": "002e38ddfec8832865b852bb7c847b4325114272",
+  "homepage": "https://github.com/pipitang/cordova-umeng-analytics#readme",
+  "keywords": [
+    "cordova",
+    "phonegap",
+    "umeng"
+  ],
+  "license": "MIT",
+  "name": "cordova-umeng-analytics",
+  "optionalDependencies": {},
+  "readme": "# cordova-umeng-analytics\n\nCordova友盟统计插件\n\n# 更新历史\n\n* 当前iOS版本已经同步到「友盟官方 iOS 统计分析SDK v4.2.4（2016-12-12）」\n\n# 功能\n\n目前只有基本的统计分析功能，具体功能参见官方文档。 自动更新功能，请参见[友盟更新插件](http://github.com/pipitang/cordova-umeng-update)\n\n# 安装\n\n1. 运行 ```cordova plugin add https://github.com/pipitang/cordova-umeng-analytics``` \n\n2. cordova各种衍生命令行都应该支持，例如phonegap或者ionic。\n\n# 使用方法\n\n## 原则\n\n\n## API\n### 统计分析API\n\n#### 配置API\n\n请务必在cordova ready中调用配置接口\n\n```Javascript\nUmeng.Analytics.config({\n    appkey: 'your_app_key', \n    channel: 'your_channel'\n}, function () {\n    alert(\"友盟API初始化成功\");\n}, function (reason) {\n    alert(\"友盟API初始化失败\");\n});\n```\n\n\n#### 开始记录页面停留 \n\n页面统计集成正确，才能够获取正确的页面访问路径、访问深度（PV）的数据。对于Cordova程序来说，这里的页面一般来说是应用程序的某个TOKEN。与一般的页面浏览不同，移动APP需要正确处理被暂停和恢复状态，在Cordova中如何实现，请问度娘或者谷哥。\n\n```Javascript\nUmeng.Analytics.startPage('xxxPage', \nfunction () {\n    alert(\"Success\");\n}, function (reason) {\n    alert(\"Failed: \" + reason);\n});\n```\n\n#### 结束记录页面停留\n此处传入的参数务必与startPage成对出现，参见\n\n```Javascript\nUmeng.Analytics.endPage('xxxPage', function () {\n   alert(\"Success\");\n}, function (reason) {\n   alert(\"Failed: \" + reason);\n});\n```\n\n\n#### 自定义事件 [参见](http://dev.umeng.com/analytics/functions/numekv)\n\n```Javascript\nUmeng.Analytics.logEvent({\n    eventId: 'pay',\n    attributes: {book:'Swfit Fundamentals'},\n    num: 110\n}, function () {\n    alert(\"Success\");\n}, function (reason) {\nalert(\"Failed: \" + reason);\n});\n```\n\n其中，eventId为必传参数，其它参数不传，即为统计该行为发生次数。如果同时传入```attributes```，则为统计各行为各属性发生的次数。如果eventId, attributes和num同时传入，则为统计\"计算事件\"，请查看官方文档。\n\n#### 打开或关闭调试\n\n\n```Javascript\nUmeng.Analytics.enableDebug(true, function () {\n   alert(\"Success\");\n}, function (reason) {\n   alert(\"Failed: \" + reason);\n});\n```\n\n\n# FAQ\n\nQ: Android如何调试？\n\nA: 如果怀疑插件有BUG，请使用tag名称为cordova-umeng-analytics。\n\nQ: Windows 版本？\n\nA: 这个很抱歉，有个哥们买了Lumia之后一直在抱怨应用太少，很不幸，你也有这个需求 ：） 欢迎 pull request.\n\n\n# TODO\n\n1. 动态拉取依赖库\n2. 页面统计自动处理应用暂停和启动\n\n# 许可证\n\n[MIT LICENSE](http://opensource.org/licenses/MIT)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipitang/cordova-umeng-analytics.git"
+  },
+  "version": "0.0.6"
+}

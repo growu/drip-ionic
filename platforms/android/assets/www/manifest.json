@@ -2,19 +2,19 @@
     "files": {
         "css_app.min.css": {
             "filename": "css/app.min.css",
-            "version": "c2a6be502c8a23fe4cffa42ecc7eb9f604201c9f1469ccd484fe2089913142fa"
+            "version": "7314a64bc0222165ad64a67b2eb2caeb7d8f047d2a21d83cbe7ac745d58e7909"
         },
         "css_vendor.min.css": {
             "filename": "css/vendor.min.css",
-            "version": "2d700b3c803ad09726f6c4e5fd45c71023ac42a4a60390d4970fcd4fcb6e2d79"
+            "version": "26abf4d84d8ddf78bc5432a87303965f93f7eae8e98739ec4d5efce5d9623d13"
         },
         "js_app.min.js": {
             "filename": "js/app.min.js",
-            "version": "7edde9891938d36cd80cd5ae20b4282d40a8b9b65f7fde84f85663ebeb600549"
+            "version": "4a3bf6b961b0399158bfad81f1b537da25bf982f741aca052731d7b606772a91"
         },
         "js_vendor.min.js": {
             "filename": "js/vendor.min.js",
-            "version": "f3a43a95319a6b5ca70e3c0d8b699a10ac9b0e00d834a774c15f5f0c3564dec9"
+            "version": "f244ba4e00591c2a47d7d30fb971c4e7150e40dbad93260c037aade84749e61a"
         },
         "fonts_glyphicons-halflings-regular.eot": {
             "filename": "fonts/glyphicons-halflings-regular.eot",
@@ -102,7 +102,7 @@
         },
         "img_logo.png": {
             "filename": "img/logo.png",
-            "version": "20ed5bbf92e60bebaca9e175d23c3551e9ba266f821f248a4a5c367be3aff446"
+            "version": "be9ce261cf78ee30b0c8077d31d33a36680056249abf430134b726820068f516"
         },
         "img_share_bg.jpg": {
             "filename": "img/share_bg.jpg",

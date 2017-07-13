@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('UserFollowController', UserFollowController);
 
     function UserFollowController($scope,$stateParams,User) {

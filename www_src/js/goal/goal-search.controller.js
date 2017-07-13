@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalSearchController', GoalSearchController);
 
     function GoalSearchController(Goal) {

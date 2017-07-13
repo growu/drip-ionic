@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .directive('eventList', eventList);
 
     function eventList () {
@@ -27,7 +27,7 @@
     }
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .controller('EventListController', EventListController);
     function EventListController(Event,ENV) {
         var vm = this;

@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .factory('Comm', Comm);
 
     function Comm($q,$log) {
@@ -35,17 +35,17 @@
             return deferred.promise;
         }
 
-        function isXiaoMiChannel(){
-            return getUmengChannel().then(function(channel){
-                $log.debug(channel);
-                if(channel == "xiaomi") {
-                    return true;
-                }
-                return false;
-            },function(error){
-                return false;
-            });
-        }
+        // function isXiaoMiChannel(){
+        //     return getUmengChannel().then(function(channel){
+        //         $log.debug(channel);
+        //         if(channel == "xiaomi") {
+        //             return true;
+        //         }
+        //         return false;
+        //     },function(error){
+        //         return false;
+        //     });
+        // }
 
         return service;
 

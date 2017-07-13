@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.setting')
+        .module('drip.setting')
         .controller('FeedbackController', FeedbackController);
 
     function FeedbackController($http,$state,$log,Loading,ENV,Upload) {

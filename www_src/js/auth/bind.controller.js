@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.auth')
+        .module('drip.auth')
         .controller('BindController', BindController);
 
     function BindController($state, Loading, Auth) {

@@ -1,44 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="me.growu.drip" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <preference name="loglevel" value="DEBUG" />
+<widget android-versionCode="3010" id="me.growu.drip" version="0.3.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="AppConfig">
+        <param name="android-package" value="com.orderhub.cordova.AppConfig" />
+    </feature>
+    <feature name="Analytics">
+        <param name="android-package" value="org.apache.cordova.umeng.Analytics" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="ImagePicker">
-        <param name="android-package" value="com.synconset.ImagePicker" />
-    </feature>
-    <feature name="UmengAnalytics">
-        <param name="android-package" value="com.qiudao.cordova.umeng.UmengAnalytics" />
-    </feature>
-    <feature name="CropPlugin">
-        <param name="android-package" value="com.jeduan.crop.CropPlugin" />
-    </feature>
-    <feature name="YCQQ">
-        <param name="android-package" value="org.zy.yuancheng.qq.YCQQ" />
-    </feature>
-    <access origin="https://openmobile.qq.com/*" />
-    <access origin="http://qzonestyle.gtimg.cn/*" />
-    <access origin="http://pub.idqqimg.com/*" />
-    <access origin="http://qzs.qq.com/*" />
-    <access origin="http://m.qzone.com/*" />
-    <access origin="http://*.ptlogin2.qq.com/*" />
-    <access origin="http://*.qq.com/*" />
-    <access origin="http://q2.qlogo.cn/*" />
-    <preference name="QQ_APP_ID" value="1104758278" />
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="FileTransfer">
-        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
+    <feature name="Wechat">
+        <param name="android-package" value="xu.li.cordova.wechat.Wechat" />
     </feature>
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
@@ -49,33 +23,59 @@
     <feature name="AppRate">
         <param name="android-package" value="org.pushandplay.cordova.apprate.AppRate" />
     </feature>
-    <feature name="Keyboard">
-        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="CropPlugin">
+        <param name="android-package" value="com.jeduan.crop.CropPlugin" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
-    <feature name="JPushPlugin">
-        <param name="android-package" value="cn.jpush.phonegap.JPushPlugin" />
+    <feature name="QQSDK">
+        <param name="android-package" value="me.vanpan.qqsdk.QQSDKPlugin" />
     </feature>
+    <access origin="https://openmobile.qq.com/*" />
+    <access origin="http://qzonestyle.gtimg.cn/*" />
+    <access origin="http://pub.idqqimg.com/*" />
+    <access origin="http://qzs.qq.com/*" />
+    <access origin="http://m.qzone.com/*" />
+    <access origin="http://*.ptlogin2.qq.com/*" />
+    <access origin="http://*.qq.com/*" />
+    <access origin="http://q2.qlogo.cn/*" />
     <feature name="weibo">
         <param name="android-package" value="com.hiliaox.Weibo" />
     </feature>
-    <feature name="Wechat">
-        <param name="android-package" value="xu.li.cordova.wechat.Wechat" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
     </feature>
-    <preference name="WECHATAPPID" value="wx1bdc17e4439c5ffc" />
-    <feature name="SocialSharing">
-        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    <feature name="ImagePicker">
+        <param name="android-package" value="com.synconset.ImagePicker" />
     </feature>
-    <feature name="AppConfig">
-        <param name="android-package" value="com.orderhub.cordova.AppConfig" />
+    <feature name="JPushPlugin">
+        <param name="android-package" value="cn.jiguang.cordova.push.JPushPlugin" />
     </feature>
-    <feature name="Xiaomi">
-        <param name="android-package" value="com.jasonz.xiaomi.Xiaomi" />
-    </feature>
-    <preference name="XIAOMIAPPID" value="2882303761517415143" />
+    <name>水滴打卡</name>
+    <description>
+    水滴打卡 － 一个目标管理和习惯养成的工具
+    </description>
+    <author email="drip@growu.me" href="http://www.growu.me/">
+      格吾社区
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
     <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
@@ -94,17 +94,9 @@
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-    <name>水滴打卡</name>
-    <description>
-    水滴打卡 － 一个帮助你进行目标管理和习惯养成的工具
-    </description>
-    <author email="admin@growu.me" href="http://www.growu.me/">
-      格吾社区
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <allow-intent href="*" />
-    <allow-navigation href="*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="WECHATAPPID" value="wxac31b5ac3e65915a" />
+    <preference name="QQ_APP_ID" value="1106248902" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
@@ -112,9 +104,8 @@
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="1000" />
-    <preference name="QQAppId" value="1104758278" />
+    <preference name="QQAppId" value="1106248902" />
     <preference name="WeiboAppId" value="1114202144" />
     <preference name="wechatappid" value="wx1bdc17e4439c5ffc" />
-    <preference name="REDIRECTURI" value="http://www.keepdays.com" />
-    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <preference name="REDIRECTURI" value="http://drip.growu.me" />
 </widget>

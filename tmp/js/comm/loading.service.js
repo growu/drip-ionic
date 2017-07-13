@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .factory('Loading', Loading);
 
     function Loading($ionicLoading) {

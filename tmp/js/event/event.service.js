@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .factory('Event', Event);
 
     function Event($http, $q, $localStorage, $ionicLoading, $ionicActionSheet, $ionicHistory,$log, CacheFactory,$state, ENV, Auth, User, Loading) {

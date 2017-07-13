@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('UserGoalsController', UserGoalsController);
 
     function UserGoalsController($http,$stateParams,$localStorage,ENV) {

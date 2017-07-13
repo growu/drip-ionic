@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalSettingController', GoalSettingController);
 
     function GoalSettingController($scope, $stateParams, $rootScope, $state, Goal, goal, Modal, $log, $ionicModal) {

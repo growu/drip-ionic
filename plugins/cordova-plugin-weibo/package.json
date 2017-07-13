@@ -1,25 +1,100 @@
 {
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-weibo",
+        "scope": null,
+        "escapedName": "cordova-plugin-weibo",
+        "name": "cordova-plugin-weibo",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1463719273208,
+  "_from": "cordova-plugin-weibo@latest",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-weibo@1.6.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-weibo",
+  "_nodeVersion": "6.2.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-weibo-1.6.0.tgz_1463719266725_0.926364806946367"
+  },
+  "_npmUser": {
+    "name": "belinchung",
+    "email": "belinchung@gmail.com"
+  },
+  "_npmVersion": "3.8.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-weibo",
+    "scope": null,
+    "escapedName": "cordova-plugin-weibo",
     "name": "cordova-plugin-weibo",
-    "version": "1.6.0",
-    "description": "weibo plugin for cordova",
-    "cordova": {
-      "id": "cordova-plugin-weibo",
-      "platforms": [
-          "android",
-          "ios"
-      ]
-    },
-    "repository": {
-	    "type": "git",
-	    "url": "https://github.com/BelinChung/cordova-plugin-weibo"
-	  },
-  	"keywords": [
-  		"cordova",
-      "ecosystem:cordova",
-      "sina",
-  		"weibo",
-  		"sdk"
-  	],
-  	"author": "BelinChung",
-  	"license": "MIT"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-weibo/download/cordova-plugin-weibo-1.6.0.tgz",
+  "_shasum": "a33773f63258e828ccef411972d4519779c45328",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-weibo",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "BelinChung"
+  },
+  "bugs": {
+    "url": "https://github.com/BelinChung/cordova-plugin-weibo/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-weibo",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "weibo plugin for cordova",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "a33773f63258e828ccef411972d4519779c45328",
+    "size": 13249269,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-weibo/download/cordova-plugin-weibo-1.6.0.tgz"
+  },
+  "gitHead": "eeebbfbeb883c42dc0f2405250e9785bf8aab72e",
+  "homepage": "https://github.com/BelinChung/cordova-plugin-weibo#readme",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "sina",
+    "weibo",
+    "sdk"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "belinchung",
+      "email": "i@dearb.me"
+    }
+  ],
+  "name": "cordova-plugin-weibo",
+  "optionalDependencies": {},
+  "publish_time": 1463719273208,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelinChung/cordova-plugin-weibo.git"
+  },
+  "scripts": {},
+  "version": "1.6.0"
 }

@@ -88,7 +88,7 @@
         var initiateUI = function() {
             try {
                 window.plugins.jPushPlugin.init();
-                getRegistrationID();
+                window.setTimeout(getRegistrationID, 1000);
                 if (device.platform != "Android") {
                     window.plugins.jPushPlugin.setDebugModeFromIos();
                     window.plugins.jPushPlugin.setApplicationIconBadgeNumber(0);
@@ -116,7 +116,10 @@
                     if (tag3 != "") {
                         tags.push(tag3);
                     }
-                    window.plugins.jPushPlugin.setTagsWithAlias(tags, alias);
+                    window.plugins.jPushPlugin.setTagsWithAlias(tags, alias, function () {
+                      // Success callback
+                      console.log(tags + ' - ' + alias)
+                    });
                 } catch (exception) {
                     console.log(exception);
                 }

@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .controller('EventShareController', EventShareController);
 
     function EventShareController(Event, $q, Loading, $log, $ionicScrollDelegate, $cordovaSocialSharing, $timeout, $stateParams, ENV) {
@@ -111,11 +111,13 @@
 
             screen().then(function (image) {
                 var args = {};
+                args.client = QQSDK.ClientType.QQ;//QQSDK.ClientType.QQ,QQSDK.ClientType.TIM;
+                args.scene = QQSDK.Scene.QQ;//QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
                 args.url = shareLink;
                 args.title = shareTitle;
                 args.description = shareMessage;
                 args.imageUrl = shareImags;
-                YCQQ.shareToQQ(function () {
+                QQSDK.shareToQQ(function () {
                     $log.debug("QQ分享成功");
                 }, function (failReason) {
                     $log.error("QQ分享失败");
@@ -132,11 +134,13 @@
 
             screen().then(function (image) {
                 var args = {};
+                args.client = QQSDK.ClientType.QQ;//QQSDK.ClientType.QQ,QQSDK.ClientType.TIM;
+                args.scene = QQSDK.Scene.QQZone;//QQSDK.Scene.QQZone,QQSDK.Scene.Favorite
                 args.url = shareLink;
                 args.title = shareTitle;
                 args.description = shareMessage;
                 args.imageUrl = shareImags;
-                YCQQ.shareToQZone(function () {
+                QQSDK.shareToQZone(function () {
                     $log.debug("QQ空间分享成功");
                 }, function (failReason) {
                     $log.error("QQ空间分享失败");
@@ -145,7 +149,6 @@
             }, function (err) {
 
             });
-
 
         };
 

@@ -3,6 +3,7 @@ package com.jeduan.crop;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 
 import com.soundcloud.android.crop.Crop;
@@ -27,7 +28,7 @@ public class CropPlugin extends CordovaPlugin {
           String imagePath = args.getString(0);
 
           this.inputUri = Uri.parse(imagePath);
-          this.outputUri = Uri.fromFile(new File(getTempDirectoryPath() + "/cropped.jpg"));
+          this.outputUri = Uri.fromFile(new File(getTempDirectoryPath() + "/" + System.currentTimeMillis()+ "-cropped.jpg"));
 
           PluginResult pr = new PluginResult(PluginResult.Status.NO_RESULT);
           pr.setKeepCallback(true);
@@ -91,5 +92,32 @@ public class CropPlugin extends CordovaPlugin {
         // Create the cache directory if it doesn't exist
         cache.mkdirs();
         return cache.getAbsolutePath();
+    }
+
+    public Bundle onSaveInstanceState() {
+        Bundle state = new Bundle();
+
+        if (this.inputUri != null) {
+            state.putString("inputUri", this.inputUri.toString());
+        }
+
+        if (this.outputUri != null) {
+            state.putString("outputUri", this.outputUri.toString());
+        }
+
+        return state;
+    }
+
+    public void onRestoreStateForActivityResult(Bundle state, CallbackContext callbackContext) {
+
+        if (state.containsKey("inputUri")) {
+            this.inputUri = Uri.parse(state.getString("inputUri"));
+        }
+
+        if (state.containsKey("outputUri")) {
+            this.inputUri = Uri.parse(state.getString("outputUri"));
+        }
+
+        this.callbackContext = callbackContext;
     }
 }

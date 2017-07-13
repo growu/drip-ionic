@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.setting')
+        .module('drip.setting')
         .config(appRateConfig);
 
     function appRateConfig($cordovaAppRateProvider) {

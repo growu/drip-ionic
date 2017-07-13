@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.route')
+        .module('drip.route')
         .config(routeConfig);
 
     routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -33,10 +33,10 @@
                 },
                 isWeiboInstalled:function(OAuth){
                     return OAuth.isWeiboInstalled();
-                },
-                isXiaomiChannel:function(Comm){
-                    return Comm.isXiaoMiChannel();
                 }
+                // isXiaomiChannel:function(Comm){
+                //     return Comm.isXiaoMiChannel();
+                // }
             }
         }).state('register', {
             url: '/register',
@@ -48,10 +48,10 @@
                 },
                 isWeiboInstalled:function(OAuth){
                     return OAuth.isWeiboInstalled();
-                },
-                isXiaomiChannel:function(Comm){
-                    return Comm.isXiaoMiChannel();
                 }
+                // isXiaomiChannel:function(Comm){
+                //     return Comm.isXiaoMiChannel();
+                // }
             }
         }).state('app', {
             url: "/app",

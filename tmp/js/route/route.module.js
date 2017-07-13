@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.route', [
+        .module('drip.route', [
             'templates',
             'ui.router',
         ]);

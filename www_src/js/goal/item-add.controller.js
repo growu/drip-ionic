@@ -8,7 +8,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('ItemAddController', ItemAddController);
 
     function ItemAddController($scope,parameters) {

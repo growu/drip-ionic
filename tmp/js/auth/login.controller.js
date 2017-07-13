@@ -3,15 +3,18 @@
     'use strict';
 
     angular
-        .module('kd.auth')
+        .module('drip.auth')
         .controller('LoginController', LoginController);
 
-    function LoginController($http, $state, $log, Loading, $localStorage, ENV, Auth, OAuth, isXiaomiChannel, isQQInstalled, isWeiboInstalled) {
+    function LoginController($http, $state, $log, Loading, $localStorage, ENV, Auth, OAuth, isQQInstalled, isWeiboInstalled) {
 
         var vm = this;
 
-        vm.isXiaomiChannel = isXiaomiChannel;
+        // vm.isXiaomiChannel = isXiaomiChannel;
         vm.isQQInstalled = isQQInstalled;
+        $log.debug("是否QQ安装：");
+        $log.debug(vm.isQQInstalled);
+
         vm.isWeiboInstalled = isWeiboInstalled;
 
         vm.user = {};
@@ -21,7 +24,7 @@
 
         vm.doQQLogin = OAuth.doQQLogin;
         vm.doWeiboLogin = OAuth.doWeiboLogin;
-        vm.doXiaomiLogin = OAuth.doXiaomiLogin;
+        // vm.doXiaomiLogin = OAuth.doXiaomiLogin;
         vm.doLogin = doLogin;
 
         function doLogin() {

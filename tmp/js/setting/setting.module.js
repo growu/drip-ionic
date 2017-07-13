@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.setting', [
-            'kd.core'
+        .module('drip.setting', [
+            'drip.core'
         ]);
 })();

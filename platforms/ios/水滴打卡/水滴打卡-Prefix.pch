@@ -17,7 +17,7 @@
  under the License.
  */
 //
-// Prefix header for all source files of the '微打卡' target in the '微打卡' project
+// Prefix header for all source files of the '水滴打卡' target in the '水滴打卡' project
 //
 
 #ifdef __OBJC__

@@ -1,7 +1,59 @@
 {
-  "name": "cordova-plugin-dialogs",
-  "version": "1.3.0",
-  "description": "Cordova Notification Plugin",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-dialogs",
+        "scope": null,
+        "escapedName": "cordova-plugin-dialogs",
+        "name": "cordova-plugin-dialogs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1493685638426,
+  "_from": "cordova-plugin-dialogs@latest",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-dialogs@1.3.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-dialogs",
+  "_nodeVersion": "6.10.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-dialogs-1.3.3.tgz_1493685638186_0.20763673936016858"
+  },
+  "_npmUser": {
+    "name": "filmaj",
+    "email": "maj.fil@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-dialogs",
+    "scope": null,
+    "escapedName": "cordova-plugin-dialogs",
+    "name": "cordova-plugin-dialogs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-dialogs/download/cordova-plugin-dialogs-1.3.3.tgz",
+  "_shasum": "532ff2eb5c86133a5878550dae59c76ab397f8c9",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-dialogs",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/apache/cordova-plugin-dialogs/issues"
+  },
   "cordova": {
     "id": "cordova-plugin-dialogs",
     "platforms": [
@@ -18,10 +70,26 @@
       "windows"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/apache/cordova-plugin-dialogs"
+  "dependencies": {},
+  "description": "Cordova Notification Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "532ff2eb5c86133a5878550dae59c76ab397f8c9",
+    "size": 106326,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-dialogs/download/cordova-plugin-dialogs-1.3.3.tgz"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-dialogs#readme",
   "keywords": [
     "cordova",
     "notification",
@@ -38,20 +106,45 @@
     "cordova-windows8",
     "cordova-windows"
   ],
-  "scripts": {
-    "test": "npm run jshint",
-    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
-  },
-  "author": "Apache Software Foundation",
   "license": "Apache-2.0",
-  "engines": {
-    "cordovaDependencies": {
-      "2.0.0": {
-        "cordova": ">100"
-      }
+  "maintainers": [
+    {
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
     }
+  ],
+  "name": "cordova-plugin-dialogs",
+  "optionalDependencies": {},
+  "publish_time": 1493685638426,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-dialogs.git"
   },
-  "devDependencies": {
-    "jshint": "^2.6.0"
-  }
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "types": "./types/index.d.ts",
+  "version": "1.3.3"
 }

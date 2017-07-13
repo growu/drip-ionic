@@ -1,9 +1,9 @@
-angular.module('kd.core', [])
+angular.module('drip.core', [])
 
 // 定义环境
 .constant('ENV',{
 	"debug":true,// 测试模式
-	"version":"0.3.0",// 版本
+	"version":"0.3.1",// 版本
 	// "apiUrl":"http://192.168.2.14/kd/public/api/",
 	// "resUrl":"http://192.168.2.14/kd/public/uploads/",
 	'homeUrl':"http://drip.growu.me",

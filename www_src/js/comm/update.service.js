@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .factory('Update', Update);
 
     function Update($http, $q, $log, Loading, $ionicPopup, $cordovaInAppBrowser, ENV) {

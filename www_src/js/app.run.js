@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd')
+        .module('drip')
         .run(appRun);
 
     function appRun($ionicPlatform,$localStorage,amMoment){
@@ -60,13 +60,35 @@
                 }
 
                 if(window.weibo) {
-                    window.weibo.init(1114202144, "http://www.keepdays.com", function(){
+                    window.weibo.init(3987556016, "http://drip.growu.me", function(){
 
                     }, function(err){
                         console.log("微博SDK初始化失败");
                         console.log(err);
                     });
                 }
+
+                // 友盟初始化
+                if(device.platform != "Android") {
+                    Umeng.Analytics.config({
+                        appkey: '595cb3c77f2c740fbf0009fa',
+                        channel: 'AppStore'
+                    }, function () {
+                        console.log("友盟API初始化成功");
+                    }, function (reason) {
+                        console.log("友盟API初始化失败");
+                    });
+                } else {
+                    Umeng.Analytics.config({
+                        appkey: '595cb342c62dca66bf001828',
+                        channel: 'Android'
+                    }, function () {
+                        console.log("友盟API初始化成功");
+                    }, function (reason) {
+                        console.log("友盟API初始化失败");
+                    });
+                }
+
             }
         });
 

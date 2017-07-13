@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('GoalCalendarController', GoalCalendarController);
 
     function GoalCalendarController($http,$scope,$stateParams,$localStorage,$ionicLoading,$timeout,$state,$log,Goal,ENV) {

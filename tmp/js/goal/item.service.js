@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .factory('Item', Item);
 
     function Item($rootScope,$ionicModal) {

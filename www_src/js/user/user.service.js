@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .factory('User', User);
 
     function User($q, $http, $localStorage,$log, ENV, Loading, $ionicActionSheet,Auth,CacheFactory) {

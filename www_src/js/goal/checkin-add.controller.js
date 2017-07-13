@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .controller('CheckinAddController', CheckinAddController);
 
     function CheckinAddController($rootScope, $state, $scope, $ionicPopup, $stateParams, Goal, goal, Upload, ENV) {

@@ -1,14 +1,57 @@
 {
-  "name": "cordova-plugin-qqsdk",
-  "version": "0.4.0",
-  "description": "codrova/phonegap wrapper for qq sdk",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-qqsdk",
+        "scope": null,
+        "escapedName": "cordova-plugin-qqsdk",
+        "name": "cordova-plugin-qqsdk",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1494855782368,
+  "_from": "cordova-plugin-qqsdk@latest",
+  "_id": "cordova-plugin-qqsdk@0.9.4",
+  "_inCache": true,
+  "_location": "/cordova-plugin-qqsdk",
+  "_nodeVersion": "6.10.3",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-qqsdk-0.9.4.tgz_1494855778862_0.8921928349882364"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iVanPan/Cordova_QQ.git"
+  "_npmUser": {
+    "name": "vanpan",
+    "email": "fan543119@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-qqsdk",
+    "scope": null,
+    "escapedName": "cordova-plugin-qqsdk",
+    "name": "cordova-plugin-qqsdk",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-qqsdk/download/cordova-plugin-qqsdk-0.9.4.tgz",
+  "_shasum": "9007ca6546aae8bb90373eb5ca437b0966b128b1",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-qqsdk",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "https://github.com/iVanPan"
+  },
+  "bugs": {
+    "url": "https://github.com/iVanPan/Cordova_QQ/issues"
   },
   "cordova": {
     "id": "cordova-plugin-qqsdk",
@@ -17,6 +60,18 @@
       "ios"
     ]
   },
+  "dependencies": {},
+  "description": "codrova/phonegap wrapper for qq sdk",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "9007ca6546aae8bb90373eb5ca437b0966b128b1",
+    "size": 4257982,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-qqsdk/download/cordova-plugin-qqsdk-0.9.4.tgz"
+  },
+  "gitHead": "5ebcdec7fd6b0c3b3cf743a68488c7e4db6c18ac",
+  "homepage": "https://github.com/iVanPan/Cordova_QQ",
   "keywords": [
     "ecosystem:cordova",
     "cordova-android",
@@ -26,15 +81,30 @@
     "plugin",
     "qqsdk",
     "qq",
+    "TIM",
     "Tencent",
     "login",
     "share",
     "favorites"
   ],
-  "author": "https://github.com/iVanPan",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iVanPan/Cordova_QQ/issues"
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "vanpan",
+      "email": "fan543119@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-qqsdk",
+  "optionalDependencies": {},
+  "publish_time": 1494855782368,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iVanPan/Cordova_QQ.git"
   },
-  "homepage": "https://github.com/iVanPan/Cordova_QQ"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.9.4"
 }

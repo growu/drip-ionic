@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.goal')
+        .module('drip.goal')
         .factory('Checkin', Checkin);
 
        	function Checkin($http, $q,$ionicLoading,$log, $state,ENV,Loading) {

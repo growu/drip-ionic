@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.explore', [
-            'kd.core'
+        .module('drip.explore', [
+            'drip.core'
         ]);
 })();

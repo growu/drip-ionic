@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('ProfileController', ProfileController);
 
     function ProfileController($state, Loading,$localStorage,User,Upload) {

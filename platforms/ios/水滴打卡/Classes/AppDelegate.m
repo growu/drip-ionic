@@ -19,7 +19,7 @@
 
 //
 //  AppDelegate.m
-//  微打卡
+//  水滴打卡
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.
@@ -27,15 +27,46 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+
 #import "WeiboSDK.h"
 #import "weibo.h"
-#import "YCQQ.h"
+
+#import <TencentOpenAPI/TencentOAuth.h>
+
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
     self.viewController = [[MainViewController alloc] init];
+    //Required
+    //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义categories
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    
+    // Optional
+    // 获取IDFA
+    // 如需使用IDFA功能请添加此代码并在初始化方法的advertisingIdentifier参数中填写对应值
+//    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+//    
+//    // Required
+//    // init Push
+//    // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
+//    // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
+//    [JPUSHService setupWithOption:launchOptions appKey:@"46becc0d96be0a46d601867f"
+//                          channel:@"AppStore"
+//                 apsForProduction:isProduction
+//            advertisingIdentifier:advertisingId];
+    
+    
+
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
@@ -44,13 +75,14 @@
     weibo *weiboPlugin = [self.viewController.pluginObjects objectForKey:@"weibo"];
     [WeiboSDK handleOpenURL:url delegate:weiboPlugin];
     [TencentOAuth HandleOpenURL:url];
+    
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    [TencentOAuth HandleOpenURL:url];
     [WeiboSDK handleOpenURL:url delegate:self ];
+    [TencentOAuth HandleOpenURL:url];
     
     return YES;
 }

@@ -2,17 +2,18 @@
     'use strict';
 
     angular
-        .module('kd.auth')
+        .module('drip.auth')
         .factory('OAuth', OAuth);
 
     function OAuth($http, $localStorage, Loading, $log, $state, ENV) {
 
         var isCheckQQInstalled = 0;
+        var isWeiboPluginLoaded = false;
 
         var service = {
-            doWeiboLogin: doWeiboLogin,
+            doWeiboLogin:doWeiboLogin,
             doQQLogin: doQQLogin,
-            doXiaomiLogin: doXiaomiLogin,
+            // doXiaomiLogin: doXiaomiLogin,
             isWeiboInstalled: isWeiboInstalled,
             isQQInstalled: isQQInstalled,
         };
@@ -51,16 +52,18 @@
         }
 
         function isQQInstalled() {
-            if (window.cordova && YCQQ) {
+            if (window.cordova && QQSDK) {
                 $log.debug("QQ登录插件加载成功！");
-                return YCQQ.checkClientInstalled(function () {
+                var args = {};
+                args.client = QQSDK.ClientType.QQ;//QQSDK.ClientType.QQ,QQSDK.ClientType.TIM;
+                return QQSDK.checkClientInstalled(function () {
                     $log.debug("安装QQ客户端");
                     isCheckQQInstalled = 1;
                     return true;
                 }, function () {
                     $log.debug("未安装QQ客户端");
                     return false;
-                });
+                },args);
             } else {
                 $log.debug("QQ登录插件未加载！");
                 return false;
@@ -77,6 +80,7 @@
             // }
             if (window.cordova && window.weibo) {
                 $log.debug("微博登录插件加载成功！");
+                isWeiboPluginLoaded = true;
                 return true;
             } else {
                 $log.debug("微博登录插件未加载！");
@@ -114,7 +118,9 @@
         }
 
         function doQQLogin() {
-            YCQQ.ssoLogin(function (response) {
+            var args = {};
+            args.client = QQSDK.ClientType.QQ;//QQSDK.ClientType.QQ,QQSDK.ClientType.TIM;
+            QQSDK.ssoLogin(function (response) {
                 $log.debug("QQ登录成功", response);
                 Loading.showWaiting("正在获取用户信息...");
 
@@ -142,39 +148,39 @@
                 } else {
                     Loading.show("登录失败");
                 }
-            }, isCheckQQInstalled);
+            }, args);
         }
 
-        function doXiaomiLogin() {
-            var data = {};
-
-            $log.debug("小米SDK开始登录...");
-
-            Xiaomi.getAccessToken(function (token) {
-                data = token;
-                $log.debug("获取token成功:");
-                $log.error(token);
-
-                Xiaomi.getOpenId(function (openID) {
-                    $log.debug("获取openid成功:");
-                    $log.error(openID);
-                    data.openid = openID;
-
-                    Xiaomi.getProfile(function (profile) {
-                        $log.debug("获取profile成功:");
-                        data = angular.extend(data, profile);
-
-                        doThirdLogin('xiaomi', data);
-                    }, function (error) {
-                        $log.debug("获取profile失败:", error);
-                    });
-                }, function (error) {
-                    $log.debug("获取openid失败:", error);
-                });
-            }, function (error) {
-                $log.debug("获取token失败:", error);
-            });
-        }
+        // function doXiaomiLogin() {
+        //     var data = {};
+        //
+        //     $log.debug("小米SDK开始登录...");
+        //
+        //     Xiaomi.getAccessToken(function (token) {
+        //         data = token;
+        //         $log.debug("获取token成功:");
+        //         $log.error(token);
+        //
+        //         Xiaomi.getOpenId(function (openID) {
+        //             $log.debug("获取openid成功:");
+        //             $log.error(openID);
+        //             data.openid = openID;
+        //
+        //             Xiaomi.getProfile(function (profile) {
+        //                 $log.debug("获取profile成功:");
+        //                 data = angular.extend(data, profile);
+        //
+        //                 doThirdLogin('xiaomi', data);
+        //             }, function (error) {
+        //                 $log.debug("获取profile失败:", error);
+        //             });
+        //         }, function (error) {
+        //             $log.debug("获取openid失败:", error);
+        //         });
+        //     }, function (error) {
+        //         $log.debug("获取token失败:", error);
+        //     });
+        // }
 
 
     }

@@ -27,6 +27,7 @@
 #import "NSDictionary+CordovaPreferences.h"
 #import "CDVLocalStorage.h"
 #import "CDVCommandDelegateImpl.h"
+#import <Foundation/NSCharacterSet.h>
 
 @interface CDVViewController () {
     NSInteger _userAgentLockToken;
@@ -37,7 +38,6 @@
 @property (nonatomic, readwrite, strong) NSMutableDictionary* pluginObjects;
 @property (nonatomic, readwrite, strong) NSMutableArray* startupPluginNames;
 @property (nonatomic, readwrite, strong) NSDictionary* pluginsMap;
-@property (nonatomic, readwrite, strong) NSArray* supportedOrientations;
 @property (nonatomic, readwrite, strong) id <CDVWebViewEngineProtocol> webViewEngine;
 
 @property (readwrite, assign) BOOL initialized;
@@ -148,13 +148,13 @@
         }
         path = absolutePath;
     }
-    
+
     // Assert file exists
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         NSAssert(NO, @"ERROR: %@ does not exist. Please run cordova-ios/bin/cordova_plist_to_config_xml path/to/project.", path);
         return nil;
     }
-    
+
     return path;
 }
 
@@ -162,7 +162,7 @@
 {
     // read from config.xml in the app bundle
     NSString* path = [self configFilePath];
-    
+
     NSURL* url = [NSURL fileURLWithPath:path];
 
     self.configParser = [[NSXMLParser alloc] initWithContentsOfURL:url];
@@ -208,8 +208,12 @@
         appURL = [NSURL URLWithString:self.startPage];
     } else if ([self.wwwFolderName rangeOfString:@"://"].location != NSNotFound) {
         appURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", self.wwwFolderName, self.startPage]];
-    } else if([self.wwwFolderName hasSuffix:@".bundle"]){
+    } else if([self.wwwFolderName rangeOfString:@".bundle"].location != NSNotFound){
         // www folder is actually a bundle
+        NSBundle* bundle = [NSBundle bundleWithPath:self.wwwFolderName];
+        appURL = [bundle URLForResource:self.startPage withExtension:nil];
+    } else if([self.wwwFolderName rangeOfString:@".framework"].location != NSNotFound){
+        // www folder is actually a framework
         NSBundle* bundle = [NSBundle bundleWithPath:self.wwwFolderName];
         appURL = [bundle URLForResource:self.startPage withExtension:nil];
     } else {
@@ -269,7 +273,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Load settings
     [self loadSettings];
 
@@ -280,7 +284,7 @@
         backupWebStorageType = backupWebStorage;
     }
     [self.settings setCordovaSetting:backupWebStorageType forKey:@"BackupWebStorage"];
-    
+
     [CDVLocalStorage __fixupDatabaseLocationsWithBackupType:backupWebStorageType];
 
     // // Instantiate the WebView ///////////////
@@ -316,10 +320,11 @@
 
     // /////////////////
     NSURL* appURL = [self appUrl];
+    __weak __typeof__(self) weakSelf = self;
 
     [CDVUserAgentUtil acquireLock:^(NSInteger lockToken) {
-        _userAgentLockToken = lockToken;
-        [CDVUserAgentUtil setUserAgent:self.userAgent lockToken:lockToken];
+        // Fix the memory leak caused by the strong reference.
+        [weakSelf setLockToken:lockToken];
         if (appURL) {
             NSURLRequest* appReq = [NSURLRequest requestWithURL:appURL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20.0];
             [self.webViewEngine loadRequest:appReq];
@@ -329,7 +334,7 @@
 
             NSURL* errorUrl = [self errorURL];
             if (errorUrl) {
-                errorUrl = [NSURL URLWithString:[NSString stringWithFormat:@"?error=%@", [loadErr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] relativeToURL:errorUrl];
+                errorUrl = [NSURL URLWithString:[NSString stringWithFormat:@"?error=%@", [loadErr stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLPathAllowedCharacterSet]] relativeToURL:errorUrl];
                 NSLog(@"%@", [errorUrl absoluteString]);
                 [self.webViewEngine loadRequest:[NSURLRequest requestWithURL:errorUrl]];
             } else {
@@ -338,6 +343,106 @@
             }
         }
     }];
+    
+    // /////////////////
+    
+    NSString* bgColorString = [self.settings cordovaSettingForKey:@"BackgroundColor"];
+    UIColor* bgColor = [self colorFromColorString:bgColorString];
+    [self.webView setBackgroundColor:bgColor];
+}
+
+- (void)setLockToken:(NSInteger)lockToken
+{
+	_userAgentLockToken = lockToken;
+	[CDVUserAgentUtil setUserAgent:self.userAgent lockToken:lockToken];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewWillAppearNotification object:nil]];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewDidAppearNotification object:nil]];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewWillDisappearNotification object:nil]];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewDidDisappearNotification object:nil]];
+}
+
+-(void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewWillLayoutSubviewsNotification object:nil]];
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewDidLayoutSubviewsNotification object:nil]];
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVViewWillTransitionToSizeNotification object:[NSValue valueWithCGSize:size]]];
+}
+
+- (UIColor*)colorFromColorString:(NSString*)colorString
+{
+    // No value, nothing to do
+    if (!colorString) {
+        return nil;
+    }
+    
+    // Validate format
+    NSError* error = NULL;
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"^(#[0-9A-F]{3}|(0x|#)([0-9A-F]{2})?[0-9A-F]{6})$" options:NSRegularExpressionCaseInsensitive error:&error];
+    NSUInteger countMatches = [regex numberOfMatchesInString:colorString options:0 range:NSMakeRange(0, [colorString length])];
+    
+    if (!countMatches) {
+        return nil;
+    }
+    
+    // #FAB to #FFAABB
+    if ([colorString hasPrefix:@"#"] && [colorString length] == 4) {
+        NSString* r = [colorString substringWithRange:NSMakeRange(1, 1)];
+        NSString* g = [colorString substringWithRange:NSMakeRange(2, 1)];
+        NSString* b = [colorString substringWithRange:NSMakeRange(3, 1)];
+        colorString = [NSString stringWithFormat:@"#%@%@%@%@%@%@", r, r, g, g, b, b];
+    }
+    
+    // #RRGGBB to 0xRRGGBB
+    colorString = [colorString stringByReplacingOccurrencesOfString:@"#" withString:@"0x"];
+    
+    // 0xRRGGBB to 0xAARRGGBB
+    if ([colorString hasPrefix:@"0x"] && [colorString length] == 8) {
+        colorString = [@"0xFF" stringByAppendingString:[colorString substringFromIndex:2]];
+    }
+    
+    // 0xAARRGGBB to int
+    unsigned colorValue = 0;
+    NSScanner *scanner = [NSScanner scannerWithString:colorString];
+    if (![scanner scanHexInt:&colorValue]) {
+        return nil;
+    }
+    
+    // int to UIColor
+    return [UIColor colorWithRed:((float)((colorValue & 0x00FF0000) >> 16))/255.0
+                           green:((float)((colorValue & 0x0000FF00) >>  8))/255.0
+                            blue:((float)((colorValue & 0x000000FF) >>  0))/255.0
+                           alpha:((float)((colorValue & 0xFF000000) >> 24))/255.0];
 }
 
 - (NSArray*)parseInterfaceOrientations:(NSArray*)orientations
@@ -374,7 +479,12 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+// CB-12098
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 90000  
+- (NSUInteger)supportedInterfaceOrientations  
+#else  
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+#endif
 {
     NSUInteger ret = 0;
 
@@ -401,9 +511,12 @@
 
 - (UIView*)newCordovaViewWithFrame:(CGRect)bounds
 {
-    NSString* defaultWebViewEngineClass = @"CDVUIWebViewEngine";
+    NSString* defaultWebViewEngineClass = [self.settings cordovaSettingForKey:@"CordovaDefaultWebViewEngine"];
     NSString* webViewEngineClass = [self.settings cordovaSettingForKey:@"CordovaWebViewEngine"];
 
+    if (!defaultWebViewEngineClass) {
+        defaultWebViewEngineClass = @"CDVUIWebViewEngine";
+    }
     if (!webViewEngineClass) {
         webViewEngineClass = defaultWebViewEngineClass;
     }
@@ -445,7 +558,7 @@
         _userAgent = [NSString stringWithFormat:@"%@ %@", localBaseUserAgent, appendUserAgent];
     } else {
         // Use our address as a unique number to append to the User-Agent.
-        _userAgent = [NSString stringWithFormat:@"%@ (%lld)", localBaseUserAgent, (long long)self];
+        _userAgent = localBaseUserAgent;
     }
     return _userAgent;
 }

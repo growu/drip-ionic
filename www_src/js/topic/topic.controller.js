@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.topic')
+        .module('drip.topic')
         .controller('TopicController', TopicController);
 
     function TopicController($scope,$stateParams,$ionicScrollDelegate,$timeout,Topic,ENV) {

@@ -8,7 +8,7 @@
     'use strict';
 
     angular
-        .module('kd.topic')
+        .module('drip.topic')
         .factory('Topic', Topic);
 
     function Topic($http, $q,ENV,Loading) {

@@ -3,14 +3,14 @@
     'use strict';
 
     angular
-        .module('kd.auth')
+        .module('drip.auth')
         .controller('RegisterController', RegisterController);
 
-    function RegisterController($http, $state, $localStorage, Loading, ENV, OAuth, isXiaomiChannel, isQQInstalled, isWeiboInstalled) {
+    function RegisterController($http, $state, $localStorage, Loading, ENV, OAuth, isQQInstalled, isWeiboInstalled) {
 
         var vm = this;
 
-        vm.isXiaomiChannel = isXiaomiChannel;
+        // vm.isXiaomiChannel = isXiaomiChannel;
         vm.isQQInstalled = isQQInstalled;
         vm.isWeiboInstalled = isWeiboInstalled;
 

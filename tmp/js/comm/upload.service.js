@@ -5,7 +5,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .factory('Upload', Upload);
 
     function Upload($q, $localStorage,$cordovaImagePicker,$cordovaFileTransfer,Loading, $log,ENV) {

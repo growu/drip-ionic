@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .directive('imageOnload', imageOnload);
 
     function imageOnload () {

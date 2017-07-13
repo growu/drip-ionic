@@ -8,16 +8,12 @@
 
 #import <Cordova/CDV.h>
 
-#define kJPushPluginReceiveNotification @"JPushPluginReceiveNofication"
-#define kJPushPluginiOS10ForegroundReceiveNotification @"kJPushPluginiOS10ForegroundReceiveNotification"
-#define kJPushPluginiOS10ClickNotification @"kJPushPluginiOS10ClickNotification"
-
-
 @interface JPushPlugin : CDVPlugin{
 
 }
 
-+(void)setLaunchOptions:(NSDictionary *)theLaunchOptions;
+//注册通知服务并启动 SDK
+-(void)startJPushSDK:(CDVInvokedUrlCommand*)command;
 
 //以下为js中可调用接口
 //设置标签、别名
@@ -64,6 +60,10 @@
 //检查用户的推送设置情况
 -(void)getUserNotificationSettings:(CDVInvokedUrlCommand*)command;
 
+//ios 10 APIs
+-(void)addDismissActions:(CDVInvokedUrlCommand*)command;
+-(void)addNotificationActions:(CDVInvokedUrlCommand*)command;
+
 /*
  *  以下为js中可监听到的事件
  *  jpush.openNotification      点击推送消息启动或唤醒app
@@ -73,4 +73,22 @@
  *  jpush.backgroundNotification 后台收到推送
  */
 
+# pragma mark - private
+
++(void)fireDocumentEvent:(NSString*)eventName jsString:(NSString*)jsString;
+
++(void)setupJPushSDK:(NSDictionary*)userInfo;
+
 @end
+
+JPushPlugin *SharedJPushPlugin;
+
+@interface NSDictionary (JPush)
+-(NSString*)toJsonString;
+@end
+
+@interface NSString (JPush)
+-(NSDictionary*)toDictionary;
+@end
+
+

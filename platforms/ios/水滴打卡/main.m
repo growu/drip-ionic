@@ -18,7 +18,7 @@
  */
 //
 //  main.m
-//  微打卡
+//  水滴打卡
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
 //  Copyright ___ORGANIZATIONNAME___ ___YEAR___. All rights reserved.

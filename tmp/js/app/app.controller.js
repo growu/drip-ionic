@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.app')
+        .module('drip.app')
         .controller('AppController', AppController);  
 
     function AppController($http,$localStorage,ENV,$interval) {

@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd')
+        .module('drip')
         .config(appConfig);
 
     function appConfig($ionicConfigProvider, $compileProvider, $httpProvider) {

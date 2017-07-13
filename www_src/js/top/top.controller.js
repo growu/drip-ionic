@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.top')
+        .module('drip.top')
         .controller('TopController', TopController);  
 
     function TopController($http,ENV) {

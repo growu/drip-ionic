@@ -1,4 +1,5 @@
-cordova.define("cordova-plugin-apprate.locales", function(require, exports, module) { /*
+cordova.define("cordova-plugin-apprate.locales", function(require, exports, module) {
+/*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -17,7 +18,8 @@ cordova.define("cordova-plugin-apprate.locales", function(require, exports, modu
  * specific language governing permissions and limitations
  * under the License.
  *
- */;
+ */
+;
 var Locale, Locales;
 
 Locale = (function() {
@@ -43,12 +45,12 @@ Locales = (function() {
     return locales[localeObject.language] = localeObject;
   };
 
-  Locales.getLocale = function(language, applicationTitle) {
+  Locales.getLocale = function(language, applicationTitle, customLocale) {
     var localeObject;
     if (applicationTitle == null) {
       applicationTitle = '';
     }
-    localeObject = locales[language] || locales[language.split(/-/)[0]] || locales[LOCALE_DEFAULT];
+    localeObject = customLocale || locales[language] || locales[language.split(/-/)[0]] || locales[LOCALE_DEFAULT];
     localeObject.title = localeObject.title.replace(/%@/g, applicationTitle);
     localeObject.message = localeObject.message.replace(/%@/g, applicationTitle);
     return localeObject;
@@ -185,6 +187,15 @@ Locales.addLocale(new Locale({
 }));
 
 Locales.addLocale(new Locale({
+  language: 'fi',
+  title: "Arvostele %@",
+  message: "Jos tykkäät %@ sovelluksesta, haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!",
+  cancelButtonLabel: "Ei kiitos",
+  laterButtonLabel: "Muistuta minua myöhemmin",
+  rateButtonLabel: "Arvostele nyt"
+}));
+
+Locales.addLocale(new Locale({
   language: 'fr',
   title: "Notez %@",
   message: "Si vous aimez utiliser %@, n’oubliez pas de voter sur l’App Store. Cela ne prend qu’une minute. Merci d’avance pour votre soutien !",
@@ -293,6 +304,15 @@ Locales.addLocale(new Locale({
 }));
 
 Locales.addLocale(new Locale({
+  language: 'pt-PT',
+  title: "Avaliar %@",
+  message: "Se gostou de utilziar o %@, importa-se de o avaliar? Não vai demorar mais do que um minuto. Obrigado pelo seu apoio!",
+  cancelButtonLabel: "Não, obrigado",
+  laterButtonLabel: "Lembrar mais tarde",
+  rateButtonLabel: "Avaliar agora"
+}));
+
+Locales.addLocale(new Locale({
   language: 'ru',
   title: "Оцените %@",
   message: "Если вам нравится пользоваться %@, не будете ли вы возражать против того, чтобы уделить минуту и оценить его?\nСпасибо вам за поддержку!",
@@ -326,6 +346,15 @@ Locales.addLocale(new Locale({
   cancelButtonLabel: "Nej tack",
   laterButtonLabel: "Påminn mig senare",
   rateButtonLabel: "Betygsätt nu!"
+}));
+
+Locales.addLocale(new Locale({
+  language: 'ta',
+  title: "%@ மதிப்பிடு",
+  message: "%@ பிடித்திருந்தால், நீங்கள் அதை மதிப்பிட ஒரு கணம் எடுக்க முடியுமா? அது ஒரு நிமிடம் தான் எடுக்கும். உங்கள் ஒத்துழைப்புக்கு நன்றி!",
+  cancelButtonLabel: "இல்லை, நன்றி",
+  laterButtonLabel: "பின்னர் நினைவூட்டு",
+  rateButtonLabel: "இப்போது மதிப்பிடு"
 }));
 
 Locales.addLocale(new Locale({
@@ -416,15 +445,6 @@ Locales.addLocale(new Locale({
   cancelButtonLabel: "不，謝謝",
   laterButtonLabel: "稍後提醒我",
   rateButtonLabel: "現在評分"
-}));
-
-Locales.addLocale(new Locale({
-  language: 'fi',
-  title: "Arvostele %@",
-  message: "Jos tykkäät %@ sovelluksesta, haluatko kirjoittaa sille arvostelun? Arvostelun kirjoittamiseen ei mene montaa minuuttia. Kiitos tuestasi!",
-  cancelButtonLabel: "Ei kiitos",
-  laterButtonLabel: "Muistuta minua myöhemmin",
-  rateButtonLabel: "Arvostele nyt"
 }));
 
 module.exports = Locales;

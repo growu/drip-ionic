@@ -38,15 +38,6 @@ module.exports.run = function (runOptions) {
         return Q.reject('Only one of "device"/"emulator" options should be specified');
     }
 
-    // validate target device for ios-sim
-    // Valid values for "--target" (case sensitive):
-    var validTargets = ['iPhone-4s', 'iPhone-5', 'iPhone-5s', 'iPhone-6-Plus', 'iPhone-6',
-        'iPhone-6s-Plus', 'iPhone-6s', 'iPad-2', 'iPad-Retina', 'iPad-Air', 'iPad-Air-2',
-        'iPad-Pro', 'Resizable-iPhone', 'Resizable-iPad'];
-    if (!(runOptions.device) && runOptions.target && validTargets.indexOf(runOptions.target.split(',')[0]) < 0 ) {
-        return Q.reject(runOptions.target + ' is not a valid target for emulator');
-    }
-
     // support for CB-8168 `cordova/run --list`
     if (runOptions.list) {
         if (runOptions.device) return listDevices();
@@ -78,13 +69,44 @@ module.exports.run = function (runOptions) {
         return build.findXCodeProjectIn(projectPath);
     }).then(function (projectName) {
         var appPath = path.join(projectPath, 'build', 'emulator', projectName + '.app');
+        var buildOutputDir = path.join(projectPath, 'build', 'device');
+
         // select command to run and arguments depending whether
         // we're running on device/emulator
         if (useDevice) {
-            return checkDeviceConnected().then(function () {
+            return checkDeviceConnected()
+            .then(function() {
+                // Unpack IPA
+                var ipafile = path.join(buildOutputDir, projectName + '.ipa');
+
+                // unpack the existing platform/ios/build/device/appname.ipa (zipfile), will create a Payload folder 
+                return spawn('unzip', [ '-o', '-qq', ipafile ], buildOutputDir);
+            })
+            .then(function() {
+                // Uncompress IPA (zip file)
+                var appFileInflated = path.join(buildOutputDir, 'Payload', projectName + '.app');
+                var appFile = path.join(buildOutputDir, projectName + '.app');
+                var payloadFolder = path.join(buildOutputDir, 'Payload');
+
+                // delete the existing platform/ios/build/device/appname.app 
+                return spawn('rm', [ '-rf', appFile ], buildOutputDir)
+                    .then(function() {
+                        // move the platform/ios/build/device/Payload/appname.app to parent 
+                        return spawn('mv', [ '-f', appFileInflated, buildOutputDir ], buildOutputDir);
+                    })
+                    .then(function() {
+                        // delete the platform/ios/build/device/Payload folder
+                        return spawn('rm', [ '-rf', payloadFolder ], buildOutputDir);
+                    });
+            })
+            .then(function() {
                 appPath = path.join(projectPath, 'build', 'device', projectName + '.app');
-                // argv.slice(2) removes node and run.js, filterSupportedArgs removes the run.js args
-                return deployToDevice(appPath, runOptions.target, filterSupportedArgs(runOptions.argv.slice(2)));
+                var extraArgs = [];
+                if (runOptions.argv) {
+                     // argv.slice(2) removes node and run.js, filterSupportedArgs removes the run.js args
+                     extraArgs = filterSupportedArgs(runOptions.argv.slice(2));
+                }
+                return deployToDevice(appPath, runOptions.target, extraArgs);
             }, function () {
                 // if device connection check failed use emulator then
                 return deployToSim(appPath, runOptions.target);
@@ -185,7 +207,7 @@ function listDevices() {
 function listEmulators() {
     return require('./list-emulator-images').run()
     .then(function (emulators) {
-        events.emit('log','Available iOS Virtual Devices:');
+        events.emit('log','Available iOS Simulators:');
         emulators.forEach(function (emulator) {
             events.emit('log','\t' + emulator);
         });

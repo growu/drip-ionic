@@ -14,36 +14,36 @@
 
 # 插件列表
 
-- com.qiudao.cordova.umeng-analytics（友盟统计）
-- cordova-plugin-app-config（读取配置文件）
-- cordova-plugin-console （控制台输出）
-- cordova-plugin-crop （图片裁剪）
-- cordova-plugin-device （设备信息）
-- cordova-plugin-file (文件管理)
-- cordova-plugin-file-transfer (文件传输)
-- cordova-plugin-inappbrowser (打开链接)
-- cordova-plugin-qqsdk (qq sdk)
-- cordova-plugin-splashscreen (splashscreen)
-- cordova-plugin-wechat (微信sdk)
-- cordova-plugin-weibo （微博sdk）
-- cordova-plugin-x-socialsharing （社交化分享）
-- cordova-plugin-xiaomi（小米登录sdk）
-- ionic-plugin-keyboard (键盘)
-- jpush-phonegap-plugin(极光推送)
+- [cordova-plugin-app-config 0.0.3](https://github.com/BlackFoks/cordova-plugin-app-config)（读取配置文件）
+- [cordova-plugin-apprate 1.3.0](https://github.com/pushandplay/cordova-plugin-apprate) (商店评分)
+- [cordova-plugin-console 1.0.7](https://github.com/apache/cordova-plugin-console/) （控制台输出）
+- [cordova-plugin-crop 0.3.1](https://github.com/jeduan/cordova-plugin-crop) （图片裁剪）
+- [cordova-plugin-device 1.1.6](https://github.com/apache/cordova-plugin-device) （设备信息）
+- [cordova-plugin-file 4.3.3](https://github.com/apache/cordova-plugin-file) (文件管理)
+- [cordova-plugin-file-transfer 1.6.3](https://github.com/apache/cordova-plugin-file-transfer) (文件传输)
+- [cordova-plugin-inappbrowser 1.7.1](https://github.com/apache/cordova-plugin-inappbrowser) (打开链接)
+- [cordova-plugin-qqsdk 0.9.6](https://github.com/iVanPan/Cordova_QQ) (QQ sdk)
+- [cordova-plugin-splashscreen 4.0.3](https://github.com/apache/cordova-plugin-splashscreen) (splashscreen)
+- [cordova-plugin-wechat 2.0.0](https://github.com/xu-li/cordova-plugin-wechat) (微信sdk)
+- [cordova-plugin-weibo 1.6.0](https://github.com/BelinChung/cordova-plugin-weibo) （微博sdk）
+- [cordova-plugin-whitelist 1.3.2](https://github.com/apache/cordova-plugin-whitelist) (白名单)
+- [cordova-umeng-analytics 0.0.6](https://github.com/pipitang/cordova-umeng-analytics)（友盟统计）
+- [ionic-plugin-keyboard](https://github.com/ionic-team/ionic-plugin-keyboard) (键盘)
+- [jpush-phonegap-plugin 3.2.0](https://github.com/jpush/jpush-phonegap-plugin)(极光推送)
 
 # 使用说明
 
-## step1:安装所需要的组件
+## 1、安装所需要的组件
 
 `npm install`
 
 `bower install`
 
-## step2:编译www源码
+## 2、编译www源码
 
 `gulp build -p`
 
-## step3:编译工程
+## 3、编译工程
 
 `ionic serve`
 `ionic build android`
@@ -54,10 +54,9 @@
 0.4.0
 
 
-
 # 关于项目
 
-「水滴打卡」是一款基于目标管理和习惯养成的打卡工具，并充分融入了社交元素。现已上线
+「水滴打卡」是一款基于目标管理和习惯养成的打卡工具.
 
 **IOS**：[https://itunes.apple.com/us/app/wei-da-ka-zhuan-zhu-yu-mu/id1017364870?l=zh&ls=1&mt=8](https://itunes.apple.com/us/app/wei-da-ka-zhuan-zhu-yu-mu/id1017364870?l=zh&ls=1&mt=8)
 

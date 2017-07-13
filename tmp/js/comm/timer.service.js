@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .factory('Timer', Timer);
 
         function Timer($http, $localStorage, $interval,ENV) {

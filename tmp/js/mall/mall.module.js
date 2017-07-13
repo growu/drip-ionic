@@ -6,7 +6,7 @@
     'use strict';
 
     angular
-        .module('kd.mall', [
+        .module('drip.mall', [
 
         ]);
 })();

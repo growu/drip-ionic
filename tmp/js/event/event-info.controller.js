@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.event')
+        .module('drip.event')
         .controller('EventInfoController', EventInfoController);
 
     function EventInfoController($stateParams,$timeout, User, ENV, Event,Comment,$ionicActionSheet) {

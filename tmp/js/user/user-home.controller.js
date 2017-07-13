@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.user')
+        .module('drip.user')
         .controller('UserHomeController', UserHomeController);  
 
     function UserHomeController($scope,$ionicPopover,$ionicHistory,$stateParams,$timeout,$ionicScrollDelegate,$localStorage,User,ENV,Event) {

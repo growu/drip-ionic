@@ -1,0 +1,112 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-image-picker",
+        "scope": null,
+        "escapedName": "cordova-plugin-image-picker",
+        "name": "cordova-plugin-image-picker",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1475160295362,
+  "_from": "cordova-plugin-image-picker@latest",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-image-picker@1.1.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-image-picker",
+  "_nodeVersion": "5.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-image-picker-1.1.3.tgz_1475160293462_0.3035948865581304"
+  },
+  "_npmUser": {
+    "name": "sdushay",
+    "email": "sdushay@gmail.com"
+  },
+  "_npmVersion": "3.5.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-image-picker",
+    "scope": null,
+    "escapedName": "cordova-plugin-image-picker",
+    "name": "cordova-plugin-image-picker",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-image-picker/download/cordova-plugin-image-picker-1.1.3.tgz",
+  "_shasum": "3862015d98c2e248399991459462e1e381378171",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-image-picker",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "Wymsee"
+  },
+  "bugs": {
+    "url": "https://github.com/wymsee/cordova-imagePicker/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-image-picker",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "This plugin allows selection of multiple images from the camera roll / gallery in a phonegap app",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "3862015d98c2e248399991459462e1e381378171",
+    "size": 70963,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-image-picker/download/cordova-plugin-image-picker-1.1.3.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "gitHead": "483fc178016b895334e3ab8d3e5d4b3e61de2455",
+  "homepage": "https://github.com/wymsee/cordova-imagePicker#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "dmcnamara1",
+      "email": "dmcnamara1@gmail.com"
+    },
+    {
+      "name": "sdushay",
+      "email": "sdushay@gmail.com"
+    },
+    {
+      "name": "thekiteeatingtree",
+      "email": "thekiteeatingtree@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-image-picker",
+  "optionalDependencies": {},
+  "publish_time": 1475160295362,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wymsee/cordova-imagePicker.git"
+  },
+  "scripts": {},
+  "version": "1.1.3"
+}

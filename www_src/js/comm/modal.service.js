@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.comm')
+        .module('drip.comm')
         .factory('Modal', Modal);
 
     function Modal($ionicModal, $rootScope, $q, $controller) {

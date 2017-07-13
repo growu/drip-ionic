@@ -1,0 +1,104 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-jcore",
+        "scope": null,
+        "escapedName": "cordova-plugin-jcore",
+        "name": "cordova-plugin-jcore",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/tuo3/git/drip-ionic/node_modules"
+    ]
+  ],
+  "_cnpm_publish_time": 1498100030220,
+  "_from": "cordova-plugin-jcore@latest",
+  "_hasShrinkwrap": false,
+  "_id": "cordova-plugin-jcore@1.1.5",
+  "_inCache": true,
+  "_location": "/cordova-plugin-jcore",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-jcore-1.1.5.tgz_1498100029816_0.8400004613213241"
+  },
+  "_npmUser": {
+    "name": "jpush",
+    "email": "support@jpush.cn"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-jcore",
+    "scope": null,
+    "escapedName": "cordova-plugin-jcore",
+    "name": "cordova-plugin-jcore",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://r.cnpmjs.org/cordova-plugin-jcore/download/cordova-plugin-jcore-1.1.5.tgz",
+  "_shasum": "9170a59f2f9288a7236f1e7aff949bef900bee3b",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-jcore",
+  "_where": "/Users/tuo3/git/drip-ionic/node_modules",
+  "author": {
+    "name": "wilhantian, jpush"
+  },
+  "bugs": {
+    "url": "https://github.com/jpush/cordova-plugin-jcore/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-jcore",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "jcore for cordova plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "9170a59f2f9288a7236f1e7aff949bef900bee3b",
+    "size": 6655966,
+    "noattachment": false,
+    "tarball": "http://r.cnpmjs.org/cordova-plugin-jcore/download/cordova-plugin-jcore-1.1.5.tgz"
+  },
+  "gitHead": "bfa1c4c32c6594bae58c2ef8e64368884b5a5848",
+  "homepage": "https://github.com/jpush/cordova-plugin-jcore#readme",
+  "keywords": [
+    "jcore",
+    "jpush",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT License",
+  "maintainers": [
+    {
+      "name": "jpush",
+      "email": "support@jpush.cn"
+    },
+    {
+      "name": "wilhantian",
+      "email": "wilhan.tian@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-jcore",
+  "optionalDependencies": {},
+  "publish_time": 1498100030220,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpush/cordova-plugin-jcore.git"
+  },
+  "scripts": {},
+  "version": "1.1.5"
+}

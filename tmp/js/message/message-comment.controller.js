@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.message')
+        .module('drip.message')
         .controller('MessageCommentController', MessageCommentController);
 
     function MessageCommentController($http, ENV) {

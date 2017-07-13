@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.setting')
+        .module('drip.setting')
         .controller('SettingController', SettingController);
 
     function SettingController($cordovaAppRate,Update,ENV) {

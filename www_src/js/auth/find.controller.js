@@ -7,7 +7,7 @@
     'use strict';
 
     angular
-        .module('kd.auth')
+        .module('drip.auth')
         .controller('FindController', FindController);
 
     function FindController($http,$ionicLoading,ENV,$interval) {

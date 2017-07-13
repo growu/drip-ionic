@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('kd', [
+        .module('drip', [
             'ionic',
             'templates',
             'ui.router',
@@ -18,21 +18,21 @@
             'pascalprecht.translate',
             'angular-svg-round-progressbar',
             'rpCoverHeader',
-            'kd.core',
-            'kd.route',
-            'kd.auth',
-            'kd.app',
-            'kd.home',
-            'kd.goal',
-            'kd.event',
-            'kd.my',
-            'kd.setting',
-            'kd.message',
-            'kd.top',
-            'kd.topic',
-            'kd.user',
-            'kd.mall',
-            'kd.comm',
-            'kd.explore'
+            'drip.core',
+            'drip.route',
+            'drip.auth',
+            'drip.app',
+            'drip.home',
+            'drip.goal',
+            'drip.event',
+            'drip.my',
+            'drip.setting',
+            'drip.message',
+            'drip.top',
+            'drip.topic',
+            'drip.user',
+            'drip.mall',
+            'drip.comm',
+            'drip.explore'
         ]);
 })();

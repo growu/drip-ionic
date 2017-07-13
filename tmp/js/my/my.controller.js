@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('kd.my')
+        .module('drip.my')
         .controller('MyController', MyController);  
 
     function MyController($state,$localStorage) {
