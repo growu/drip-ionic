@@ -10,7 +10,7 @@
         .run(appRun);
 
     function appRun($ionicPlatform,$localStorage,amMoment){
-        window.BOOTSTRAP_OK = true;
+        // window.BOOTSTRAP_OK = true;
 
         $ionicPlatform.ready(function() {
             // 隐藏启动页

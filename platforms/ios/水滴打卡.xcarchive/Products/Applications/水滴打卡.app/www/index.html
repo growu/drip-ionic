@@ -7,16 +7,21 @@
     <!--<meta http-equiv="Content-Security-Policy" content="img-src * 'self' data:; default-src * 'self' gap: ; style-src 'self' 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'; ">-->
     <title>水滴打卡</title>
     <script type="text/javascript" src="cordova.js"></script>
-    <!--  <link rel="stylesheet" href="./css/vendor.min.css?1458797031537" type="text/css">
-    <link rel="stylesheet" href="./css/app.min.css?1458797031537" type="text/css">
-    <script type="text/javascript" src="./js/vendor.min.js?1458797031537"></script>
-    <script type="text/javascript" src="./js/app.min.js?1458797031537"></script> -->
-    <script type="text/javascript"
-            timeout="5100"
-            manifest="manifest.json"
-            src="bootstrap.js"></script>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <!-- endinject -->
+    <!--<script type="text/javascript"-->
+            <!--timeout="5100"-->
+            <!--manifest="manifest.json"-->
+            <!--src="bootstrap.js"></script>-->
+    <!--<script>-->
 </head>
 <body ng-app="drip" class="platform-ios platform-cordova platform-webview">
     <ion-nav-view></ion-nav-view>
+    <!-- inject:js -->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <!-- endinject -->
 </body>
 </html>

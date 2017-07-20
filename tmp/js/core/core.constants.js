@@ -9,5 +9,5 @@ angular.module('drip.core', [])
 	'homeUrl':"http://drip.growu.me",
 	'downUrl':"http://drip.growu.me/update",
 	"apiUrl":"http://drip.growu.me/api/",
-	"resUrl":"http://drip.growu.me/uploads/",
+	"resUrl":"http://drip.growu.me/uploads/"
 });

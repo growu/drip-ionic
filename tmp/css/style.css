@@ -57,7 +57,7 @@ h1,h2{
 }
 
 .num {
-  color: #1abc9c;
+  color: #48c6ef;
   font-size: 2.0em;
   font-weight: 400;
 }
@@ -838,19 +838,19 @@ ion-popover-view.fit ion-content {
 
 
 .flex-calendar .week {
-    background-color: #1abc9c!important;
+    background-color: #48c6ef!important;
 }
 
 .flex-calendar .month {
-    background-color: #0c9!important;
+    background-color: #48c6ef!important;
 }
 
 .flex-calendar .days .day.selected .number {
-    background-color: #1abc9c!important;
+    background-color: #48c6ef!important;
 }
 
 .flex-calendar .days .day.event:before {
-    background-color: #1abc9c!important;;
+    background-color: #48c6ef!important;;
 }
 
 /*  timeline */

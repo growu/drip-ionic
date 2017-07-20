@@ -65,7 +65,7 @@
                     if (res) {
                         deferred.resolve("检查更新");
                         if (type == 1) {
-                            checkResUpdate();
+                            // checkResUpdate();
                         } else if (type == 2) {
                             gotoStore();
                         }
@@ -157,41 +157,41 @@
         /**
          * 资源更新
          */
-        function checkResUpdate() {
-            var fs = new CordovaPromiseFS({
-                Promise: $q
-            });
-            // Initialize a CordovaAppLoader
-            var loader = new CordovaAppLoader({
-                fs: fs,
-                serverRoot: ENV.downUrl,
-                localRoot: 'app',
-                cacheBuster: true, // make sure we're not downloading cached files.
-                checkTimeout: 10000 // timeout for the "check" function - when you loose internet connection
-            });
-
-            function onProgress(ev) {
-                Loading.showWaiting('正在下载资源包' + parseInt(ev.percentage * 100) + '%...');
-            }
-
-            loader.check().then(function (updateAvailable) {
-                if (updateAvailable) {
-                    loader.download(onProgress)
-                        .then(function (manifest) {
-                                Loading.showWaiting('正在覆盖旧的资源...');
-                                loader.update();
-                                Loading.show('更新成功');
-                            },
-                            function (error) {
-                                $log.error("下载错误:", error);
-                                Loading.show('资源下载失败,请检查网络配置重新尝试');
-                            }
-                        );
-                } else {
-                    $log.error("无更新内容");
-                }
-            });
-        }
+        // function checkResUpdate() {
+        //     var fs = new CordovaPromiseFS({
+        //         Promise: $q
+        //     });
+        //     // Initialize a CordovaAppLoader
+        //     var loader = new CordovaAppLoader({
+        //         fs: fs,
+        //         serverRoot: ENV.downUrl,
+        //         localRoot: 'app',
+        //         cacheBuster: true, // make sure we're not downloading cached files.
+        //         checkTimeout: 10000 // timeout for the "check" function - when you loose internet connection
+        //     });
+        //
+        //     function onProgress(ev) {
+        //         Loading.showWaiting('正在下载资源包' + parseInt(ev.percentage * 100) + '%...');
+        //     }
+        //
+        //     loader.check().then(function (updateAvailable) {
+        //         if (updateAvailable) {
+        //             loader.download(onProgress)
+        //                 .then(function (manifest) {
+        //                         Loading.showWaiting('正在覆盖旧的资源...');
+        //                         loader.update();
+        //                         Loading.show('更新成功');
+        //                     },
+        //                     function (error) {
+        //                         $log.error("下载错误:", error);
+        //                         Loading.show('资源下载失败,请检查网络配置重新尝试');
+        //                     }
+        //                 );
+        //         } else {
+        //             $log.error("无更新内容");
+        //         }
+        //     });
+        // }
 
         return service;
 

@@ -59,7 +59,7 @@
 
         if(content.length > 100) {
             isShow = true;
-            vm.content1 =  content.substr(0, 100)+'...<a style=\"color:#0c9\" ng-click="eventcontent.hideMore($event)"> 显示全文</a>';
+            vm.content1 =  content.substr(0, 100)+'...<a style=\"color:#48c6ef\" ng-click="eventcontent.hideMore($event)"> 显示全文</a>';
         } else {
             vm.content1 = content;
         }
@@ -69,7 +69,7 @@
             $event.preventDefault();
             $event.stopPropagation();
             if(isShow) {
-                vm.content1 =  content.substr(0, 100)+'...<a href="#" style="color:#0c9" ng-click="eventcontent.hideMore($event)">全文</a>';
+                vm.content1 =  content.substr(0, 100)+'...<a href="#" style="color:#48c6ef" ng-click="eventcontent.hideMore($event)">全文</a>';
             }
         };
 
@@ -77,7 +77,7 @@
             $event.preventDefault();
             $event.stopPropagation();
             if(isShow) {
-                vm.content1 =  content+'<a href="#" style="color:#0c9" ng-click="eventcontent.showMore($event)"> 收起全部</a>';
+                vm.content1 =  content+'<a href="#" style="color:#48c6ef" ng-click="eventcontent.showMore($event)"> 收起全部</a>';
             }
         };
 

@@ -55,8 +55,8 @@ gulp.task('build', function(){
         'build-lib-js',
         'build-index',
         'build-fonts',
-        'build-img',
-        'build-manifest'
+        'build-img'
+        // 'build-manifest'
     );
 });
 
@@ -69,7 +69,7 @@ gulp.task('clean', function () {
 // 生成通用库
 gulp.task('build-comm-lib',function(){
     var copyBower = gulp.src([
-            './bower_components/ionic/release/js/ionic.bundle.js',
+            './bower_components/ionic/release/js/ionic.bundle.min.js',
             './bower_components/ionic/release/fonts/**.*',
             './bower_components/moment/min/moment.min.js',
             './bower_components/moment/locale/zh-cn.js',
@@ -109,9 +109,9 @@ gulp.task('build-comm-lib',function(){
 // 生成app的lib库
 gulp.task('build-app-lib',function(){
     var copyCordova =  gulp.src([
-            './bower_components/ngCordova/dist/ng-cordova.min.js',
-            './bower_components/cordova-app-loader/dist/CordovaAppLoader.js',
-            './bower_components/cordova-app-loader/dist/CordovaPromiseFS.js'
+            './bower_components/ngCordova/dist/ng-cordova.min.js'
+            // './bower_components/cordova-app-loader/dist/CordovaAppLoader.js',
+            // './bower_components/cordova-app-loader/dist/CordovaPromiseFS.js'
         ],  {base: './bower_components/'}) 
         .pipe(gulp.dest('./tmp/lib')); 
     
@@ -183,7 +183,7 @@ gulp.task('build-lib-css',function(){
 gulp.task('build-lib-js',function(){
     return  gulp.src([
             "./tmp/lib/jquery-1.9.1.min.js",
-            "./tmp/lib/ionic/release/js/ionic.bundle.js",
+            "./tmp/lib/ionic/release/js/ionic.bundle.min.js",
             "./tmp/lib/moment/min/moment.min.js",
             "./tmp/lib/moment/local/zh-cn.js",
             "./tmp/lib/angular-moment/angular-moment.min.js",
@@ -196,14 +196,14 @@ gulp.task('build-lib-js',function(){
 
 //  生成index.html
 gulp.task('build-index',function(){
-    var injectIndex = gulp.src('./www_src/index.html')
+    return gulp.src('./www_src/index.html')
               .pipe(inject(gulp.src(['./www/js/vendor.min.js','./www/js/app.min.js','./www/css/vendor.min.css','./www/css/app.min.css']),{ignorePath:'www',addRootSlash: false}))
           .pipe(gulp.dest('./www'));
 
-    var copyManifest = gulp.src('./www_src/index.manifest')
-          .pipe(gulp.dest('./www'));
+    // var copyManifest = gulp.src('./www_src/index.manifest')
+    //       .pipe(gulp.dest('./www'));
     
-    return merge(injectIndex,copyManifest);
+    // return merge(injectIndex,copyManifest);
 
  });
 

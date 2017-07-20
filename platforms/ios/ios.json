@@ -105,7 +105,7 @@
                 "parents": {
                     "CFBundleURLTypes": [
                         {
-                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>wechat</string><key>CFBundleURLSchemes</key><array><string>YOUR_WECHAT_APP_ID</string></array></dict></array>",
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>wechat</string><key>CFBundleURLSchemes</key><array><string>wxac31b5ac3e65915a</string></array></dict></array>",
                             "count": 1
                         },
                         {

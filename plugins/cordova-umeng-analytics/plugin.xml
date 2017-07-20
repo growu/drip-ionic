@@ -53,7 +53,12 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        
+
+        <config-file target="AndroidManifest.xml"  parent="application">
+            <meta-data android:name="UMENG_APPKEY" android:value="your key" />
+            <meta-data android:name="UMENG_CHANNEL" android:value="UMENG_CHANNEL"/>
+        </config-file>
+
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

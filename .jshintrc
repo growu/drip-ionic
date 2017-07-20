@@ -1,0 +1,6 @@
+{
+	"devel":  true,
+	"strict": false,  // true: Requires all functions run in ES5 Strict Mode
+	"predef": ["angular","ionic","navigator","window"],
+	 "-W041": false
+}
