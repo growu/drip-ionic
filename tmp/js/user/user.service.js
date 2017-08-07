@@ -232,28 +232,28 @@
 
         function getGoals(cache) {
             var deferred = $q.defer();
-            // 是否通过缓存访问 默认true
-            cache = (typeof(cache) == 'undefined') ? true : cache;
-
-            var userGoalsCache = CacheFactory.get('userGoalsCache');
-
-            if(!userGoalsCache) {
-                userGoalsCache = CacheFactory.createCache('userGoalsCache', {
-                    maxAge: 24 * 60 * 60 * 1000,
-                    deleteOnExpire: 'aggressive'
-                });
-            }
-
-            if(cache&&userGoalsCache.get('goals')) {
-                deferred.resolve(userGoalsCache.get('goals'));
-            } else {
+            // // 是否通过缓存访问 默认true
+            // cache = (typeof(cache) == 'undefined') ? true : cache;
+            //
+            // var userGoalsCache = CacheFactory.get('userGoalsCache');
+            //
+            // if(!userGoalsCache) {
+            //     userGoalsCache = CacheFactory.createCache('userGoalsCache', {
+            //         maxAge: 24 * 60 * 60 * 1000,
+            //         deleteOnExpire: 'aggressive'
+            //     });
+            // }
+            //
+            // if(cache&&userGoalsCache.get('goals')) {
+            //     deferred.resolve(userGoalsCache.get('goals'));
+            // } else {
                 Loading.showWaiting("正在获取目标列表...");
                 $http.get(ENV.apiUrl + 'user/goals')
                     .success(function (response) {
                         if (response.status) {
                             Loading.hide();
                             // 写入缓存
-                            userGoalsCache.put("goals",response.data);
+                            // userGoalsCache.put("goals",response.data);
                             deferred.resolve(response.data);
                         } else {
                             Loading.show(response.message);
@@ -263,7 +263,7 @@
                     deferred.reject(error);
                 });
 
-            }
+            // }
             return deferred.promise;
         }
 

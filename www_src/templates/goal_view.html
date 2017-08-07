@@ -13,12 +13,12 @@
         <div class="text-center" style="margin-top: 10px;">
             <p><span class="badge badge-balanced" ng-if="goalview.goal.pivot.status == 0">进行中</span></p>
             <p><span class="badge badge-assertive" ng-if="goalview.goal.pivot.status == 1">已结束</span></p>
-            <p style="color:#bbb;">开始于：{{goalview.goal.pivot.start_date}}，结束于：{{goalview.goal.pivot.end_date?goalview.goal.pivot.end_date:'未知'}}</p>
+            <p style="color:#bbb;">开始于：{{goalview.goal.pivot.start_date}}，结束于：{{goalview.goal.pivot.end_date?goalview.goal.pivot.end_date:'永久'}}</p>
         </div>
         <div class="row" style="margin:10px auto;">
             <div class="progress-wrapper" ng-click="goalview.goCheckin()">
                 <div class="progress ng-cloak">
-                    <i class="icon ion-checkmark-round" style="font-size: 120px;" ng-style="{color:goalview.goal.pivot.is_today_checkin?'#1abc9c':'#bbb'}"></i>
+                    <i class="icon ion-checkmark-round" style="font-size: 120px;" ng-style="{color:goalview.goal.pivot.is_today_checkin?'#48c6ef':'#bbb'}"></i>
                 </div>
                 <round-progress
                         max="goalview.goal.pivot.expect_days>0?goalview.goal.pivot.expect_days:999"

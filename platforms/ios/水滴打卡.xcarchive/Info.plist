@@ -9,16 +9,16 @@
 		<key>CFBundleIdentifier</key>
 		<string>me.growu.drip</string>
 		<key>CFBundleShortVersionString</key>
-		<string>0.3.2</string>
+		<string>0.4.0</string>
 		<key>CFBundleVersion</key>
-		<string>0.3.2</string>
+		<string>0.4.0</string>
 		<key>SigningIdentity</key>
 		<string>iPhone Developer: XiaoGang Zhang (K2G667M9J5)</string>
 	</dict>
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2017-07-20T08:04:56Z</date>
+	<date>2017-08-06T10:50:33Z</date>
 	<key>Name</key>
 	<string>水滴打卡</string>
 	<key>SchemeName</key>

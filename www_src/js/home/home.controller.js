@@ -15,6 +15,7 @@
         vm.finished_goals = goals.finished_goals;
         vm.isReorder = false;
         vm.isFinishGroupShow = false;
+        vm.viewModel = 'grid';
 
         // 检查更新
         // Update.checkAndUpdate();
@@ -27,6 +28,10 @@
         vm.reOrderGoal = reOrderGoal;
         vm.toggleGroup = toggleGroup;
         vm.checkStatus = checkStatus;
+        vm.getColor = getColor;
+
+        vm.toggleViewModel = toggleViewModel;
+
 
         // 监听事件
         $rootScope.$on('goal.update', function (evt, data) {
@@ -41,6 +46,10 @@
         $rootScope.$on('goal.delete', function (evt, data) {
             getGoals();
         });
+
+        function toggleViewModel(model) {
+            vm.viewModel = model;
+        }
 
         function getGoals(isRefresh) {
 
@@ -113,6 +122,26 @@
                 return 'badge-assertive';
             }
             return 'badge-positive';
+        }
+
+        function getColor(time) {
+
+            if (time == 0) {
+                console.log("1");
+                return '#ef473a';
+            }
+
+            var diff_days = Math.ceil((now - time) / 86400);
+            if (diff_days >= 3 && diff_days < 7) {
+                console.log("2");
+                return '#ffc900';
+            }
+            if (diff_days >= 7) {
+                console.log("3");
+                return '#ef473a';
+            }
+            console.log("4");
+            return '#48c6ef';
         }
 
     }
