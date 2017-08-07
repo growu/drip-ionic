@@ -58,13 +58,11 @@
 
 「水滴打卡」是一款基于目标管理和习惯养成的打卡工具.
 
-**IOS**：[https://itunes.apple.com/us/app/wei-da-ka-zhuan-zhu-yu-mu/id1017364870?l=zh&ls=1&mt=8](https://itunes.apple.com/us/app/wei-da-ka-zhuan-zhu-yu-mu/id1017364870?l=zh&ls=1&mt=8)
+ ![扫码下载](http://drip.growu.me/img/qrcode.png)
 
-**Android**: 在应用宝，360，豌豆荚，小米商店搜索**水滴打卡**即可。
-
+ 或者在苹果商店，应用宝，360，豌豆荚，小米商店搜索**水滴打卡**即可。
 
 > 代码和设计方面也存在很多的不足之处，我们也希望借助社区的力量，来不断地完善此款app。如果你对我们的项目感兴趣，也可以联系格吾君的微信号（growu001）,加入我们的线上开发团队中。
-
 
 
 # 关注我们：
@@ -75,8 +73,6 @@
 
 
 
-
 # License
-
 
 本项目源代码遵循GPL授权许可，你可以修改并免费使用，但请保留本项目作者信息。
