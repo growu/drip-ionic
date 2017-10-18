@@ -25,37 +25,47 @@
                 </label>
                 <div class="item item-divider"></div>
                 <label class="item item-input">
+                    <span class="input-label">开始日期</span>
+                    <input type="date" name="start_date"  min="{{goaladd.today}}" ng-model="goaladd.goal.start_date " ng-change="goaladd.setDays()"  required>
+                    <div class="error"
+                         ng-if="goalForm.start_date.$touched && goalForm.start_date.$dirty && goalForm.start_date.$invalid">
+                        <small class="error" ng-if="goalForm.start_date.$error.required">
+                            请输入开始日期
+                        </small>
+                    </div>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">结束日期</span>
+                    <input type="date" name="end_date"  ng-model="goaladd.goal.end_date" required ng-change="goaladd.setDays()">
+                </label>
+                <label class="item item-input">
                     <span class="input-label">目标天数</span>
-                    <input type="number" name="days" placeholder="请输入数字，0代表每天" ng-model="goaladd.goal.days"
-                           max="999" ng-pattern="/^[0-9]{1,4}$/" required>
+                    <input type="number" name="days" min="0" placeholder="请输入具体数字，0代表不限定" ng-model="goaladd.goal.days"
+                          required>
                     <div class="error"
                          ng-if="goalForm.days.$touched && goalForm.days.$dirty && goalForm.days.$invalid">
                         <small class="error" ng-if="goalForm.days.$error.required">
                             天数不得为空
                         </small>
-                        <small class="error"
-                               ng-if="goalForm.days.$error.pattern">
-                            天数必须在0-999范围内
-                        </small>
                     </div>
                 </label>
-                <label class="item" ng-if="goaladd.goal.days>0">
-                    起止日期
-                    <span class="item-note">
-					{{goaladd.getRange()}}
-    			    </span>
-                </label>
-                <label class="item" ng-if="goaladd.goal.days>=0">
-                    消耗能量
-                    <span class="item-note assertive">
-					-{{goaladd.goal.days==0?1000:goaladd.goal.days}}
-    			    </span>
-                </label>
+                <!--<label class="item" ng-if="goaladd.goal.days>0">-->
+                    <!--起止日期-->
+                    <!--<span class="item-note">-->
+					<!--{{goaladd.getRange()}}-->
+    			    <!--</span>-->
+                <!--</label>-->
+                <!--<label class="item" ng-if="goaladd.goal.days>=0">-->
+                    <!--消耗能量-->
+                    <!--<span class="item-note assertive">-->
+					<!-- -{{goaladd.goal.days==0?1000:goaladd.goal.days}}-->
+    			    <!--</span>-->
+                <!--</label>-->
                 <div class="item item-divider"></div>
 
                 <label class="item item-input">
                     <span class="input-label">目标介绍</span>
-                    <textarea placeholder="用简短的话语描述你的目标(可不填写)" rows="3" ng-model="goaladd.goal.desc"></textarea>
+                    <textarea placeholder="描述你的目标" rows="3" ng-model="goaladd.goal.desc"></textarea>
                 </label>
                 <div class="item item-divider"></div>
 

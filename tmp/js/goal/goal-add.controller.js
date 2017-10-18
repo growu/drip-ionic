@@ -9,7 +9,27 @@
     function GoalAddController($rootScope,$state,Goal) {
         var vm = this;
 
-        vm.goal = {};
+        vm.today = moment().format("YYYY-MM-DD");
+
+        vm.goal = {
+            'start_date':moment().toDate(),
+            'end_date':moment().toDate(),
+            'days':0
+        };
+
+        vm.setDays = function() {
+
+            if(vm.goal.start_date && vm.goal.end_date) {
+
+                if(vm.goal.end_date < vm.goal.start_date) {
+                    vm.goal.end_date = vm.goal.start_date;
+                }
+
+                var a = moment( vm.goal.start_date);
+                var b = moment( vm.goal.end_date);
+                vm.goal.days = b.diff(a, 'days') + 1;
+            }
+        };
 
         vm.doSaveGoal =  function() {
 

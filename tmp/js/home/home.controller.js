@@ -11,8 +11,8 @@
         var vm = this;
         var now = Math.floor(moment().toDate().getTime() / 1000);
 
-        vm.processed_goals = goals.processed_goals;
-        vm.finished_goals = goals.finished_goals;
+        vm.processed_goals = goals.process;
+        vm.finished_goals = goals.finish;
         vm.isReorder = false;
         vm.isFinishGroupShow = false;
         vm.viewModel = 'grid';
@@ -127,20 +127,16 @@
         function getColor(time) {
 
             if (time == 0) {
-                console.log("1");
                 return '#ef473a';
             }
 
             var diff_days = Math.ceil((now - time) / 86400);
             if (diff_days >= 3 && diff_days < 7) {
-                console.log("2");
                 return '#ffc900';
             }
             if (diff_days >= 7) {
-                console.log("3");
                 return '#ef473a';
             }
-            console.log("4");
             return '#48c6ef';
         }
 

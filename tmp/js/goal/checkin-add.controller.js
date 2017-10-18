@@ -16,6 +16,7 @@
             'type': false,
             'model': 'text',
             'goal_id': goalId,
+            'is_public':goal.pivot.is_public,
             'attaches': [],
         };
 

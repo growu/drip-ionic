@@ -4,5 +4,8 @@
   "type": "ionic1",
   "watchPatterns": [
     "scss/**/*"
-  ]
+  ],
+  "integrations": {
+    "cordova": {}
+  }
 }
