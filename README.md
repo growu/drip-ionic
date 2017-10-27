@@ -1,4 +1,6 @@
 
+由于此项目已经采用ionic v3版本重新编写，该项目已经停止代码维护，仅供参考学习。新项目[地址](https://github.com/growu/drip-ionic3)
+
 # 项目说明
 
 本项目是「水滴打卡」App 基于Ionic编写的Android和Ios客户端代码
@@ -33,26 +35,35 @@
 
 # 使用说明
 
-## 1、安装所需要的组件
+## 1、安装
 
-`npm install`
+```bash
+npm install
+```
 
-`bower install`
+```bash
+bower install
+```
 
-## 2、编译www源码
+## 2、编译
 
-`gulp build -p`
+```bash
+gulp build -p
+```
 
-## 3、编译工程
+## 3、运行
 
-`ionic serve`
-`ionic build android`
-`ionic build ios --device`
+```bash
+ionic serve
+```
 
-# TODO
+```bash
+ionic build android
+```
 
-0.4.0
-
+```bash
+ionic build ios --device
+```
 
 # 关于项目
 
@@ -62,17 +73,20 @@
 
  或者在苹果商店，应用宝，360，豌豆荚，小米商店搜索**水滴打卡**即可。
 
-> 代码和设计方面也存在很多的不足之处，我们也希望借助社区的力量，来不断地完善此款app。如果你对我们的项目感兴趣，也可以联系格吾君的微信号（growu001）,加入我们的线上开发团队中。
-
 
 # 关注我们：
 
-微信公众号:格吾社区
+QQ群：7852084
+
+微信群：请添加格吾君微信（微信号：growu001）,发送暗号"水滴打卡"即可。
+
+官网：[http://drip.growu.me](http://drip.growu.me)
+
+微信公众号:格吾社区(微信号：growuu)
 
 新浪微博：[http://weibo.com/growu/](http://weibo.com/growu)
 
 
-
 # License
 
-本项目源代码遵循GPL授权许可，你可以修改并免费使用，但请保留本项目作者信息。
+本项目源代码遵循GPL授权许可，请勿用于商业用途。
