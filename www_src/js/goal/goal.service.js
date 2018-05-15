@@ -107,7 +107,7 @@
             var order = [];
             // 修改本地的目标顺序
             angular.forEach(new_goals,function(data,index,array){
-                goals[data.goal_id].pivot.order = index;
+                        goals[data.goal_id].pivot.order = index;
                 var obj = {};
                 obj.goal_id = data.goal_id;
                 obj.index = index;

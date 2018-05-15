@@ -76,8 +76,6 @@ ionic build ios --device
 
 # 关注我们：
 
-QQ群：7852084
-
 微信群：请添加格吾君微信（微信号：growu001）,发送暗号"水滴打卡"即可。
 
 官网：[http://drip.growu.me](http://drip.growu.me)
@@ -86,6 +84,9 @@ QQ群：7852084
 
 新浪微博：[http://weibo.com/growu/](http://weibo.com/growu)
 
+# 问题反馈
+
+IONIC技术交流群：783459080
 
 # License
 
