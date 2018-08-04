@@ -93,4 +93,4 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 
 # License
 
-本项目源代码遵循GPL授权许可，请勿用于商业用途。
+GPL
